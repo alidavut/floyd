@@ -27,9 +27,9 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="4.633006"
-     inkscape:cx="50.830929"
-     inkscape:cy="100.69057"
+     inkscape:zoom="2.4262477"
+     inkscape:cx="83.050053"
+     inkscape:cy="69.448804"
      inkscape:window-width="1728"
      inkscape:window-height="1051"
      inkscape:window-x="0"
@@ -56,10 +56,6 @@
        style="font-weight:bold;font-size:35.2777px;font-family:Manrope;-inkscape-font-specification:'Manrope Bold';stroke-width:0.499999"
        transform="matrix(0.80201903,0,0,0.80201903,31.531204,21.444461)">
       <path
-         d="M 131.08969,121.01575 V 95.615798 h 4.25097 v 11.782762 l 10.14233,-11.782762 h 5.2211 l -10.91844,12.453032 11.65928,12.94692 h -5.39749 l -10.70678,-11.85331 v 11.85331 z"
-         style="fill:#ffffff;stroke-width:0.5"
-         id="path993" />
-      <path
          d="m 148.99389,110.49417 v -4.3568 h 4.35679 v 4.3568 z"
          style="fill:#ffffff;stroke-width:0.5"
          id="path995" />
@@ -67,6 +63,14 @@
          d="m 159.22826,95.615805 6.77332,25.399935 h -4.2686 l -6.77332,-25.399937 z"
          style="fill:#ffffff;stroke-width:0.5"
          id="path997" />
+    </g>
+    <g
+       aria-label="F"
+       id="text19299"
+       style="font-weight:bold;font-size:28.2222px;font-family:Manrope;-inkscape-font-specification:'Manrope Bold';fill:#ffffff;stroke-width:0.79375">
+      <path
+         d="M 137.08655,118.45261 V 98.132622 h 12.23432 v 3.400778 h -8.83355 v 5.06588 h 7.14022 v 3.38667 h -7.14022 v 8.46666 z"
+         id="path20037" />
     </g>
   </g>
 </svg>

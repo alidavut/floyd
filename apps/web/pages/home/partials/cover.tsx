@@ -1,5 +1,6 @@
 import { Button } from '@floyd/ui/components';
 import coverImage from './cover-image.svg';
+import { PiStarBold, PiStarFill } from 'react-icons/pi';
 
 export function Cover() {
   return (
@@ -12,9 +13,19 @@ export function Cover() {
         className="bg-gradient-to-b absolute inset-0 z-0 from-transparent to-white"
       />
       <div className="container relative">
-        <div className="grid grid-cols-7">
-          <div className="col-span-4">
-            <h1 className="text-[2rem] lg:text-[4.5rem] font-bold tracking-tight leading-[2.25rem] lg:leading-[4.5rem] mb-6">
+        <div className="grid grid-cols-11 gap-6">
+          <div className="col-span-6">
+            <div className="flex items-center space-x-1 mb-6">
+              <PiStarFill className="text-teal-600 w-5 h-5" />
+              <PiStarFill className="text-teal-600 w-5 h-5" />
+              <PiStarFill className="text-teal-600 w-5 h-5" />
+              <PiStarFill className="text-teal-600 w-5 h-5" />
+              <PiStarFill className="text-teal-600 w-5 h-5" />
+              <span className="text-gray-500 text-[0.875rem] pl-2 font-medium">
+                Loved by 1000+ users
+              </span>
+            </div>
+            <h1 className="text-[2rem] lg:text-[4.75rem] font-bold tracking-tight leading-[2.25rem] lg:leading-[4.75rem] mb-6">
               Booking platform made
               {' '}
               <span className="inline-block relative">
@@ -34,7 +45,7 @@ export function Cover() {
               </a>
             </div>
           </div>
-          <div className="col-span-3">
+          <div className="col-span-5">
             <img src={coverImage.src} className="w-full" />
           </div>
         </div>

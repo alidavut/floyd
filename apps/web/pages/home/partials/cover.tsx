@@ -16,11 +16,11 @@ export function Cover() {
         <div className="grid grid-cols-11 gap-12">
           <div className="col-span-6">
             <div className="flex items-center space-x-1 mb-6">
-              <PiStarFill className="text-teal-600 w-5 h-5" />
-              <PiStarFill className="text-teal-600 w-5 h-5" />
-              <PiStarFill className="text-teal-600 w-5 h-5" />
-              <PiStarFill className="text-teal-600 w-5 h-5" />
-              <PiStarFill className="text-teal-600 w-5 h-5" />
+              <PiStarFill className="text-green-600 w-5 h-5" />
+              <PiStarFill className="text-green-600 w-5 h-5" />
+              <PiStarFill className="text-green-600 w-5 h-5" />
+              <PiStarFill className="text-green-600 w-5 h-5" />
+              <PiStarFill className="text-green-600 w-5 h-5" />
               <span className="text-gray-500 text-[0.875rem] pl-2 font-medium">
                 Loved by 1000+ users
               </span>

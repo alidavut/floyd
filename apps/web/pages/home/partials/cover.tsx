@@ -13,7 +13,7 @@ export function Cover() {
         className="bg-gradient-to-b absolute inset-0 z-0 from-transparent to-white"
       />
       <div className="container relative">
-        <div className="grid grid-cols-11 gap-6">
+        <div className="grid grid-cols-11 gap-12">
           <div className="col-span-6">
             <div className="flex items-center space-x-1 mb-6">
               <PiStarFill className="text-teal-600 w-5 h-5" />

@@ -1,0 +1,28 @@
+@import 'nprogress/nprogress.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  @apply bg-gray-100;
+  @apply text-black;
+}
+
+a {
+  @apply cursor-pointer;
+}
+
+body.loading * {
+  cursor: progress !important;
+}
+
+#nprogress .bar {
+  background: #000000 !important;
+  height: 4px !important;
+}

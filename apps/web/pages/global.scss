@@ -1,0 +1,34 @@
+@import 'nprogress/nprogress.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  @apply bg-gray-50;
+  @apply text-black;
+}
+
+a {
+  @apply cursor-pointer;
+}
+
+body.loading * {
+  cursor: progress !important;
+}
+
+#nprogress .bar {
+  background: #000000 !important;
+  height: 4px !important;
+}
+
+.circles-bg {
+  background-color: #767676;
+  opacity: 0.075;
+  background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #767676 40px ), repeating-linear-gradient( #05050555, #050505 );
+}

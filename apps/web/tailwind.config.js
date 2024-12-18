@@ -1,11 +1,12 @@
-const colors = require('@floyd/utils/colors');
+const { colors } = require('@floyd/utils/colors');
 
 module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
     './lib/**/*.{js,ts,jsx,tsx}',
-    '../../node_modules/@floyd/ui/components/**/*.{js,ts,jsx,tsx}'
+    '../../node_modules/@floyd/ui/components/**/*.{js,ts,jsx,tsx}',
+    '../../node_modules/@floyd/utils/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
     extend: {

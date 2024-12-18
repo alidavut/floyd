@@ -11,8 +11,6 @@ export function HomeView() {
         titlePure
       />
       <Cover />
-      <Features />
-      <UseCases />
       <GetStarted />
     </div>
   )

@@ -8,8 +8,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Manrope', 'sans-serif'],
-        mono: ['Source Code Pro', 'monospace']
+        sans: ['Albert Sans', 'sans-serif']
       },
       keyframes: {
         'fade-in': {

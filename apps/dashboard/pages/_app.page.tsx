@@ -25,7 +25,7 @@ export default function MyApp({ Component, pageProps, storeData }) {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Source+Code+Pro:ital,wght@0,100..700;1,100..700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap"
         />
       </Head>
       <Provider storeMap={storeMap}>

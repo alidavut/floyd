@@ -14,7 +14,7 @@ export default function MyApp({ Component, pageProps }) {
         <link rel="icon" href={favicon.src} key="favicon" />
         <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Source+Code+Pro:ital,wght@0,100..700;1,100..700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap"
         />
       </Head>
       <Script id="google-tag-manager" strategy="afterInteractive">

@@ -5,7 +5,7 @@ import { Spinner } from '../spinner/spinner';
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
   variant?: 'contained' | 'outlined';
-  size?: 'small' | 'medium' | 'large';
+  size?: 'small' | 'medium' | 'large' | 'huge';
   fullWidth?: boolean;
   loading?: boolean;
 }
@@ -17,16 +17,17 @@ function ButtonComponent({ type='button', variant='contained', size='medium', ch
     <button
       ref={ref}
       className={cx(
-        'font-semibold rounded-md relative transition-all box-border',
+        'font-semibold rounded-full relative transition-all box-border',
         fullWidth && 'w-full',
         disabled && 'opacity-50',
         size === 'small' && 'text-sm px-2 py-1',
         size === 'medium' && 'text-base px-4 py-[0.575rem]',
         size === 'large' && 'text-[1.125rem] px-[1.5rem] py-[0.675rem]',
-        variant === 'outlined' && 'border border-gray-950/50 bg-transparent text-gray-950 ring-gray-500/10',
-        variant === 'outlined' && !disabled && 'hover:bg-gray-500/5 active:bg-gray-500/10 hover:ring-[2px]',
-        variant === 'contained' && 'bg-gray-950 text-white ring-gray-500/30',
-        variant === 'contained' && !disabled && 'hover:bg-gray-900 active:bg-gray-950/80 hover:ring-[3px]',
+        size === 'huge' && 'text-[1.5rem] px-[2.5rem] py-[1.25rem] font-bold',
+        variant === 'outlined' && 'border border-yellow-950/50 bg-transparent text-yellow-950 ring-yellow-500/10',
+        variant === 'outlined' && !disabled && 'hover:bg-yellow-500/5 active:bg-yellow-500/10 hover:ring-[2px]',
+        variant === 'contained' && 'bg-yellow-300 text-gray-950 ring-yellow-300',
+        variant === 'contained' && !disabled && 'hover:bg-yellow-400 active:bg-yellow-400/80 hover:ring-[3px]',
       )}
       disabled={disabled}
       type={type}

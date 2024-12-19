@@ -17,7 +17,7 @@ export function GetStarted() {
               Book a demo with our team to see how Floyd can help you.
             </p>
             <div className="mt-9">
-              <a href="https://tally.so/r/mRBgXP" target="_blank" rel="noreferrer">
+              <a href="https://tally.so/r/3E8EVq" target="_blank" rel="noreferrer">
                 <Button size="large">
                   <span className="flex items-center space-x-2">
                     <span>

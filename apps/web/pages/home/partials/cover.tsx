@@ -1,6 +1,6 @@
 import { Button } from '@floyd/ui/components';
 import coverImage from './cover-image.svg';
-import { PiStarBold, PiStarFill } from 'react-icons/pi';
+import { PiRocketLaunch, PiStarFill } from 'react-icons/pi';
 
 export function Cover() {
   return (
@@ -22,7 +22,7 @@ export function Cover() {
               <PiStarFill className="text-green-600 w-5 h-5" />
               <PiStarFill className="text-green-600 w-5 h-5" />
               <span className="text-gray-500 text-[0.875rem] pl-2 font-medium">
-                Loved by 1000+ users
+                Will be loved by millions
               </span>
             </div>
             <h1 className="text-[2rem] lg:text-[4.75rem] font-bold tracking-tight leading-[2.25rem] lg:leading-[4.75rem] mb-6">
@@ -37,12 +37,15 @@ export function Cover() {
               Accept bookings, manage your schedule, and monetize your events in minutes. It's super easy to get started
               with Floyd.
             </p>
-            <div className="space-x-4">
-              <a href="https://manager.floyd.so/signup" target="_blank" rel="noreferrer">
+            <div className="space-x-4 flex items-center">
+              <a href="https://tally.so/r/3E8EVq" target="_blank" rel="noreferrer">
                 <Button size="huge">
-                  Setup my page
+                  Join waitlist
                 </Button>
               </a>
+              <span className="text-gray-500 font-medium">
+                Launching soon <PiRocketLaunch className="w-5 h-5 inline-block" />
+              </span>
             </div>
           </div>
           <div className="col-span-5">

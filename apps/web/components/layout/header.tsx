@@ -52,7 +52,7 @@ export function Header({ transparent = false, position = 'static', border=true, 
             <ul
               className={cx(
                 'flex flex-col md:flex-row items-center justify-center space-y-6 font-semibold right-4 absolute',
-                'md:static md:bg-transparent md:shadow-none md:space-x-1.5 md:space-y-0 md:right-0 md:p-0',
+                'md:static md:bg-transparent md:shadow-none md:space-x-0.5 md:space-y-0 md:right-0 md:p-0',
                 'shadow-xl p-8 rounded-full transition-opacity',
                 '[&_a]:block [&_a]:px-[0.975rem] [&_a]:py-[0.575rem] [&_a]:rounded-full [&_a]:transition-all',
                 menuOpen ? 'top-16 md:top-0 opacity-100' : '-top-[1000px] md:top-0 opacity-0 md:opacity-100',
@@ -65,7 +65,7 @@ export function Header({ transparent = false, position = 'static', border=true, 
               }}>
               <li>
                 <Link href="/about">
-                  About Us
+                  About us
                 </Link>
               </li>
               <li>
@@ -78,13 +78,13 @@ export function Header({ transparent = false, position = 'static', border=true, 
               </li>
               <li>
                 <a
-                  href="https://tally.so/r/mRBgXP"
+                  href="https://tally.so/r/3E8EVq"
                   target="_blank"
                   rel="noreferrer"
                   className={cx(
-                    'inline-block ml-1.5 bg-yellow-300 text-gray-950 px-4 py-[0.575rem] rounded-full',
+                    'inline-block ml-2 bg-yellow-300 text-gray-950 px-4 py-[0.575rem] rounded-full',
                   )}>
-                  Sign Up
+                  Join waitlist
                 </a>
               </li>
             </ul>

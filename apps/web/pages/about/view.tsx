@@ -2,14 +2,14 @@ import { Head } from 'components'
 
 export function AboutView() {
   return (
-    <div className="flex-1 flex flex-col px-4">
+    <div className="flex-1 flex flex-col">
       <Head
         title="About"
       />
-      <div className="bg-purple-700 flex-1 flex items-center rounded-xl text-white">
-        <div className="container max-w-xl py-40">
+      <div className="bg-green-600 flex-1 flex items-center text-white">
+        <div className="container max-w-3xl py-40">
           <div className="space-y-4 md:space-y-16">
-            <p className="text-3xl md:text-4xl font-bold md:leading-tight tracking-tight text-center">
+            <p className="text-3xl md:text-5xl font-bold md:leading-tight tracking-tight text-center">
               Revolutionizing Event Bookings: Powerful Solutions for Creators
             </p>
           </div>

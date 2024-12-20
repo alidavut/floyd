@@ -1,20 +1,20 @@
 import { Button } from '@floyd/ui/components';
-import coverImage from './cover-image.svg';
+import coverImage from './cover-image.png';
 import { PiRocketLaunch, PiStarFill } from 'react-icons/pi';
 
 export function Cover() {
   return (
     <div
-      className="relative z-10 py-20 lg:py-40 pt-28 lg:pt-44">
+      className="relative z-10">
       <div
-        className="bg-gradient-to-br absolute inset-0 z-0 from-purple-50 to-pink-50"
+        className="bg-gradient-to-br absolute inset-0 z-0 from-purple-100 to-pink-100"
       />
       <div
-        className="bg-gradient-to-b absolute inset-0 z-0 from-transparent to-white"
+        className="bg-gradient-to-b absolute inset-0 z-0 from-transparent to-gray-100"
       />
       <div className="container relative">
         <div className="grid grid-cols-11 gap-12">
-          <div className="col-span-6">
+          <div className="col-span-6 py-20 lg:py-40 pt-28 lg:pt-44">
             <div className="flex items-center space-x-1 mb-6">
               <PiStarFill className="text-green-600 w-5 h-5" />
               <PiStarFill className="text-green-600 w-5 h-5" />
@@ -29,27 +29,35 @@ export function Cover() {
               Booking platform made
               {' '}
               <span className="inline-block relative">
-                <span className="h-[1.5rem] bg-purple-200 block absolute inset-0 top-auto -rotate-1 rounded-full" />
-                <span className="relative">for frontiers</span>
+                <span className="h-[1.5rem] bg-yellow-200 block absolute inset-0 top-auto -rotate-1 rounded-full" />
+                <span className="relative font-serif italic">for frontiers</span>
               </span>
             </h1>
-            <p className="font-medium text-[1rem] lg:text-[1.5rem] text-gray-800 mb-12 leading-[1.5] max-w-xl">
+            <p className="font-medium text-[1rem] lg:text-[1.5rem] text-gray-900 mb-12 leading-[1.5] max-w-xl">
               Accept bookings, manage your schedule, and monetize your events in minutes. It's super easy to get started
               with Floyd.
             </p>
-            <div className="space-x-4 flex items-center">
+            <div className="space-x-6 flex items-center">
               <a href="https://tally.so/r/3E8EVq" target="_blank" rel="noreferrer">
                 <Button size="huge">
                   Join waitlist
                 </Button>
               </a>
-              <span className="text-gray-500 font-medium">
-                Launching soon <PiRocketLaunch className="w-5 h-5 inline-block" />
+              <span className="text-gray-600 font-medium">
+                We're launching soon <PiRocketLaunch className="w-5 h-5 inline-block" />
               </span>
             </div>
           </div>
-          <div className="col-span-5">
-            <img src={coverImage.src} className="w-full" />
+          <div className="col-span-5 relative">
+            <div className="absolute inset-0 flex items-center">
+              <img src={coverImage.src} className="w-full rotate-6" />
+              {/* <div
+                className="bg-gradient-to-b absolute inset-0 bottom-1/2 z-0 from-gray-100 via-gray-100/70 to-transparent"
+              />
+              <div
+                className="bg-gradient-to-b absolute inset-0 top-1/2 z-0 from-transparent via-gray-100/70 to-gray-100"
+              /> */}
+            </div>
           </div>
         </div>
       </div>

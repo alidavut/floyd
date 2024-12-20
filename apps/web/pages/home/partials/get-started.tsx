@@ -4,7 +4,7 @@ import { PiArrowRight } from 'react-icons/pi';
 export function GetStarted() {
   return (
     <div className="container">
-      <div className="border-t border-dashed border-gray-300/80">
+      <div>
         <div className="py-20 lg:py-32">
           <div className="text-center">
             <h2 className="text-3xl max-w-xl mx-auto mb-3 leading-10">
@@ -19,12 +19,7 @@ export function GetStarted() {
             <div className="mt-9">
               <a href="https://tally.so/r/3E8EVq" target="_blank" rel="noreferrer">
                 <Button size="large">
-                  <span className="flex items-center space-x-2">
-                    <span>
-                      Request Demo
-                    </span>
-                    <PiArrowRight className="w-[1.175rem] h-[1.175rem]" />
-                  </span>
+                  Join waitlist
                 </Button>
               </a>
             </div>

@@ -12,7 +12,8 @@ module.exports = {
     extend: {
       colors,
       fontFamily: {
-        sans: ['Albert Sans', 'sans-serif']
+        sans: ['Inter', 'sans-serif'],
+        serif: ['Lora', 'serif']
       },
       keyframes: {
         'fade-in': {

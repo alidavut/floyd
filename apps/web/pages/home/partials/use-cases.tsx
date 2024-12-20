@@ -2,18 +2,11 @@ import { PiAirplaneTakeoff, PiBed, PiCalendarStar, PiHeartHalf, PiPersonSimpleHi
 
 export function UseCases() {
   return (
-    <div className="pb-32">
-      <div>
-        <div className="container">
-          <div
-            className="lg:border-l border-dashed border-gray-400/80 h-20 lg:h-32"
-          />
-        </div>
-      </div>
+    <div>
       <div className="container">
-        <div className="grid lg:grid-cols-3 gap-12 lg:gap-24">
-          <div>
-            <div className="lg:px-8">
+        <div className="bg-green-100 rounded-2xl p-12">
+          <div className="grid lg:grid-cols-3 gap-12 lg:gap-24">
+            <div>
               <h3 className="text-3xl lg:text-3xl font-bold mb-4">
                 Tailored for every booking scenario
               </h3>
@@ -22,38 +15,38 @@ export function UseCases() {
                 and events to rentals and appointments, enabling seamless booking experiences.
               </p>
             </div>
-          </div>
-          <div className="lg:col-span-2 grid lg:grid-cols-2 gap-12">
-            <Item
-              icon={PiBed}
-              title="Hotels & Vacation Rentals"
-              description="Simplify room management, offer flexible pricing, and keep availability up-to-date."
-            />
-            <Item
-              icon={PiTicket}
-              title="Event Management"
-              description="Streamline ticket sales, attendee check-ins, and custom event schedules."
-            />
-            <Item
-              icon={PiAirplaneTakeoff}
-              title="Transportation & Travel"
-              description="Manage seat reservations, routes, and dynamic pricing."
-            />
-            <Item
-              icon={PiHeartHalf}
-              title="Healthcare & Wellness"
-              description="Coordinate practitioner schedules, appointment types, and waitlists."
-            />
-            <Item
-              icon={PiCalendarStar}
-              title="Equipment & Venue Rentals"
-              description="Enable flexible time slots and options for deposits and add-ons."
-            />
-            <Item
-              icon={PiPersonSimpleHike}
-              title="Experiences & Tours"
-              description="Support bookings for tours, workshops, and activities with real-time availability."
-            />
+            <div className="lg:col-span-2 grid lg:grid-cols-2 gap-12">
+              <Item
+                icon={PiBed}
+                title="Hotels & Vacation Rentals"
+                description="Simplify room management, offer flexible pricing, and keep availability up-to-date."
+              />
+              <Item
+                icon={PiTicket}
+                title="Event Management"
+                description="Streamline ticket sales, attendee check-ins, and custom event schedules."
+              />
+              <Item
+                icon={PiAirplaneTakeoff}
+                title="Transportation & Travel"
+                description="Manage seat reservations, routes, and dynamic pricing."
+              />
+              <Item
+                icon={PiHeartHalf}
+                title="Healthcare & Wellness"
+                description="Coordinate practitioner schedules, appointment types, and waitlists."
+              />
+              <Item
+                icon={PiCalendarStar}
+                title="Equipment & Venue Rentals"
+                description="Enable flexible time slots and options for deposits and add-ons."
+              />
+              <Item
+                icon={PiPersonSimpleHike}
+                title="Experiences & Tours"
+                description="Support bookings for tours, workshops, and activities with real-time availability."
+              />
+            </div>
           </div>
         </div>
       </div>

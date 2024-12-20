@@ -53,10 +53,10 @@ export function Header({ transparent = false, position = 'static', border=true, 
               className={cx(
                 'flex flex-col md:flex-row items-center justify-center space-y-6 font-semibold right-4 absolute',
                 'md:static md:bg-transparent md:shadow-none md:space-x-0.5 md:space-y-0 md:right-0 md:p-0',
-                'shadow-xl p-8 rounded-full transition-opacity',
-                '[&_a]:block [&_a]:px-[0.975rem] [&_a]:py-[0.575rem] [&_a]:rounded-full [&_a]:transition-all',
+                'shadow-xl p-8 rounded-sm transition-opacity',
+                '[&_a]:block [&_a]:px-[1rem] [&_a]:py-[0.625rem] [&_a]:rounded-sm [&_a]:transition-all',
                 menuOpen ? 'top-16 md:top-0 opacity-100' : '-top-[1000px] md:top-0 opacity-0 md:opacity-100',
-                dark ? '[&_a:hover]:bg-white/5' : '[&_a:hover]:bg-black/5',
+                dark ? '[&_a:hover]:bg-white/5' : '[&_a:hover]:bg-gray-950/10',
                 dark ? 'text-white bg-gray-900 shadow-white/5 border-gray-700' : 'text-gray-900 bg-white border-gray-300',
               )}
               onClick={async () => {
@@ -82,7 +82,7 @@ export function Header({ transparent = false, position = 'static', border=true, 
                   target="_blank"
                   rel="noreferrer"
                   className={cx(
-                    'inline-block ml-2 bg-yellow-300 text-gray-950 px-4 py-[0.575rem] rounded-full',
+                    'inline-block ml-2 bg-black hover:!bg-gray-900 px-4 py-[0.575rem] rounded-full text-white',
                   )}>
                   Join waitlist
                 </a>

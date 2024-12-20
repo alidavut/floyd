@@ -6,10 +6,10 @@ export function AboutView() {
       <Head
         title="About"
       />
-      <div className="bg-green-600 flex-1 flex items-center text-white">
+      <div className="bg-gray-700 flex-1 flex items-center text-white">
         <div className="container max-w-3xl py-40">
           <div className="space-y-4 md:space-y-16">
-            <p className="text-3xl md:text-5xl font-bold md:leading-tight tracking-tight text-center">
+            <p className="text-3xl md:text-5xl font-semibold md:leading-tight text-center">
               Revolutionizing Event Bookings: Powerful Solutions for Creators
             </p>
           </div>
@@ -28,7 +28,7 @@ export function AboutView() {
         <p>
           Feel free to reach out to us at{' '}
           <a href="mailto:support@floyd.so" className="underline">
-            support@floyd.so
+            hey@floyd.so
           </a>
         </p>
       </div>

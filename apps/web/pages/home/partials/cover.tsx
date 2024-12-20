@@ -7,14 +7,14 @@ export function Cover() {
     <div
       className="relative z-10">
       <div
-        className="bg-gradient-to-br absolute inset-0 z-0 from-purple-100 to-pink-100"
+        className="bg-gradient-to-br absolute inset-0 z-0 from-gray-100 to-purple-100"
       />
       <div
         className="bg-gradient-to-b absolute inset-0 z-0 from-transparent to-gray-100"
       />
       <div className="container relative">
         <div className="grid grid-cols-11 gap-12">
-          <div className="col-span-6 py-20 lg:py-40 pt-28 lg:pt-44">
+          <div className="col-span-6 py-20 lg:py-52">
             <div className="flex items-center space-x-1 mb-6">
               <PiStarFill className="text-green-600 w-5 h-5" />
               <PiStarFill className="text-green-600 w-5 h-5" />

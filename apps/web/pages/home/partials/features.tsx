@@ -3,46 +3,52 @@ import cx from 'classnames';
 
 export function Features() {
   return (
-    <div className="container">
-      <div className="grid grid-cols-2 gap-6 w-3/5">
+    <div className="container mb-32">
+      <div className="grid grid-cols-2 w-3/5 gap-24">
         <Card
           title="Create your page"
           description="Claim your username and start listing your events."
-          icon={PiHighlighterCircle}
-          color="bg-green-600"
+          number={1}
+          color="bg-green-300"
+        />
+        <Card
+          title="Add your listings"
+          description="Create your events in minutes with our easy-to-use tools."
+          number={2}
+          color="bg-yellow-300"
+        />
+        <Card
+          title="Share your profile"
+          description="Promote your page and start getting bookings."
+          number={3}
+          color="bg-purple-300"
         />
         <Card
           title="Accept bookings"
-          description="Allow your attendees to book your services and events."
-          icon={PiCalendarCheck}
-          color="bg-yellow-600"
-        />
-        <Card
-          title="Monetize your events"
-          description="Set up pricing and accept payments from your attendees."
-          icon={PiCreditCard}
-          color="bg-purple-600"
+          description="Get paid instantly and manage your schedule with ease."
+          number={4}
+          color="bg-red-300"
         />
       </div>
     </div>
   )
 }
 
-function Card({ title, description, icon, color }) {
-  const Icon = icon ?? (() => <span />);
-
+function Card({ title, description, number, color }) {
   const className = cx(
-    'p-9 rounded-sm relative border-s4 border-dashesd border-gray-900 bg-black'
+    'pt-9 rounded-sm relative',
   );
 
   return (
     <div className={className}>
-      <div className={cx("w-12 h-12 rounded-full flex items-center justify-center absolute z-10 -top-7 left-6", color)}>
-        <Icon className="w-8 h-8 text-white" />
+      <div className={cx("w-10 h-7 absolute z-10 -top-2 left-3 rounded-sm -rotate-3", color)}>
+      </div>
+      <div className={cx("w-10 h-10 rounded-sm flex items-center justify-center absolute z-10 -top-7 left-0 bg-black/90")}>
+        <span className="text-white font-bold text-xl">{number}</span>
       </div>
       <div>
-        <h4 className="text-2xl font-bold mb-1.5 text-white">{title}</h4>
-        <p className="text-lg text-gray-200">{description}</p>
+        <h4 className="text-2xl font-bold mb-1.5 text-black">{title}</h4>
+        <p className="text-xl text-gray-800">{description}</p>
       </div>
     </div>
   )

@@ -10,7 +10,7 @@ export function Footer() {
           links={[
             { label: "Home", href: "/", external: false },
             { label: "About", href: "/about", external: false },
-            { label: "Contact", href: "mailto:support@floyd.so", external: true }
+            { label: "Contact", href: "mailto:hey@floyd.so", external: true }
           ]}
         />
         <Links

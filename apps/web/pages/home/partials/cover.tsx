@@ -22,7 +22,7 @@ export function Cover() {
               <PiStarFill className="text-green-600 w-5 h-5" />
               <PiStarFill className="text-green-600 w-5 h-5" />
               <span className="text-gray-500 text-[0.875rem] pl-2 font-medium">
-                Will be loved by millions
+                A tool trusted by forward thinkers.
               </span>
             </div>
             <h1 className="text-[2.5rem] lg:text-[4.75rem] font-bold tracking-tight leading-[2.5rem] lg:leading-[4.75rem] mb-6">

@@ -30,7 +30,7 @@ export function Footer() {
         />
         <div className="text-center md:text-right col-span-2">
           <a href="/" className="text-lg font-semibold inline-block mb-2">
-            <img src={badge.src} className="h-[2.5rem] rounded" />
+            <img src={badge.src} className="h-[2.5rem] rounded-sm" />
           </a>
           <p className="text-gray-500">
             Copyright {new Date().getFullYear()} Floyd.

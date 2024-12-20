@@ -40,7 +40,7 @@ export function Header({ transparent = false, position = 'static', border=true, 
           <a href="/" className={cx('text-xl font-bold')}>
             <img
               src={dark ? logoLight.src : logoDark.src}
-              className="h-4 w-auto"
+              className="h-7 w-auto"
             />
           </a>
           <div ref={ref}>

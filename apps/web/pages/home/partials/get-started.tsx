@@ -18,7 +18,7 @@ export function GetStarted() {
             <div className="mt-9">
               <a href="https://tally.so/r/3E8EVq" target="_blank" rel="noreferrer">
                 <Button size="large">
-                  Join waitlist
+                  Get early access
                 </Button>
               </a>
             </div>

@@ -84,7 +84,7 @@ export function Header({ transparent = false, position = 'static', border=true, 
                   className={cx(
                     'inline-block ml-2 bg-black hover:!bg-gray-900 px-4 py-[0.575rem] rounded-full text-white',
                   )}>
-                  Join waitlist
+                  Get early access
                 </a>
               </li>
             </ul>

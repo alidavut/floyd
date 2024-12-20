@@ -26,25 +26,25 @@ export function Cover() {
               </span>
             </div>
             <h1 className="text-[2rem] lg:text-[4.75rem] font-bold tracking-tight leading-[2.25rem] lg:leading-[4.75rem] mb-6">
-              Booking platform made
+              Booking mastery, made
               {' '}
               <span className="inline-block relative">
                 <span className="h-[1.5rem] bg-yellow-200 block absolute inset-0 top-auto -rotate-1 rounded-full" />
-                <span className="relative font-serif italic">for frontiers</span>
+                <span className="relative font-serif italic font-semibold">for frontiers</span>
               </span>
             </h1>
             <p className="font-medium text-[1rem] lg:text-[1.5rem] text-gray-900 mb-12 leading-[1.5] max-w-xl">
-              Accept bookings, manage your schedule, and monetize your events in minutes. It's super easy to get started
-              with Floyd.
+              Accept bookings, manage schedules, and monetize events in minutes. Floyd turns bold ideas into beautiful,
+              unforgettable experiences.
             </p>
             <div className="space-x-6 flex items-center">
               <a href="https://tally.so/r/3E8EVq" target="_blank" rel="noreferrer">
                 <Button size="huge">
-                  Join waitlist
+                  Get early access
                 </Button>
               </a>
               <span className="text-gray-600 font-medium">
-                We're launching soon <PiRocketLaunch className="w-5 h-5 inline-block" />
+                Claim your spot soon <PiRocketLaunch className="w-5 h-5 inline-block" />
               </span>
             </div>
           </div>

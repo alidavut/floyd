@@ -3,8 +3,8 @@ import cx from 'classnames';
 
 export function Features() {
   return (
-    <div className="container mb-32">
-      <div className="grid grid-cols-2 w-3/5 gap-24">
+    <div className="container mb-20 lg:mb-32">
+      <div className="grid md:grid-cols-2 lg:w-2/3 gap-6 lg:gap-[4.5rem]">
         <Card
           title="Create your page"
           description="Claim your username and start listing your events."
@@ -36,7 +36,7 @@ export function Features() {
 
 function Card({ title, description, number, color }) {
   const className = cx(
-    'pt-9 rounded-sm relative',
+    'mt-7 pt-9 rounded-sm relative',
   );
 
   return (

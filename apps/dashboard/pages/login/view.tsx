@@ -3,7 +3,7 @@ import { Alert, Button, Form, Input } from '@floyd/ui/components';
 import { ServiceError } from 'services/errors';
 import { getInputErrors } from 'lib/errors';
 import { Head } from 'components';
-import logoDark from '@floyd/ui/assets/images/badge.svg';
+import logoDark from '@floyd/ui/assets/images/badge-pure.svg';
 
 interface Props {
   onSubmit: (params: { email: string, password: string }) => void;
@@ -23,12 +23,12 @@ export function View({ error, onSubmit }: Props): ReactElement {
         <div className="text-center">
           <img
             src={logoDark.src}
-            className="h-12 rounded-sm mx-auto mb-1.5"
+            className="h-14 rounded-sm mx-auto mb-1.5"
           />
-          <h3 className="font-bold text-[1.675rem]">
+          <h3 className="font-semibold text-[1.825rem] font-serif">
             Welcome Back
           </h3>
-          <p className="text-gray-500 text-[0.925rem]">
+          <p className="text-shark-600 text-[0.95rem]">
             Good to see you again 👋
           </p>
         </div>

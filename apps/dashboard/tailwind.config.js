@@ -1,3 +1,5 @@
+const { colors } = require('@floyd/utils/colors');
+
 module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
@@ -7,8 +9,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors,
       fontFamily: {
-        sans: ['Inter', 'sans-serif']
+        sans: ['Inter', 'sans-serif'],
+        serif: ['Lora', 'serif']
       },
       keyframes: {
         'fade-in': {

@@ -29,7 +29,7 @@ export function Input<T extends HTMLInputElement['type']>({ label, onValueChange
         )}
         <input
           className="bg-white transition-all outline-none border rounded-sm p-2 w-full border-gray-300/80
-            focus:border-gray-900 focus:ring-1 focus:ring-gray-600"
+            focus:border-gray-900 focus:ring-1 focus:ring-gray-900"
           onChange={handleChange}
           type={type}
           {...rest}

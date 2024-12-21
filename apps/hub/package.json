@@ -1,5 +1,5 @@
 {
-  "name": "dashboard",
+  "name": "hub",
   "scripts": {
     "start": "next start",
     "dev": "next dev",

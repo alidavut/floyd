@@ -1,1 +1,0 @@
-web: cd apps/dashboard && npm start

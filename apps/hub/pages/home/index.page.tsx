@@ -14,7 +14,7 @@ function Home(): ReactElement {
   return (
     <div className="flex-1 flex items-center justify-center">
       <Head
-        title="Dashboard"
+        title="Hub"
       />
       <div className="container">
         <div className="max-w-md mx-auto">

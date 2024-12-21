@@ -1,6 +1,7 @@
 import { z } from 'zod';
 
 export const createSchema = z.object({
+  handle: z.string().min(1),
   email: z.string().email().toLowerCase(),
   password: z.string().min(6),
   firstName: z.string().min(1),

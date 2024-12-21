@@ -11,6 +11,7 @@ interface Props {
 
 export function View({ error, onSubmit }: Props): ReactElement {
   const [params, setParams] = useState({
+    handle: '',
     email: '',
     password: '',
     firstName: '',
@@ -23,6 +24,15 @@ export function View({ error, onSubmit }: Props): ReactElement {
     <div className="container py-16">
       <div className="max-w-md mx-auto border rounded-sm p-3">
         <Form onSubmit={() => onSubmit(params)} className="space-y-5">
+          <div>
+            <Input
+              label="Username"
+              prefix="https://floyd.so/"
+              onValueChange={(value) => setParams({ ...params, handle: value })}
+              value={params.handle}
+              errors={inputErrors?.handle}
+            />
+          </div>
           <div>
             <Input
               label="Email"

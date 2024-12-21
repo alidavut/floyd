@@ -23,7 +23,7 @@ export function View({ error, onSubmit }: Props): ReactElement {
         <div className="text-center">
           <img
             src={logoDark.src}
-            className="h-12 rounded-md mx-auto mb-1.5"
+            className="h-12 rounded-sm mx-auto mb-1.5"
           />
           <h3 className="font-bold text-[1.675rem]">
             Welcome Back
@@ -35,7 +35,7 @@ export function View({ error, onSubmit }: Props): ReactElement {
         {error && !inputErrors && (
           <Alert color="error" description={error.message} />
         )}
-        <div className="bg-white p-6 rounded-md">
+        <div className="bg-white p-6 rounded-sm">
           <Form onSubmit={() => onSubmit(params)} className="space-y-6">
             <div>
                 <Input

@@ -7,10 +7,11 @@ import { AuthSerializer } from 'services/auth/serializer';
 
 export default createHTTPService({
   id: 'user.create',
-  inputSchema: user.createSchema.superRefine(unique(User, ['email'])),
+  inputSchema: user.createSchema.superRefine(unique(User, ['email'])).superRefine(unique(User, ['handle'])),
 
   async perform({ input, auth }) {
     const user = User.create({
+      handle: input.handle,
       email: input.email,
       password: await hashPassword(input.password),
       firstName: input.firstName,

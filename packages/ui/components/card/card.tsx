@@ -6,7 +6,7 @@ interface Props {
 
 export function Card({ children }: Props): ReactElement {
   return (
-    <div className="bg-white rounded border border-gray-100">
+    <div className="bg-white rounded-sm border border-gray-100">
       {children}
     </div>
   )
@@ -14,7 +14,7 @@ export function Card({ children }: Props): ReactElement {
 
 function Body({ children }: Props): ReactElement {
   return (
-    <div className="p-4">
+    <div className="p-6">
       {children}
     </div>
   )

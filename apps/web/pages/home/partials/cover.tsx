@@ -33,7 +33,7 @@ export function Cover() {
                 <span className="relative font-serif italic font-semibold">for frontiers</span>
               </span>
             </h1>
-            <p className="font-medium text-[1rem] lg:text-[1.5rem] text-gray-900 mb-12 leading-[1.5] max-w-xl">
+            <p className="font-medium text-[1rem] lg:text-[1.5rem] text-bunker-900 mb-12 leading-[1.5] max-w-xl">
               Accept bookings, manage schedules, and monetize events in minutes. Floyd turns bold ideas into beautiful,
               unforgettable experiences.
             </p>
@@ -43,7 +43,7 @@ export function Cover() {
                   Get early access
                 </Button>
               </a>
-              <span className="flex items-center text-gray-600 font-medium">
+              <span className="flex items-center text-bunker-500 font-medium">
                 <span className="block text-center w-full lg:text-left">
                   Claim your username soon <PiRocketLaunch className="w-5 h-5 inline-block" />
                 </span>

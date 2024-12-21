@@ -28,7 +28,7 @@ export function View({ error, onSubmit }: Props): ReactElement {
           <h3 className="font-semibold text-[1.825rem] font-serif">
             Welcome Back
           </h3>
-          <p className="text-shark-600 text-[0.95rem]">
+          <p className="text-bunker-600 text-[0.95rem]">
             Good to see you again 👋
           </p>
         </div>

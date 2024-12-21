@@ -43,7 +43,7 @@ function Card({ title, description, number, color }) {
     <div className={className}>
       <div className={cx("w-10 h-7 absolute z-10 -top-2 left-3 rounded-sm -rotate-3", color)}>
       </div>
-      <div className={cx("w-10 h-10 rounded-sm flex items-center justify-center absolute z-10 -top-7 left-0 bg-black/90")}>
+      <div className={cx("w-10 h-10 rounded-sm flex items-center justify-center absolute z-10 -top-7 left-0 bg-bunker-950/90")}>
         <span className="text-white font-bold text-xl">{number}</span>
       </div>
       <div>

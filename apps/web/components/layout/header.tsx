@@ -82,7 +82,7 @@ export function Header({ transparent = false, position = 'static', border=true, 
                   target="_blank"
                   rel="noreferrer"
                   className={cx(
-                    'inline-block ml-2 bg-black hover:!bg-gray-900 px-4 py-[0.575rem] rounded-full text-white',
+                    'inline-block ml-2 bg-bunker-950 hover:!bg-bunker-900 px-4 py-[0.575rem] rounded-full text-white',
                   )}>
                   Get early access
                 </a>

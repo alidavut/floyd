@@ -22,7 +22,7 @@ export function Cover() {
               <PiStarFill className="text-green-600 w-5 h-5" />
               <PiStarFill className="text-green-600 w-5 h-5" />
               <span className="text-gray-500 text-[0.875rem] pl-2 font-medium">
-                A tool trusted by forward thinkers.
+                Trusted by forward thinkers.
               </span>
             </div>
             <h1 className="text-[2.5rem] lg:text-[4.75rem] font-bold tracking-tight leading-[2.5rem] lg:leading-[4.75rem] mb-6">
@@ -45,7 +45,7 @@ export function Cover() {
               </a>
               <span className="flex items-center text-gray-600 font-medium">
                 <span className="block text-center w-full lg:text-left">
-                  Claim your spot soon <PiRocketLaunch className="w-5 h-5 inline-block" />
+                  Claim your username soon <PiRocketLaunch className="w-5 h-5 inline-block" />
                 </span>
               </span>
             </div>

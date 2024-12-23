@@ -1,5 +1,7 @@
-import { Text } from '@react-email/components';
+import { Heading, Link } from '@react-email/components';
 import { Layout } from '../layout';
+import { createPreview } from './preview';
+import { Button, Text } from 'emails/components';
 
 export interface Props {
   firstName: string;
@@ -8,9 +10,30 @@ export interface Props {
 export function WelcomeEmail({ firstName }: Props) {
   return (
     <Layout>
-      <Text className="font-bold text-gray-900">
-        Welcome to the platform, {firstName}!
+      <Heading className="text-xl font-bold text-bunker-950">
+        You’re In! Welcome to Floyd 🎉
+      </Heading>
+      <Text>
+        Hi, {firstName}!
       </Text>
+      <Text>
+        Thank you for joining Floyd! We’re excited to have you on board.
+      </Text>
+      <Text>
+        Our team is preparing your early access, and we’ll notify you as soon as you can start creating unforgettable
+        experiences.
+      </Text>
+      <Text>
+        Stay tuned!
+      </Text>
+      <Text>
+        — Floyd Team
+      </Text>
+      <Button href="https://hub.floyd.so" className="mt-6">
+        Manage your page
+      </Button>
     </Layout>
   )
 }
+
+export default createPreview(WelcomeEmail, { firstName: 'John' });

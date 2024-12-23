@@ -17,7 +17,7 @@ export function View({ error, onSubmit, loading }: Props) {
   const inputErrors = getInputErrors(error);
 
   return (
-    <div className="container py-36">
+    <div className="container py-15">
       <Head
         title="Login"
       />

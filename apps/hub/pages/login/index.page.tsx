@@ -4,7 +4,7 @@ import { useService } from 'services/service';
 import { services } from 'services';
 import { useRouter } from 'next/router';
 import { withLayout } from '@floyd/ui/layout';
-import { Layout } from 'components';
+import { SignInLayout } from 'components';
 
 function Login(): ReactElement {
   const router = useRouter();
@@ -26,4 +26,4 @@ function Login(): ReactElement {
   )
 }
 
-export default withLayout(Layout)(Login);
+export default withLayout(SignInLayout)(Login);

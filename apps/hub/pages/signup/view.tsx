@@ -3,6 +3,7 @@ import { Button, Form, Input } from '@floyd/ui/components';
 import { SignupParams } from './utils';
 import { ServiceError } from 'services/errors';
 import { getInputErrors } from 'lib/errors';
+import logoDark from '@floyd/ui/assets/images/badge-pure.svg';
 
 interface Props {
   onSubmit: (params: SignupParams) => void;
@@ -22,7 +23,19 @@ export function View({ error, onSubmit }: Props): ReactElement {
 
   return (
     <div className="container py-16">
-      <div className="max-w-md mx-auto border rounded-sm p-3">
+      <div className="max-w-sm mx-auto space-y-9">
+        <div className="text-center">
+          <img
+            src={logoDark.src}
+            className="h-14 rounded-sm mx-auto mb-1.5"
+          />
+          <h3 className="font-semibold text-[1.825rem] font-serif">
+            Create your account
+          </h3>
+          <p className="text-bunker-600 text-[0.95rem]">
+            Already have an account? <a href="/login" className="link">Login</a>
+          </p>
+        </div>
         <Form onSubmit={() => onSubmit(params)} className="space-y-5">
           <div>
             <Input
@@ -66,8 +79,12 @@ export function View({ error, onSubmit }: Props): ReactElement {
               errors={inputErrors?.lastName}
             />
           </div>
-          <Button type="submit">Sign Up</Button>
+          <Button type="submit" fullWidth>Sign up</Button>
         </Form>
+        <p className="text-center text-bunker-600 text-sm border-t border-dashed pt-6 mt-6">
+          By signing up, you acknowledge that you have read and agreed to our{' '}
+          <a href="/terms" className="link">Terms of Service</a> and <a href="/privacy" className="link">Privacy Policy</a>.
+        </p>
       </div>
     </div>
   )

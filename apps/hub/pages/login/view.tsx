@@ -35,28 +35,26 @@ export function View({ error, onSubmit }: Props): ReactElement {
         {error && !inputErrors && (
           <Alert color="error" description={error.message} />
         )}
-        <div className="bg-white p-6 rounded-sm">
-          <Form onSubmit={() => onSubmit(params)} className="space-y-6">
-            <div>
-                <Input
-                  label="Email"
-                  onValueChange={(value) => setParams({ ...params, email: value })}
-                  value={params.email}
-                  errors={inputErrors?.email}
-                />
-            </div>
-            <div>
+        <Form onSubmit={() => onSubmit(params)} className="space-y-6">
+          <div>
               <Input
-                label="Password"
-                type="password"
-                onValueChange={(value) => setParams({ ...params, password: value })}
-                value={params.password}
-                errors={inputErrors?.password}
+                label="Email"
+                onValueChange={(value) => setParams({ ...params, email: value })}
+                value={params.email}
+                errors={inputErrors?.email}
               />
-            </div>
-            <Button type="submit" fullWidth>Login</Button>
-          </Form>
-        </div>
+          </div>
+          <div>
+            <Input
+              label="Password"
+              type="password"
+              onValueChange={(value) => setParams({ ...params, password: value })}
+              value={params.password}
+              errors={inputErrors?.password}
+            />
+          </div>
+          <Button type="submit" fullWidth>Login</Button>
+        </Form>
       </div>
     </div>
   )

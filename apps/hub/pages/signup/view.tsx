@@ -5,6 +5,7 @@ import { ServiceError } from 'services/errors';
 import { getInputErrors } from 'lib/errors';
 import logoDark from '@floyd/ui/assets/images/badge-pure.svg';
 import Link from 'next/link';
+import { Head } from 'components';
 
 interface Props {
   step: 'info' | 'verification';
@@ -32,6 +33,10 @@ export function View({ step, onSubmit, error, loading }: Props) {
 
   return (
     <div className="container py-15">
+      <Head
+        title="Sign up"
+        description="Join Floyd in just a few simple steps."
+      />
       <div className="max-w-sm mx-auto space-y-9">
         <div className="text-center">
           <img

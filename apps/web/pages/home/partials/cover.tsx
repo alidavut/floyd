@@ -45,7 +45,7 @@ export function Cover() {
               </a>
               <span className="flex items-center text-bunker-500 font-medium">
                 <span className="block text-center w-full lg:text-left">
-                  Claim your username soon <PiRocketLaunch className="w-5 h-5 inline-block" />
+                  Claim your username now <PiRocketLaunch className="w-5 h-5 inline-block" />
                 </span>
               </span>
             </div>

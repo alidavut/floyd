@@ -1,7 +1,6 @@
-import { Heading, Link } from '@react-email/components';
 import { Layout } from '../layout';
 import { createPreview } from './preview';
-import { Button, Text } from 'emails/components';
+import { Button, Heading, Text } from 'emails/components';
 
 export interface Props {
   firstName: string;
@@ -10,7 +9,7 @@ export interface Props {
 export function WelcomeEmail({ firstName }: Props) {
   return (
     <Layout>
-      <Heading className="text-xl font-bold text-bunker-950">
+      <Heading>
         You’re In! Welcome to Floyd 🎉
       </Heading>
       <Text>

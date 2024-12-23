@@ -14,7 +14,7 @@
     "service": "TS_NODE_BASEURL=./dist node -r ./dist/initialize -r ts-node/register/transpile-only ./dist/services/run",
     "service:dev": "ts-node -r ./src/initialize -r dotenv/config ./src/services/run",
     "heroku-postbuild": "npm run build",
-    "dev:email": "email dev --dir ./src/emails"
+    "dev:email": "email dev --dir ./src/emails/templates"
   },
   "dependencies": {
     "@react-email/components": "^0.0.31",

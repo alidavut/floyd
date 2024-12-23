@@ -1,4 +1,4 @@
-import { ReactElement, useState } from 'react';
+import { useState } from 'react';
 import { Alert, Button, Form, Input } from '@floyd/ui/components';
 import { ServiceError } from 'services/errors';
 import { getInputErrors } from 'lib/errors';
@@ -8,9 +8,10 @@ import logoDark from '@floyd/ui/assets/images/badge-pure.svg';
 interface Props {
   onSubmit: (params: { email: string, password: string }) => void;
   error?: ServiceError;
+  loading: boolean;
 }
 
-export function View({ error, onSubmit }: Props): ReactElement {
+export function View({ error, onSubmit, loading }: Props) {
   const [params, setParams] = useState({ email: '', password: '' });
   const inputErrors = getInputErrors(error);
 
@@ -53,7 +54,7 @@ export function View({ error, onSubmit }: Props): ReactElement {
               errors={inputErrors?.password}
             />
           </div>
-          <Button type="submit" fullWidth>Login</Button>
+          <Button type="submit" loading={loading} fullWidth>Login</Button>
         </Form>
       </div>
     </div>

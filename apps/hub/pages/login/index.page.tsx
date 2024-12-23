@@ -8,7 +8,7 @@ import { SignInLayout } from 'components';
 
 function Login(): ReactElement {
   const router = useRouter();
-  const { perform: login, error } = useService(services.auth.login);
+  const { perform: login, error, loading } = useService(services.auth.login);
 
   async function handleSubmit(params: { email: string, password: string }) {
     try {
@@ -22,6 +22,7 @@ function Login(): ReactElement {
     <View
       onSubmit={handleSubmit}
       error={error}
+      loading={loading}
     />
   )
 }

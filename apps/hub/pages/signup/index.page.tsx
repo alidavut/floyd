@@ -9,7 +9,7 @@ import { SignInLayout } from 'components';
 
 function Signup(): ReactElement {
   const router = useRouter();
-  const { perform: createUser, error } = useService(services.user.create);
+  const { perform: createUser, error, loading } = useService(services.user.create);
 
   async function handleSubmit(params: SignupParams) {
     try {
@@ -23,6 +23,7 @@ function Signup(): ReactElement {
     <View
       onSubmit={handleSubmit}
       error={error}
+      loading={loading}
     />
   )
 }

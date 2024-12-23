@@ -1,4 +1,4 @@
-import { ReactElement, useState } from 'react';
+import { useState } from 'react';
 import { Button, Form, Input } from '@floyd/ui/components';
 import { SignupParams } from './utils';
 import { ServiceError } from 'services/errors';
@@ -8,9 +8,10 @@ import logoDark from '@floyd/ui/assets/images/badge-pure.svg';
 interface Props {
   onSubmit: (params: SignupParams) => void;
   error?: ServiceError;
+  loading: boolean;
 }
 
-export function View({ error, onSubmit }: Props): ReactElement {
+export function View({ onSubmit, error, loading }: Props) {
   const [params, setParams] = useState({
     handle: '',
     email: '',
@@ -89,7 +90,7 @@ export function View({ error, onSubmit }: Props): ReactElement {
               errors={inputErrors?.lastName}
             />
           </div>
-          <Button type="submit" fullWidth>Sign up</Button>
+          <Button type="submit" loading={loading} fullWidth>Sign up</Button>
         </Form>
         <p className="text-center text-bunker-600 text-sm border-t border-dashed pt-7">
           By signing up, you acknowledge that you have read and agreed to our{' '}

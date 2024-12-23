@@ -1,4 +1,4 @@
-import { ReactElement } from 'react';
+import { ReactElement, useState } from 'react';
 import { View } from './view';
 import { SignupParams } from './utils';
 import { services } from 'services';
@@ -10,18 +10,22 @@ import bg from './bg.jpg';
 
 function Signup(): ReactElement {
   const router = useRouter();
+  const [step, setStep] = useState<'info' | 'verification'>('info');
+
   const { perform: createUser, error, loading } = useService(services.user.create);
 
   async function handleSubmit(params: SignupParams) {
     try {
-      await createUser(params);
-      router.push('/');
+      // await createUser(params);
+      // router.push('/');
+      setStep('verification');
     } catch (error) {
     }
   }
 
   return (
     <View
+      step={step}
       onSubmit={handleSubmit}
       error={error}
       loading={loading}

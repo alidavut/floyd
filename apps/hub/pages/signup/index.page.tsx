@@ -7,6 +7,7 @@ import { useRouter } from 'next/router';
 import { withLayout } from '@floyd/ui/layout';
 import { SignInLayout } from 'components';
 import bg from './bg.jpg';
+import { triggerEvent } from 'lib/analytics';
 
 function Signup(): ReactElement {
   const router = useRouter();
@@ -31,6 +32,7 @@ function Signup(): ReactElement {
         setStep('verification');
       } else {
         await createUser({ ...params, otpKey });
+        triggerEvent('signed_up');
         router.push('/');
       }
     } catch (error) {

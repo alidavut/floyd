@@ -1,4 +1,5 @@
 import { BaseEntity } from 'entities/base';
+import { startCase } from 'lodash';
 import { Not, Raw } from 'typeorm';
 import { z } from 'zod';
 
@@ -23,7 +24,7 @@ export function unique(entityClass: typeof BaseEntity, fields: string[]) {
         ctx.addIssue({
           code: 'custom',
           path: [field],
-          message: `already exists`
+          message: `${startCase(field)} already exists`
         });
       }
     }

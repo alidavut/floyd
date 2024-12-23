@@ -22,7 +22,7 @@ export function Input<T extends HTMLInputElement['type']>({ label, onValueChange
   return (
     <label className={cx('block', fullWidth && 'w-full')}>
       {label && (
-        <span className="block font-medium text-[0.925rem] mb-0.5">{label}</span>
+        <span className="block font-medium text-[0.925rem] mb-1">{label}</span>
       )}
       <span className="flex transition-all rounded-sm bg-white border overflow-hidden
         focus-within:ring-1 focus-within:ring-gray-900 focus-within:border-gray-900">
@@ -40,7 +40,11 @@ export function Input<T extends HTMLInputElement['type']>({ label, onValueChange
       </span>
       {errors?.length > 0 && (
         <div className="text-sm text-red-600 pt-1.5 px-1.5">
-          {errors.join(', ')}
+          <ul>
+            {errors.map((error) => (
+              <li key={error}>{error}</li>
+            ))}
+          </ul>
         </div>
       )}
     </label>

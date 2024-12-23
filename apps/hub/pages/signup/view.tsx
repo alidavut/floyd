@@ -21,6 +21,11 @@ export function View({ error, onSubmit }: Props): ReactElement {
 
   const inputErrors = getInputErrors(error);
 
+  function handleHandleChange(value: string) {
+    const handle = value.toLowerCase().replace(/[^a-z0-9-]/g, '');
+    setParams({ ...params, handle });
+  }
+
   return (
     <div className="container py-15">
       <div className="max-w-sm mx-auto space-y-9">
@@ -46,7 +51,7 @@ export function View({ error, onSubmit }: Props): ReactElement {
                 </span>
               )}
               placeholder="username"
-              onValueChange={(value) => setParams({ ...params, handle: value })}
+              onValueChange={handleHandleChange}
               value={params.handle}
               errors={inputErrors?.handle}
             />
@@ -86,7 +91,7 @@ export function View({ error, onSubmit }: Props): ReactElement {
           </div>
           <Button type="submit" fullWidth>Sign up</Button>
         </Form>
-        <p className="text-center text-bunker-600 text-sm border-t border-dashed pt-6">
+        <p className="text-center text-bunker-600 text-sm border-t border-dashed pt-7">
           By signing up, you acknowledge that you have read and agreed to our{' '}
           <a href="https://floyd.so/about/terms" className="link" target="_blank">Terms of Service</a>{' '}
           and{' '}

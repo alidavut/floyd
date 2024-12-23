@@ -1,9 +1,10 @@
+import { ReactNode } from 'react';
 import cx from 'classnames';
 
-interface Props<T extends HTMLInputElement['type']> extends React.InputHTMLAttributes<HTMLInputElement> {
+interface Props<T extends HTMLInputElement['type']> extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'prefix'> {
   label?: string;
   type?: T;
-  prefix?: string;
+  prefix?: string | ReactNode;
   onValueChange?: (value: T extends 'number' ? number : string) => void;
   errors?: string[];
   fullWidth?: boolean;
@@ -23,21 +24,25 @@ export function Input<T extends HTMLInputElement['type']>({ label, onValueChange
       {label && (
         <span className="block font-medium text-[0.925rem] mb-0.5">{label}</span>
       )}
-      <span className="flex">
+      <span className="flex transition-all rounded-sm bg-white border overflow-hidden
+        focus-within:ring-1 focus-within:ring-gray-900 focus-within:border-gray-900">
         {prefix && (
-          <span className="block text-gray-500 text-[0.825rem] mb-0.5">{prefix}</span>
+          <span className="flex flex-col">
+            {prefix}
+          </span>
         )}
         <input
-          className="bg-white transition-all outline-none border rounded-sm p-2 w-full border-gray-300/80
-            focus:border-gray-900 focus:ring-1 focus:ring-gray-900"
+          className="bg-transparent outline-none p-2 w-full"
           onChange={handleChange}
           type={type}
           {...rest}
         />
       </span>
-      {errors?.map((error, index) => (
-        <div key={index} className="text-sm text-red-600">{error}</div>
-      ))}
+      {errors?.length > 0 && (
+        <div className="text-sm text-red-600 pt-1.5 px-1.5">
+          {errors.join(', ')}
+        </div>
+      )}
     </label>
   )
 }

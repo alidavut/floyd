@@ -22,12 +22,12 @@ export function View({ error, onSubmit }: Props): ReactElement {
   const inputErrors = getInputErrors(error);
 
   return (
-    <div className="container py-16">
+    <div className="container py-15">
       <div className="max-w-sm mx-auto space-y-9">
         <div className="text-center">
           <img
             src={logoDark.src}
-            className="h-14 rounded-sm mx-auto mb-1.5"
+            className="h-12 rounded-sm mx-auto mb-1.5"
           />
           <h3 className="font-semibold text-[1.825rem] font-serif">
             Create your account
@@ -36,11 +36,16 @@ export function View({ error, onSubmit }: Props): ReactElement {
             Already have an account? <a href="/login" className="link">Login</a>
           </p>
         </div>
-        <Form onSubmit={() => onSubmit(params)} className="space-y-5">
+        <Form onSubmit={() => onSubmit(params)} className="space-y-6">
           <div>
             <Input
-              label="Username"
-              prefix="https://floyd.so/"
+              label="Page address"
+              prefix={(
+                <span className="flex-1 flex items-center px-3 p-2 leading-none bg-gray-50 text-gray-700">
+                  floyd.so/
+                </span>
+              )}
+              placeholder="username"
               onValueChange={(value) => setParams({ ...params, handle: value })}
               value={params.handle}
               errors={inputErrors?.handle}
@@ -81,9 +86,11 @@ export function View({ error, onSubmit }: Props): ReactElement {
           </div>
           <Button type="submit" fullWidth>Sign up</Button>
         </Form>
-        <p className="text-center text-bunker-600 text-sm border-t border-dashed pt-6 mt-6">
+        <p className="text-center text-bunker-600 text-sm border-t border-dashed pt-6">
           By signing up, you acknowledge that you have read and agreed to our{' '}
-          <a href="/terms" className="link">Terms of Service</a> and <a href="/privacy" className="link">Privacy Policy</a>.
+          <a href="https://floyd.so/about/terms" className="link" target="_blank">Terms of Service</a>{' '}
+          and{' '}
+          <a href="https://floyd.so/about/privacy" className="link" target="_blank">Privacy Policy</a>.
         </p>
       </div>
     </div>

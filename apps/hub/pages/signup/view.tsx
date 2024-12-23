@@ -4,6 +4,7 @@ import { SignupParams } from './utils';
 import { ServiceError } from 'services/errors';
 import { getInputErrors } from 'lib/errors';
 import logoDark from '@floyd/ui/assets/images/badge-pure.svg';
+import Link from 'next/link';
 
 interface Props {
   onSubmit: (params: SignupParams) => void;
@@ -39,7 +40,7 @@ export function View({ onSubmit, error, loading }: Props) {
             Create your account
           </h3>
           <p className="text-bunker-600 text-[0.95rem]">
-            Already have an account? <a href="/login" className="link">Login</a>
+            Join Floyd in just a few simple steps.
           </p>
         </div>
         <Form onSubmit={() => onSubmit(params)} className="space-y-6">
@@ -92,6 +93,9 @@ export function View({ onSubmit, error, loading }: Props) {
           </div>
           <Button type="submit" loading={loading} fullWidth>Sign up</Button>
         </Form>
+        <p className="text-center text-bunker-600 text-[0.95rem]">
+          Already have an account? <Link href="/login" className="link">Login</Link>
+        </p>
         <p className="text-center text-bunker-600 text-sm border-t border-dashed pt-7">
           By signing up, you acknowledge that you have read and agreed to our{' '}
           <a href="https://floyd.so/about/terms" className="link" target="_blank">Terms of Service</a>{' '}

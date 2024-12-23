@@ -4,6 +4,7 @@ import { ServiceError } from 'services/errors';
 import { getInputErrors } from 'lib/errors';
 import { Head } from 'components';
 import logoDark from '@floyd/ui/assets/images/badge-pure.svg';
+import Link from 'next/link';
 
 interface Props {
   onSubmit: (params: { email: string, password: string }) => void;
@@ -56,6 +57,9 @@ export function View({ error, onSubmit, loading }: Props) {
           </div>
           <Button type="submit" loading={loading} fullWidth>Login</Button>
         </Form>
+        <p className="text-center text-bunker-600 text-[0.95rem]">
+          Don't have an account? <Link href="/signup" className="link">Sign up</Link>
+        </p>
       </div>
     </div>
   )

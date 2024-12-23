@@ -5,6 +5,7 @@ import { services } from 'services';
 import { useRouter } from 'next/router';
 import { withLayout } from '@floyd/ui/layout';
 import { SignInLayout } from 'components';
+import bg from './bg.jpg';
 
 function Login(): ReactElement {
   const router = useRouter();
@@ -27,4 +28,4 @@ function Login(): ReactElement {
   )
 }
 
-export default withLayout(SignInLayout)(Login);
+export default withLayout(SignInLayout, { background: bg.src })(Login);

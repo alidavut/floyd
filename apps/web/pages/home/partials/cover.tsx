@@ -38,7 +38,7 @@ export function Cover() {
               unforgettable experiences.
             </p>
             <div className="grid lg:grid-cols-2 gap-6 lg:w-3/4">
-              <a href="https://tally.so/r/3E8EVq" target="_blank" rel="noreferrer">
+              <a href="https://hub.floyd.so/signup">
                 <Button size="huge" fullWidth>
                   Get early access
                 </Button>

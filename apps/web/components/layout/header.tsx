@@ -78,9 +78,7 @@ export function Header({ transparent = false, position = 'static', border=true, 
               </li>
               <li>
                 <a
-                  href="https://tally.so/r/3E8EVq"
-                  target="_blank"
-                  rel="noreferrer"
+                  href="https://hub.floyd.so/signup"
                   className={cx(
                     'inline-block ml-2 bg-bunker-950 hover:!bg-bunker-900 px-4 py-[0.575rem] rounded-full text-white',
                   )}>

@@ -126,7 +126,7 @@ export function View({ step, onSubmit, error, loading }: Props) {
                 value={params.otpCode}
                 errors={inputErrors?.otpCode}
               />
-              <Button type="submit" fullWidth>Verify</Button>
+              <Button type="submit" loading={loading} fullWidth>Verify</Button>
             </Form>
         )}
       </div>

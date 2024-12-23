@@ -20,6 +20,7 @@ export function View({ step, onSubmit, error, loading }: Props) {
     password: '',
     firstName: '',
     lastName: '',
+    otpCode: ''
   });
 
   const inputErrors = getInputErrors(error);
@@ -116,6 +117,9 @@ export function View({ step, onSubmit, error, loading }: Props) {
               <Input
                 label="Verification code"
                 placeholder="Enter the code we sent to your email"
+                onValueChange={(value) => setParams({ ...params, otpCode: value })}
+                value={params.otpCode}
+                errors={inputErrors?.otpCode}
               />
               <Button type="submit" fullWidth>Verify</Button>
             </Form>

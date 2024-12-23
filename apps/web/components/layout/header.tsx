@@ -70,9 +70,7 @@ export function Header({ transparent = false, position = 'static', border=true, 
               </li>
               <li>
                 <a
-                  href="https://hub.floyd.so"
-                  target="_blank"
-                  rel="noreferrer">
+                  href="https://hub.floyd.so">
                   Login
                 </a>
               </li>

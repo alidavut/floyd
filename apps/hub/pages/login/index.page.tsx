@@ -6,6 +6,7 @@ import { useRouter } from 'next/router';
 import { withLayout } from '@floyd/ui/layout';
 import { SignInLayout } from 'components';
 import bg from './bg.jpg';
+import { triggerEvent } from 'lib/analytics';
 
 function Login(): ReactElement {
   const router = useRouter();
@@ -14,6 +15,7 @@ function Login(): ReactElement {
   async function handleSubmit(params: { email: string, password: string }) {
     try {
       await login({ ...params });
+      triggerEvent('login');
       router.push('/');
     } catch (error) {
     }

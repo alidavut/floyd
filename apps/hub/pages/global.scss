@@ -1,0 +1,33 @@
+@import 'nprogress/nprogress.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  @apply bg-gray-100;
+  @apply text-bunker-950;
+}
+
+a {
+  @apply cursor-pointer;
+}
+
+body.loading * {
+  cursor: progress !important;
+}
+
+a.link {
+  @apply text-bunker-950 font-medium hover:bg-bunker-900 hover:text-white transition-all;
+  @apply ring-2 ring-transparent hover:ring-bunker-900 rounded-sm;
+}
+
+#nprogress .bar {
+  background: #000000 !important;
+  height: 4px !important;
+}

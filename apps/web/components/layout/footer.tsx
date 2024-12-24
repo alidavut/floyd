@@ -3,7 +3,7 @@ import badge from '@floyd/ui/assets/images/badge.svg';
 
 export function Footer() {
   return (
-    <div className="border-t border-brown-200 border-dashed text-sm py-12">
+    <div className="border-t border-dashed text-sm py-12">
       <div className="container grid grid-cols-2 md:grid-cols-5 gap-8">
         <Links
           title="Floyd"
@@ -32,7 +32,7 @@ export function Footer() {
           <a href="/" className="text-lg font-semibold inline-block mb-2">
             <img src={badge.src} className="h-[2.5rem] rounded-sm" />
           </a>
-          <p className="text-gray-500">
+          <p className="text-bunker-500">
             Copyright {new Date().getFullYear()} Floyd.
           </p>
         </div>
@@ -47,7 +47,7 @@ export function Links({ title, links }: { title: string, links: { label: string,
       <h4 className="uppercase mb-4 font-semibold">{title}</h4>
       <ul className="space-y-1">
       {links.map((link, i) => {
-        const linkClassNames = "text-gray-600 hover:text-gray-950 transition-colors";
+        const linkClassNames = "text-bunker-500 hover:text-bunker-950 transition-colors";
 
         const linkContent = link.external ? (
           <a href={link.href} target="_blank" rel="noreferrer" className={linkClassNames}>

@@ -57,7 +57,7 @@ export function Header({ transparent = false, position = 'static', border=true, 
                 '[&_a]:block [&_a]:px-[1rem] [&_a]:py-[0.625rem] [&_a]:rounded-sm [&_a]:transition-all',
                 menuOpen ? 'top-16 md:top-0 opacity-100' : '-top-[1000px] md:top-0 opacity-0 md:opacity-100',
                 dark ? '[&_a:hover]:bg-white/5' : '[&_a:hover]:bg-gray-950/10',
-                dark ? 'text-white bg-gray-900 shadow-white/5 border-gray-700' : 'text-gray-900 bg-white border-gray-300',
+                dark ? 'text-white bg-bunker-900 shadow-white/5 border-gray-700' : 'text-gray-900 bg-white border-gray-300',
               )}
               onClick={async () => {
                 await new Promise(resolve => setTimeout(resolve, 100));
@@ -78,7 +78,9 @@ export function Header({ transparent = false, position = 'static', border=true, 
                 <a
                   href="https://hub.floyd.so/signup"
                   className={cx(
-                    'inline-block ml-2 bg-bunker-950 hover:!bg-bunker-900 px-4 py-[0.575rem] rounded-full text-white',
+                    'inline-block ml-2 px-4 py-[0.575rem] rounded-full',
+                    dark ? 'bg-bunker-100 text-bunker-950 hover:!bg-bunker-200' :
+                      'bg-bunker-950 text-white hover:!bg-bunker-900'
                   )}>
                   Get early access
                 </a>

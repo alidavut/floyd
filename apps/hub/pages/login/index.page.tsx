@@ -15,7 +15,7 @@ function Login(): ReactElement {
   async function handleSubmit(params: { email: string, password: string }) {
     try {
       await login({ ...params });
-      triggerEvent('hub.login');
+      triggerEvent('login');
       router.push('/');
     } catch (error) {
     }

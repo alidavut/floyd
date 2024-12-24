@@ -32,7 +32,7 @@ function Signup(): ReactElement {
         setStep('verification');
       } else {
         await createUser({ ...params, otpKey });
-        triggerEvent('sign_up');
+        triggerEvent('hub.sign_up');
         router.push('/');
       }
     } catch (error) {

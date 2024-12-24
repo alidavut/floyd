@@ -16,8 +16,8 @@ export function Footer() {
         <Links
           title="Community"
           links={[
-            { label: 'Github', href: "https://github.com/FloydHQ", external: true },
-            { label: "Twitter", href: "https://twitter.com/FloydHQ", external: true },
+            { label: "Twitter", href: "https://twitter.com/HeyFloydSo", external: true },
+            { label: 'Instagram', href: "https://instagram.com/HeyFloydSo", external: true },
             { label: "LinkedIn", href: "https://www.linkedin.com/company/floydhq", external: true }
           ]}
         />

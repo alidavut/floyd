@@ -7,6 +7,7 @@
     "heroku-postbuild": "next build"
   },
   "dependencies": {
+    "@floyd/client": "*",
     "@floyd/ui": "*",
     "@tailwindcss/typography": "^0.5.10",
     "classnames": "^2.5.1",
@@ -20,6 +21,7 @@
     "usehooks-ts": "^3.1.0"
   },
   "devDependencies": {
+    "@floyd/schema": "*",
     "@floyd/tsconfig": "*",
     "@floyd/utils": "*",
     "@svgr/webpack": "^8.1.0",

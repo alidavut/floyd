@@ -1,21 +1,13 @@
 import { withLayout } from '@floyd/ui/layout';
 import { Layout } from '../layout/layout';
 import { ReactNode, useEffect } from 'react';
-import logo from '@floyd/ui/assets/images/logo-light.svg';
+import logo from '@floyd/ui/assets/images/logo-dark.svg';
 
 interface Props {
   children?: ReactNode;
 }
 
 function ProfileLayoutCompoentn({ children }: Props) {
-  useEffect(() => {
-    document.documentElement.classList.add('dark-theme');
-
-    return () => {
-      document.documentElement.classList.remove('dark-theme');
-    }
-  }, []);
-
   return (
     <div className="pb-12">
       {children}

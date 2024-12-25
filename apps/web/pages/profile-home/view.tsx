@@ -16,7 +16,7 @@ export function ProfileView({ user }: Props) {
         <h1 className="text-4xl font-semibold text-center mb-6 font-serif">
           {user.name}
         </h1>
-        <div className="bg-bunker-900/50 p-12 text-center rounded-sm text-white/50 mb-12">
+        <div className="bg-white p-12 text-center rounded-sm text-bunker-950/50 mb-12">
           No events yet
         </div>
       </div>

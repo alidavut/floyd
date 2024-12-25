@@ -41,7 +41,6 @@ function Home(): ReactElement {
               <p className="mb-6">
                 In the meantime, follow us on X and Instagram to stay up to date with our latest news and updates.
               </p>
-              <hr />
               <div className="space-y-3">
                 <a href="https://x.com/heyfloydso" target="_blank" rel="noreferrer" className="block">
                   <Button fullWidth>

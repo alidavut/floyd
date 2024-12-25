@@ -7,7 +7,7 @@ interface Props {
 
 export function ProfileView({ user }: Props) {
   return (
-    <div className="flex-1 bg-bunker-950 text-white pt-24">
+    <div className="pt-24">
       <Head
         title={user.name}
         description={`Profile for ${user.name} on Floyd`}

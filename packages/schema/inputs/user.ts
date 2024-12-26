@@ -19,7 +19,7 @@ export const createSchema = z.object({
 });
 
 export const getSchema = z.object({
-  id: z.literal('me')
+  id: z.string()
 });
 
 export type createParams = z.infer<typeof createSchema>;

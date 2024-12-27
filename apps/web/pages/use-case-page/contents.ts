@@ -46,6 +46,15 @@ export const contents: Record<string, UseCasePageContent> = {
       track schedules, and monetize your shows in minutes. Perfect for organizers who want to focus on creating, not
       logistics.`
   },
+  'webinars': {
+    image: images.webinar,
+    title: 'Webinars',
+    description: 'Webinar organizers can use Floyd to manage their events, attendees, and payments.',
+    heroTitle: 'Webinars, Perfected. Scheduling, Simplified.',
+    heroDescription: `From virtual conferences to online workshops, Floyd helps you manage your webinars with ease. Accept
+      reservations, track schedules, and monetize your events in minutes. Perfect for organizers who want to focus on
+      creating, not logistics.`
+  },
   'workshops': {
     image: images.workshop,
     title: 'Workshops',

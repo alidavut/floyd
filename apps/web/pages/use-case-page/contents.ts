@@ -19,6 +19,15 @@ export const contents: Record<string, UseCasePageContent> = {
       reservations, track schedules, and monetize your events in minutes. Perfect for organizers who want to focus on
       creating, not logistics.`
   },
+  'festivals': {
+    image: images.festival,
+    title: 'Festivals',
+    description: 'Festival organizers can use Floyd to manage their events, attendees, and payments.',
+    heroTitle: 'Festivals, Perfected. Planning, Simplified.',
+    heroDescription: `From food festivals to art fairs, Floyd helps you manage your events with ease. Accept reservations,
+      track schedules, and monetize your festivals in minutes. Perfect for organizers who want to focus on creating, not
+      logistics.`
+  },
   'yoga-instructors': {
     image: images.yoga,
     title: 'Yoga Instructors',

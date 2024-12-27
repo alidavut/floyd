@@ -13,7 +13,7 @@ export function Cover({ title, description, image }: Props) {
     <div className="container py-12">
       <div className="grid lg:grid-cols-2 gap-12 lg:gap-24">
         <div className="flex flex-col justify-center">
-          <h1 className="text-[2rem] lg:text-[3.25rem] font-semibold font-serif leading-[3rem] lg:leading-[4rem] mb-6">
+          <h1 className="text-[2rem] lg:text-[3.5rem] font-bold font-serif leading-[3rem] lg:leading-[4rem] mb-6">
             {title}
           </h1>
           <p className="text-[1.125rem] lg:text-[1.25rem] text-gray-900 leading-[1.75rem] lg:leading-[2rem] font-medium mb-12">

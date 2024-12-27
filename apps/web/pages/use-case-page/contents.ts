@@ -37,6 +37,15 @@ export const contents: Record<string, UseCasePageContent> = {
       bookings effortless. Accept reservations, track schedules, and grow your practice in just a few clicks. Perfect
       for instructors who want to focus on teaching, not logistics.`
   },
+  'theaters': {
+    image: images.theater,
+    title: 'Theaters',
+    description: 'Theater organizers can use Floyd to manage their events, attendees, and payments.',
+    heroTitle: 'Theaters, Perfected. Ticketing, Simplified.',
+    heroDescription: `From plays to musicals, Floyd helps you manage your theater events with ease. Accept reservations,
+      track schedules, and monetize your shows in minutes. Perfect for organizers who want to focus on creating, not
+      logistics.`
+  },
   'workshops': {
     image: images.workshop,
     title: 'Workshops',

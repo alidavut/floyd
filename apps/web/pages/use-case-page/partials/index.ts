@@ -1,1 +1,1 @@
-export { Cover } from './cover';
+export { Hero } from './hero';

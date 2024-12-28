@@ -1,6 +1,6 @@
 import { Head } from 'components';
 import { UseCasePageContent } from './contents';
-import { Cover } from './partials';
+import { Hero } from './partials';
 
 interface Props {
   content: UseCasePageContent;
@@ -18,7 +18,7 @@ export function UseCasePageView({ content }: Props) {
           image: content.image.src
         }}
       />
-      <Cover
+      <Hero
         title={content.heroTitle}
         description={content.heroDescription}
         image={content.image}

@@ -8,7 +8,7 @@ interface Props {
   image: StaticImageData;
 }
 
-export function Cover({ title, description, image }: Props) {
+export function Hero({ title, description, image }: Props) {
   return (
     <div className="container py-12">
       <div className="grid lg:grid-cols-2 gap-12 lg:gap-24">

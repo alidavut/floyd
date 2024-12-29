@@ -32,7 +32,7 @@ const pages = {
       <h2 id="governing-law">GOVERNING LAW</h2>
       <p>This Agreement shall be governed by the laws of Turkey, without regard to its conflict of laws rules.</p>
       <h2 id="contact">CONTACT</h2>
-      <p>If you have any questions regarding these Terms, please email us at support@floyd.so.</p>
+      <p>If you have any questions regarding these Terms, please email us at hey@floyd.so.</p>
       <h3 id="date-of-last-modification">Date of Last Modification</h3>
       <p>This policy was last modified on September 23, 2024.</p>
       <p>**By using our Service, you are stating that you have read and understood, and agree to be bound by these Terms.</p>
@@ -74,7 +74,7 @@ const pages = {
       <p>You can review, rectify, or erase your personal information at any time by contacting us. However, if the request conflicts with legal obligations or legitimate interests, we may not be able to process it fully.</p>
       <h3 id="contact-us">Contact Us</h3>
       <p>For any questions or concerns about this Privacy Policy, please contact us:</p>
-      <p>Email: support@floyd.so</p>
+      <p>Email: hey@floyd.so</p>
       <h3 id="date-of-last-modification">Date of Last Modification</h3>
       <p>This policy was last modified on September 23, 2024.</p>
       <p>*This Privacy Policy does not apply to the practices of third parties that we do not own or control.</p>

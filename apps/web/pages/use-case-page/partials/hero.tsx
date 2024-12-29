@@ -30,7 +30,7 @@ export function Hero({ title, description, image }: Props) {
           <p className="text-[1.125rem] lg:text-[1.25rem] text-bunker-700 leading-[1.75rem] lg:leading-[2rem] font-medium mb-12">
             {description}
           </p>
-          <div className="grid lg:grid-cols-2 gap-6">
+          <div className="grid lg:grid-cols-2 gap-6 lg:w-4/5">
             <a href="https://hub.floyd.so/signup">
               <Button size="huge" fullWidth>
                 Get early access

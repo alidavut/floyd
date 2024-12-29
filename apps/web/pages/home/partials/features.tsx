@@ -3,32 +3,34 @@ import cx from 'classnames';
 
 export function Features() {
   return (
-    <div className="container mb-20 lg:mb-32">
-      <div className="grid md:grid-cols-2 lg:w-2/3 gap-6 lg:gap-[4.5rem]">
-        <Card
-          title="Create your page"
-          description="Claim your username and start listing your events."
-          number={1}
-          color="bg-green-300"
-        />
-        <Card
-          title="Add your listings"
-          description="Create your events in minutes with our easy-to-use tools."
-          number={2}
-          color="bg-yellow-300"
-        />
-        <Card
-          title="Share your profile"
-          description="Promote your page and start getting bookings."
-          number={3}
-          color="bg-purple-300"
-        />
-        <Card
-          title="Accept bookings"
-          description="Get paid instantly and manage your schedule with ease."
-          number={4}
-          color="bg-red-300"
-        />
+    <div className="container">
+      <div className="border-b border-dashed border-bunker-300 mb-20 lg:mb-32 pb-32">
+        <div className="grid md:grid-cols-2 lg:w-2/3 gap-6 lg:gap-[4.5rem]">
+          <Card
+            title="Create your page"
+            description="Claim your username and start listing your events."
+            number={1}
+            color="bg-green-300"
+          />
+          <Card
+            title="Add your listings"
+            description="Create your events in minutes with our easy-to-use tools."
+            number={2}
+            color="bg-yellow-300"
+          />
+          <Card
+            title="Share your profile"
+            description="Promote your page and start getting bookings."
+            number={3}
+            color="bg-purple-300"
+          />
+          <Card
+            title="Accept bookings"
+            description="Get paid instantly and manage your schedule with ease."
+            number={4}
+            color="bg-red-300"
+          />
+        </div>
       </div>
     </div>
   )

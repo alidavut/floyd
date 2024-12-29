@@ -14,54 +14,55 @@ export const contents: Record<string, UseCasePageContent> = {
     image: images.concert,
     title: 'Concerts',
     description: 'Concert organizers can use Floyd to manage their events, attendees, and payments.',
-    heroTitle: 'Concerts, Perfected. Ticketing, Simplified.',
+    heroTitle: 'Sell tickets for your concerts effortlessly',
     heroDescription: `From music festivals to live shows, Floyd helps you manage your concerts with ease. Accept
       reservations, track schedules, and monetize your events in minutes. Perfect for organizers who want to focus on
-      creating, not logistics.`
+      creating, not logistics.`,
   },
   'festivals': {
     image: images.festival,
     title: 'Festivals',
     description: 'Festival organizers can use Floyd to manage their events, attendees, and payments.',
-    heroTitle: 'Festivals, Perfected. Planning, Simplified.',
-    heroDescription: `From food festivals to art fairs, Floyd helps you manage your events with ease. Accept reservations,
-      track schedules, and monetize your festivals in minutes. Perfect for organizers who want to focus on creating, not
-      logistics.`
+    heroTitle: 'Your festival, elevated. Bookings, simplified.',
+    heroDescription: `From music festivals to food fairs, Floyd transforms how you manage your event. Easily sell
+      tickets, keep track of attendance, and create unforgettable moments. Perfect for organizers who want to focus
+      on the experience, not the logistics.`
   },
   'yoga-instructors': {
     image: images.yoga,
     title: 'Yoga Instructors',
     description: 'Yoga instructors can use Floyd to manage their classes, students, and payments.',
-    heroTitle: 'Yoga, Simplified. Bookings, Mastered.',
-    heroDescription: `Whether you teach yoga in a studio, online, or at events, Floyd makes managing your classes and
-      bookings effortless. Accept reservations, track schedules, and grow your practice in just a few clicks. Perfect
-      for instructors who want to focus on teaching, not logistics.`
+    heroTitle: 'Simplify bookings for your yoga classes',
+    heroDescription: `Whether you teach Vinyasa, Hatha, or private sessions, Floyd helps you manage your yoga practice.
+      Accept class registrations, streamline scheduling, and get paid instantly. Ideal for instructors ready to take
+      their practice to the next level.`
   },
   'theaters': {
     image: images.theater,
     title: 'Theaters',
     description: 'Theater organizers can use Floyd to manage their events, attendees, and payments.',
-    heroTitle: 'Theaters, Perfected. Ticketing, Simplified.',
-    heroDescription: `From plays to musicals, Floyd helps you manage your theater events with ease. Accept reservations,
-      track schedules, and monetize your shows in minutes. Perfect for organizers who want to focus on creating, not
-      logistics.`
+    heroTitle: 'Your theater\'s stage, their favorite seat.',
+    heroDescription: `From local playhouses to grand performance halls, Floyd helps you manage ticket sales, coordinate
+      schedules, and enhance audience experiences. Accept bookings, simplify management, and focus on delivering
+      unforgettable performances. Perfect for theater managers looking to elevate their operations.`
   },
   'webinars': {
     image: images.webinar,
     title: 'Webinars',
-    description: 'Webinar organizers can use Floyd to manage their events, attendees, and payments.',
-    heroTitle: 'Webinars, Perfected. Scheduling, Simplified.',
-    heroDescription: `From virtual conferences to online workshops, Floyd helps you manage your webinars with ease. Accept
-      reservations, track schedules, and monetize your events in minutes. Perfect for organizers who want to focus on
-      creating, not logistics.`
+    description: `Host and manage your webinars effortlessly with Floyd. Take registrations, organize schedules, and
+      get paid seamlessly.`,
+    heroTitle: 'Seamless webinar scheduling, made simple',
+    heroDescription: `Deliver engaging webinars without the hassle of managing attendees. Floyd simplifies your process,
+      allowing you to accept registrations, organize schedules, and monetize your sessions in minutes. Perfect for
+      creators, educators, and professionals who want to focus on their content.`
   },
   'workshops': {
     image: images.workshop,
     title: 'Workshops',
     description: 'Workshop organizers can use Floyd to manage their events, attendees, and payments.',
-    heroTitle: 'Workshops, Perfected. Scheduling, Simplified.',
-    heroDescription: `From art classes to cooking workshops, Floyd helps you manage your events with ease. Accept
-      reservations, track schedules, and monetize your workshops in minutes. Perfect for organizers who want to focus
-      on creating, not logistics.`
+    heroTitle: 'Simplify workshop registrations and payments',
+    heroDescription: `Whether you're leading a creative workshop, technical seminar, or corporate training, Floyd
+    quips you to manage attendees, schedule events, and process payments effortlessly. Perfect for facilitators ready
+    to focus on what matters—creating impactful learning experiences.`
   }
 }

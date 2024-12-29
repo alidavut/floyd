@@ -36,7 +36,7 @@ export function Hero({ title, description, image }: Props) {
                 Get early access
               </Button>
             </a>
-            <span className="flex items-center text-bunker-500 font-medium">
+            <span className="flex items-center text-bunker-400 font-medium">
               <span className="block text-center w-full lg:text-left">
                 Claim your username now <PiRocketLaunch className="w-5 h-5 inline-block" />
               </span>

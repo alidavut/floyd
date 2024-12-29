@@ -1,6 +1,6 @@
 import { Button } from '@floyd/ui/components';
 import { StaticImageData } from 'next/image';
-import { PiRocketLaunch } from 'react-icons/pi';
+import { PiRocketLaunch, PiStarFill } from 'react-icons/pi';
 
 interface Props {
   title: string;
@@ -11,9 +11,20 @@ interface Props {
 export function Hero({ title, description, image }: Props) {
   return (
     <div className="container py-12">
-      <div className="grid lg:grid-cols-2 gap-12 lg:gap-24">
-        <div className="flex flex-col justify-center">
-          <h1 className="text-[2rem] lg:text-[3.5rem] font-bold font-serif leading-[3rem] lg:leading-[4rem] mb-6">
+      <div className="grid lg:grid-cols-11 gap-12 lg:gap-18">
+        <div className="col-span-6 flex flex-col justify-center">
+          <div className="flex items-center space-x-1 mb-6">
+            <PiStarFill className="text-green-600 w-5 h-5" />
+            <PiStarFill className="text-green-600 w-5 h-5" />
+            <PiStarFill className="text-green-600 w-5 h-5" />
+            <PiStarFill className="text-green-600 w-5 h-5" />
+            <PiStarFill className="text-green-600 w-5 h-5" />
+            <span className="text-bunker-400 text-[0.875rem] pl-2 font-medium leading-none">
+              Trusted by forward thinkers.
+            </span>
+          </div>
+
+          <h1 className="text-[2.5rem] lg:text-[3.5rem] font-bold tracking-tight leading-[2.5rem] lg:leading-[3.75rem] mb-6">
             {title}
           </h1>
           <p className="text-[1.125rem] lg:text-[1.25rem] text-gray-900 leading-[1.75rem] lg:leading-[2rem] font-medium mb-12">
@@ -32,12 +43,18 @@ export function Hero({ title, description, image }: Props) {
             </span>
           </div>
         </div>
-        <div>
-          <img
-            className="w-full aspect-[9/10] object-cover rounded-sm"
-            src={image.src}
-            alt={title}
-          />
+        <div className="col-span-5">
+          <div className="aspect-[14/15] relative z-10">
+            <div className="absolute top-3 left-3 bottom-0 right-0 bg-purple-600/15 rounded-sm rotate-2" />
+            <div className="absolute top-3 left-3 bottom-0 right-0 bg-bunker-950 rounded-sm" />
+            <div className="pr-3 pb-3">
+              <img
+                className="relative object-cover aspect-[14/15] rounded-sm border border-bunker-950"
+                src={image.src}
+                alt={title}
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>

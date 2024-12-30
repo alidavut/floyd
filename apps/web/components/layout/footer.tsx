@@ -22,13 +22,25 @@ export function Footer() {
           ]}
         />
         <Links
+          title="For"
+          links={[
+            { label: "Concerts", href: "/for/concerts", external: false },
+            { label: "Festivals", href: "/for/festivals", external: false },
+            { label: "Yoga Instructors", href: "/for/yoga-instructors", external: false },
+            { label: "Theaters", href: "/for/theaters", external: false },
+            { label: "Webinars", href: "/for/webinars", external: false },
+            { label: "Workshops", href: "/for/workshops", external: false },
+            { label: "More", href: "/for", external: false }
+          ]}
+        />
+        <Links
           title="Legal"
           links={[
             { label: "Terms of Service", href: "/about/terms", external: false },
             { label: "Privacy Policy", href: "/about/privacy", external: false }
           ]}
         />
-        <div className="text-center md:text-right col-span-2">
+        <div className="text-center md:text-right">
           <a href="/" className="text-lg font-semibold inline-block mb-2">
             <img src={badge.src} className="h-[2.5rem] rounded-sm" />
           </a>

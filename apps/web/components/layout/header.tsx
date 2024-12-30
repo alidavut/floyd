@@ -30,7 +30,7 @@ export function Header({ transparent = false, position = 'static', border=true, 
       )}>
       <div className={cx(
         'z-10 w-full border-b',
-        transparent ? 'bg-transparent border-transparent' : dark ? 'bg-gray-900' : 'bg-white',
+        transparent ? 'bg-transparent border-transparent' : dark ? 'bg-bunker-950' : 'bg-white',
         !border && 'border-transparent',
         !transparent && border && dark && 'border-white/5',
         !transparent && border && !dark && 'border-black/5',

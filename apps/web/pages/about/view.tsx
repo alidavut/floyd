@@ -27,7 +27,7 @@ export function AboutView() {
         <h3 className="text-xl font-semibold">Have any questions?</h3>
         <p>
           Feel free to reach out to us at{' '}
-          <a href="mailto:support@floyd.so" className="underline">
+          <a href="mailto:hey@floyd.so" className="underline">
             hey@floyd.so
           </a>
         </p>

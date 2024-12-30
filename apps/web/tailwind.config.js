@@ -38,6 +38,10 @@ module.exports = {
         'fade-out': 'fade-out 0.2s linear forwards',
         'drop-in': 'drop-in 0.2s linear forwards',
         'drop-out': 'drop-out 0.2s linear forwards'
+      },
+      spacing: {
+        15: '3.75rem',
+        18: '4.5rem'
       }
     },
     container: {

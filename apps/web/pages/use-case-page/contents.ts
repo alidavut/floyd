@@ -64,5 +64,14 @@ export const contents: Record<string, UseCasePageContent> = {
     heroDescription: `Whether you're leading a creative workshop, technical seminar, or corporate training, Floyd
     quips you to manage attendees, schedule events, and process payments effortlessly. Perfect for facilitators ready
     to focus on what matters—creating impactful learning experiences.`
+  },
+  'conferences': {
+    image: images.conference,
+    title: 'Conferences',
+    description: 'Conference organizers can use Floyd to manage their events, attendees, and payments.',
+    heroTitle: 'Seamless ticketing for conferences',
+    heroDescription: `Whether you're hosting an intimate seminar or a global convention, Floyd empowers you to manage
+      your conference effortlessly. Handle registrations, schedule sessions, and collect payments—all in one platform.
+      Built for event pioneers ready to elevate their impact.`
   }
 }

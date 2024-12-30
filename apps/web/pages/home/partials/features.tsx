@@ -1,4 +1,3 @@
-import { PiCalendarCheck, PiCalendarStar, PiCards, PiCreditCard, PiHighlighterCircle } from 'react-icons/pi';
 import cx from 'classnames';
 
 export function Features() {

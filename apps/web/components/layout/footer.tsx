@@ -29,7 +29,8 @@ export function Footer() {
             { label: "Yoga Instructors", href: "/for/yoga-instructors", external: false },
             { label: "Theaters", href: "/for/theaters", external: false },
             { label: "Webinars", href: "/for/webinars", external: false },
-            { label: "Workshops", href: "/for/workshops", external: false }
+            { label: "Workshops", href: "/for/workshops", external: false },
+            { label: "More", href: "/for", external: false }
           ]}
         />
         <Links

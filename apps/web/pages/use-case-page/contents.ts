@@ -73,5 +73,14 @@ export const contents: Record<string, UseCasePageContent> = {
     heroDescription: `Whether you're hosting an intimate seminar or a global convention, Floyd empowers you to manage
       your conference effortlessly. Handle registrations, schedule sessions, and collect payments—all in one platform.
       Built for event pioneers ready to elevate their impact.`
-  }
+  },
+  'sports-events': {
+    image: images.sports,
+    title: 'Sports Events',
+    description: 'Organizers of sports events can use Floyd to manage registrations, sell tickets, and streamline payments.',
+    heroTitle: 'Score big with seamless sports event bookings',
+    heroDescription: `Whether you're managing a marathon, a local soccer league, or a national championship, Floyd
+      equips you to handle it all. Simplify participant sign-ups, manage your schedule, and process payments
+      effortlessly. Tailored for organizers aiming to revolutionize their sports events.`
+  },
 }

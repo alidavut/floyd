@@ -4,3 +4,5 @@ export { Card } from './card/card';
 export { Alert } from './alert/alert';
 export { Form } from './form/form';
 export { Input } from './input/input';
+export { Overlay } from './overlay/overlay';
+export { PortalProvider, usePortal } from './portal/portal';

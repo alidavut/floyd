@@ -9,6 +9,7 @@ import { services } from 'services';
 import Head from 'next/head';
 import favicon from '@floyd/ui/assets/images/badge.svg';
 import Script from 'next/script';
+import { UIProvider } from '@floyd/ui/provider';
 
 export default function MyApp({ Component, pageProps, storeData }) {
   const storeMap = isBrowser ? getStore(storeData) : createStore(storeData);
@@ -38,9 +39,11 @@ export default function MyApp({ Component, pageProps, storeData }) {
           })(window,document,'script','dataLayer','${process.env.NEXT_PUBLIC_GTM_ID}');
         `}
       </Script>
-      <Provider storeMap={storeMap}>
-        <Component {...pageProps} />
-      </Provider>
+      <UIProvider>
+        <Provider storeMap={storeMap}>
+          <Component {...pageProps} />
+        </Provider>
+      </UIProvider>
       <noscript>
         <iframe
           src={`https://www.googletagmanager.com/ns.html?id=${process.env.NEXT_PUBLIC_GTM_ID}`}

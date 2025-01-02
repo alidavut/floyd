@@ -1,4 +1,4 @@
-import { ReactNode, Ref, forwardRef } from 'react';
+import { ReactNode, Ref, forwardRef, useEffect, useState } from 'react';
 import cx from 'classnames';
 import { Spinner } from '../spinner/spinner';
 
@@ -11,7 +11,22 @@ interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 function ButtonComponent({ type='button', variant='contained', size='medium', children, fullWidth, loading, ...rest }: Props, ref: Ref<HTMLButtonElement>) {
-  const disabled = rest.disabled || loading;
+  const [isLoading, setIsLoading] = useState(loading);
+  const disabled = rest.disabled || isLoading;
+
+  useEffect(() => {
+    if (!loading) {
+      const timeout = setTimeout(() => {
+        setIsLoading(false);
+      }, 500);
+
+      return () => {
+        clearTimeout(timeout);
+      }
+    } else {
+      setIsLoading(true);
+    }
+  }, [loading]);
 
   return (
     <button
@@ -32,12 +47,12 @@ function ButtonComponent({ type='button', variant='contained', size='medium', ch
       disabled={disabled}
       type={type}
       {...rest}>
-      <span className={cx('transition-all', loading && 'opacity-0')}>
+      <span className={cx('transition-all', isLoading && 'opacity-0')}>
         {children}
       </span>
       <span
         className={cx(
-          'absolute inset-0 flex justify-center items-center opacity-0 transition-all', loading && 'opacity-100'
+          'absolute inset-0 flex justify-center items-center opacity-0 transition-all', isLoading && 'opacity-100'
         )}>
         <Spinner />
       </span>

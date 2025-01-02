@@ -13,6 +13,12 @@ export function BlogPostView({ post }: Props) {
     <div>
       <Head
         title={post.title}
+        description={post.description}
+        og={{
+          title: post.title,
+          description: post.description,
+          image: post.image?.url
+        }}
       />
       <div className="bg-bunker-950">
         <div className="container grid md:grid-cols-8 md:gap-24 py-8 pt-20 md:py-24 md:pt-28">
@@ -31,7 +37,7 @@ export function BlogPostView({ post }: Props) {
           <div className="hidden md:block md:col-span-3">
             <img
               src={post.image?.url}
-              className="hidden md:block rounded-sm aspect-square object-cover"
+              className="hidden md:block rounded-sm aspect-[8/7] object-cover"
               alt={post.title}
             />
           </div>

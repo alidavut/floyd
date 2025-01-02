@@ -18,7 +18,7 @@ export function GetStarted() {
               Get started with Floyd and start accepting bookings in minutes.
             </p>
             <div className="mt-9">
-              <a href="https://tally.so/r/3E8EVq" target="_blank" rel="noreferrer">
+              <a href="https://hub.floyd.so/signup">
                 <Button size="large">
                   Get early access
                 </Button>

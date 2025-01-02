@@ -20,7 +20,9 @@ export class CreateSpaces1735813834713 implements MigrationInterface {
         user_id UUID NOT NULL REFERENCES users(id),
         space_id UUID NOT NULL REFERENCES spaces(id),
         created_at TIMESTAMP NOT NULL DEFAULT NOW(),
-        updated_at TIMESTAMP NOT NULL DEFAULT NOW()
+        updated_at TIMESTAMP NOT NULL DEFAULT NOW(),
+
+        CONSTRAINT user_space_unique UNIQUE (user_id, space_id)
       );
     `);
   }

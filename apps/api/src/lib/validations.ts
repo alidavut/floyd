@@ -1,9 +1,9 @@
 import { BaseEntity } from 'entities/base';
 import { startCase } from 'lodash';
-import { Not, Raw } from 'typeorm';
+import { Not } from 'typeorm';
 import { z } from 'zod';
 
-export function unique(entityClass: typeof BaseEntity, fields: string[]) {
+export function unique(entityClass: typeof BaseEntity, fields: string[], message?: string) {
   return async (value: { [x: string]: unknown }, ctx: z.RefinementCtx) => {
     const query = {
       where: {}
@@ -14,7 +14,7 @@ export function unique(entityClass: typeof BaseEntity, fields: string[]) {
     }
 
     for (const field of fields) {
-      query.where[field] = Raw((alias) => `LOWER(${alias}) = LOWER(:${field})`, { [field]: value[field] });
+      query.where[field] = value[field];
     }
 
     const count = await entityClass.count(query);
@@ -24,7 +24,7 @@ export function unique(entityClass: typeof BaseEntity, fields: string[]) {
         ctx.addIssue({
           code: 'custom',
           path: [field],
-          message: `${startCase(field)} already exists`
+          message: message ?? `${startCase(field)} already exists`
         });
       }
     }

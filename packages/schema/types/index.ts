@@ -20,3 +20,13 @@ export interface SpaceObject {
   createdAt: string;
   updatedAt: string;
 }
+
+export interface EventObject {
+  id: string;
+  spaceId: string;
+  title: string;
+  slug: string;
+  description: string;
+  createdAt: string;
+  updatedAt: string;
+}

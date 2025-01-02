@@ -1,14 +1,13 @@
-import { ReactElement } from 'react';
 import { View } from './view';
 import { useService } from 'services/service';
 import { services } from 'services';
 import { useRouter } from 'next/router';
 import { withLayout } from '@floyd/ui/layout';
 import { SignInLayout } from 'components';
-import bg from './bg.jpg';
 import { triggerEvent } from 'lib/analytics';
+import bg from './bg.jpg';
 
-function Login(): ReactElement {
+function Login() {
   const router = useRouter();
   const { perform: login, error, loading } = useService(services.auth.login);
 

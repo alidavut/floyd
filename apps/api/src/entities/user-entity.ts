@@ -4,9 +4,6 @@ import { BaseEntity } from './base';
 @Entity('users')
 export class User extends BaseEntity {
   @Column()
-  handle: string;
-
-  @Column()
   email: string;
 
   @Column()

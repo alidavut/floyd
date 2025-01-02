@@ -12,3 +12,11 @@ export interface UserObject {
   createdAt: string;
   updatedAt: string;
 }
+
+export interface SpaceObject {
+  id: string;
+  handle: string
+  name: string;
+  createdAt: string;
+  updatedAt: string;
+}

@@ -8,7 +8,6 @@ export class CreateUsers1731329281419 implements MigrationInterface {
 
       CREATE TABLE users (
         id UUID NOT NULL PRIMARY KEY DEFAULT uuid_generate_v4(),
-        handle VARCHAR NOT NULL UNIQUE,
         email VARCHAR NOT NULL UNIQUE,
         password VARCHAR NOT NULL,
         first_name VARCHAR NOT NULL,

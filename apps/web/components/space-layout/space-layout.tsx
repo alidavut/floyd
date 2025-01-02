@@ -1,13 +1,13 @@
 import { withLayout } from '@floyd/ui/layout';
 import { Layout } from '../layout/layout';
-import { ReactNode, useEffect } from 'react';
+import { ReactNode } from 'react';
 import logo from '@floyd/ui/assets/images/logo-dark.svg';
 
 interface Props {
   children?: ReactNode;
 }
 
-function ProfileLayoutCompoentn({ children }: Props) {
+function SpaceLayoutComponent({ children }: Props) {
   return (
     <div className="pb-12">
       {children}
@@ -23,4 +23,4 @@ function ProfileLayoutCompoentn({ children }: Props) {
   )
 }
 
-export const ProfileLayout = withLayout(Layout, { header: false, footer: false })(ProfileLayoutCompoentn);
+export const SpaceLayout = withLayout(Layout, { header: false, footer: false })(SpaceLayoutComponent);

@@ -16,7 +16,6 @@ interface Props {
 
 export function View({ step, onSubmit, error, loading }: Props) {
   const [params, setParams] = useState({
-    handle: '',
     email: '',
     password: '',
     firstName: '',
@@ -25,11 +24,6 @@ export function View({ step, onSubmit, error, loading }: Props) {
   });
 
   const inputErrors = getInputErrors(error);
-
-  function handleHandleChange(value: string) {
-    const handle = value.toLowerCase().replace(/[^a-z0-9-]/g, '');
-    setParams({ ...params, handle });
-  }
 
   return (
     <div className="container py-15">
@@ -57,20 +51,6 @@ export function View({ step, onSubmit, error, loading }: Props) {
         {step === 'info' && (
           <Fragment>
             <Form onSubmit={() => onSubmit(params)} className="space-y-6">
-              <div>
-                <Input
-                  label="Page address"
-                  prefix={(
-                    <span className="flex-1 flex items-center px-3 p-2 leading-none bg-gray-50 text-gray-700">
-                      floyd.so/
-                    </span>
-                  )}
-                  placeholder="username"
-                  onValueChange={handleHandleChange}
-                  value={params.handle}
-                  errors={inputErrors?.handle}
-                />
-              </div>
               <div>
                 <Input
                   label="Email"

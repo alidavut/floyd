@@ -5,5 +5,5 @@ export default [
   { source: '/blog/:slug', destination: '/blog-post' },
   { source: '/for', destination: '/use-cases' },
   { source: '/for/:page', destination: '/use-case-page' },
-  { source: '/:handle', destination: '/profile-home' }
+  { source: '/:handle', destination: '/space-home' }
 ];

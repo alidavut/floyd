@@ -8,7 +8,6 @@ export class UserSerializer extends Serializer<User, UserObject> {
 
     return {
       id: this.object.id,
-      handle: this.object.handle,
       email: isCurrentUser ? this.object.email : undefined,
       firstName: isCurrentUser ? this.object.firstName : undefined,
       lastName: isCurrentUser ? this.object.lastName : undefined,

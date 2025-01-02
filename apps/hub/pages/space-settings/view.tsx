@@ -43,7 +43,7 @@ export function SpaceSettingsView({ space, onSubmit, error, loading }: Props) {
           errors={inputErrors?.name}
         />
         <Button onClick={() => onSubmit(params)} loading={loading} fullWidth>
-          Save Changes
+          Update Space
         </Button>
       </div>
     </div>

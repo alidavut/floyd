@@ -5,7 +5,7 @@ import { useSpace } from 'lib/hooks';
 import { services } from 'services';
 import { useService } from 'services/service';
 
-function Settings() {
+function SpaceSettings() {
   const space = useSpace();
   const { perform: updateSpace, error, loading } = useService(services.space.update);
 
@@ -27,4 +27,4 @@ function Settings() {
   )
 }
 
-export default withLayout(SpaceLayout)(Settings);
+export default withLayout(SpaceLayout)(SpaceSettings);

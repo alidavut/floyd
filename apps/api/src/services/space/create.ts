@@ -3,10 +3,12 @@ import { space } from '@floyd/schema/inputs';
 import { Membership, Space } from 'entities';
 import { createHTTPService } from 'services/service';
 import { SpaceSerializer } from './serializer';
+import { unique } from 'lib/validations';
 
 export default createHTTPService({
   id: 'space.create',
-  inputSchema: space.createSchema,
+  inputSchema: space.createSchema
+    .superRefine(unique(Space, ['handle'])),
 
   async authorize({ auth }) {
     return auth.ok;

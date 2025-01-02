@@ -4,7 +4,7 @@ import { services } from 'services';
 import { createStoreContextMap, useStoreContext } from 'hacksaw-react';
 import { useRouter } from 'next/router';
 import { withLayout } from '@floyd/ui/layout';
-import { Layout } from 'components';
+import { SpaceLayout } from 'components';
 import { withAuth } from 'lib/authentication';
 
 function SpaceHome(): ReactElement {
@@ -25,4 +25,4 @@ SpaceHome.getInitialProps = async ({ storeMap, query }) => {
   await services.space.get({ id: query.spaceId }, { contextMap });
 };
 
-export default withLayout(Layout)(withAuth(SpaceHome));
+export default withLayout(SpaceLayout)(withAuth(SpaceHome));

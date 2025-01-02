@@ -13,6 +13,11 @@ router.get('/users/:id', mapService(services.user.get));
 router.get('/spaces', mapService(services.space.list));
 router.post('/spaces', mapService(services.space.create));
 router.get('/spaces/:id', mapService(services.space.get));
-router.put('/spaces/:id', mapService(services.space.update));
+router.patch('/spaces/:id', mapService(services.space.update));
+
+router.get('/events', mapService(services.event.list));
+router.post('/events', mapService(services.event.create));
+router.get('/events/:id', mapService(services.event.get));
+router.patch('/events/:id', mapService(services.event.update));
 
 export default router;

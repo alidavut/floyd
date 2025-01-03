@@ -18,6 +18,17 @@ export function SpaceEventsView({ space, events }: Props) {
       label: 'Create Date',
       key: 'createdAt',
       format: 'datetime'
+    },
+    {
+      label: 'Actions',
+      key: 'id',
+      render: (event: EventObject) => (
+        <Link href={`/spaces/${space.id}/events/${event.id}`}>
+          <Button size="small">
+            Edit
+          </Button>
+        </Link>
+      )
     }
   ];
 

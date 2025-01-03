@@ -14,6 +14,9 @@ export class Event extends BaseEntity {
   description: string;
 
   @Column()
+  duration: number;
+
+  @Column()
   spaceId: string;
 
   @OneToOne(() => Space)

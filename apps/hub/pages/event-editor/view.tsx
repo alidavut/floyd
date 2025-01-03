@@ -13,10 +13,7 @@ interface Props {
 }
 
 export function EventEditorView({ event, onSubmit, error, loading }: Props) {
-  const [params, setParams] = useState<Partial<EventObject>>(event || {
-    title: '',
-    description: ''
-  });
+  const [params, setParams] = useState<Partial<EventObject>>(event || {});
 
   const inputErrors = getInputErrors(error);
 
@@ -52,6 +49,14 @@ export function EventEditorView({ event, onSubmit, error, loading }: Props) {
               onValueChange={(description) => setParams({ ...params, description })}
               value={params.description}
               errors={inputErrors?.description}
+            />
+
+            <Input
+              label="Duration (minutes)"
+              type="number"
+              onValueChange={(duration) => setParams({ ...params, duration })}
+              value={params.duration}
+              errors={inputErrors?.duration}
             />
 
             <Button onClick={handleSubmit} loading={loading} fullWidth>

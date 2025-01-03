@@ -27,6 +27,7 @@ export interface EventObject {
   title: string;
   slug: string;
   description: string;
+  duration: number;
   createdAt: string;
   updatedAt: string;
 }

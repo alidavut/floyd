@@ -17,7 +17,7 @@ export function SpaceHomeView({ space }: Props) {
   }
 
   return (
-    <div className="flex-1 flex items-center justify-center">
+    <div className="flex-1 flex items-center justify-center py-15">
       <Head
         title="Hub"
       />

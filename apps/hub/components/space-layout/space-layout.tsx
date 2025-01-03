@@ -21,7 +21,7 @@ export function SpaceLayoutComponent({ children }: Props): ReactElement {
   return (
     <SpaceContext.Provider value={space}>
       <div className="flex flex-1">
-        <div className="w-60 relative">
+        <div className="w-64 relative">
           <div className="fixed inset-0 w-64 bg-white">
             <Navigation
               space={space}

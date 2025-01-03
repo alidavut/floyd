@@ -10,7 +10,7 @@ import slugify from 'slugify';
 interface Props {
   currentUser: UserObject;
   onSubmit: (params: space.createParams) => void;
-  error?: ServiceError;
+  error: ServiceError;
   loading: boolean;
 }
 

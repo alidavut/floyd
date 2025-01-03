@@ -24,10 +24,19 @@ export interface SpaceObject {
 export interface EventObject {
   id: string;
   spaceId: string;
+  status: string;
   title: string;
   slug: string;
   description: string;
   duration: number;
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface SessionObject {
+  id: string;
+  eventId: string;
+  startsAt: string;
   createdAt: string;
   updatedAt: string;
 }

@@ -1,7 +1,7 @@
 import { ReactElement } from 'react';
 import { EventEditorView } from './view';
 import { withLayout } from '@floyd/ui/layout';
-import { SpaceLayout } from 'components';
+import { EventLayout } from 'components';
 import { useService } from 'services/service';
 import { services } from 'services';
 import { useRouter } from 'next/router';
@@ -48,4 +48,4 @@ EventEditor.getInitialProps = async ({ storeMap, query }) => {
   }
 }
 
-export default withLayout(SpaceLayout)(EventEditor);
+export default withLayout(EventLayout)(EventEditor);

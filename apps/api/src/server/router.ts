@@ -20,4 +20,7 @@ router.post('/events', mapService(services.event.create));
 router.get('/events/:id', mapService(services.event.get));
 router.patch('/events/:id', mapService(services.event.update));
 
+router.get('/sessions', mapService(services.session.list));
+router.post('/sessions', mapService(services.session.create));
+
 export default router;

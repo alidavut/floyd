@@ -30,13 +30,23 @@ module.exports = {
         'drop-out': {
           '0%': { transform: 'translateY(0)', opacity: 1 },
           '100%': { transform: 'translateY(10%)', opacity: 0 }
+        },
+        'drop-in-from-right': {
+          '0%': { transform: 'translateX(100%)', opacity: 0 },
+          '100%': { transform: 'translateX(0)', opacity: 1 }
+        },
+        'drop-out-to-right': {
+          '0%': { transform: 'translateX(0)', opacity: 1 },
+          '100%': { transform: 'translateX(100%)', opacity: 0 }
         }
       },
       animation: {
         'fade-in': 'fade-in 0.2s linear forwards',
         'fade-out': 'fade-out 0.2s linear forwards',
         'drop-in': 'drop-in 0.2s linear forwards',
-        'drop-out': 'drop-out 0.2s linear forwards'
+        'drop-out': 'drop-out 0.2s linear forwards',
+        'drop-in-from-right': 'drop-in-from-right 0.2s linear forwards',
+        'drop-out-to-right': 'drop-out-to-right 0.2s linear forwards'
       },
       spacing: {
         15: '3.75rem',

@@ -22,11 +22,7 @@ export function EventEditorView({ event, onSubmit, error, loading }: Props) {
   }
 
   return (
-    <div className="container py-15 space-y-6 max-w-4xl">
-      <PageHeader
-        title={event ? 'Edit Event' : 'Create Event'}
-      />
-
+    <div>
       <Card>
         <Card.Body>
           <div className="space-y-6">

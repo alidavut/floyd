@@ -7,9 +7,11 @@ export class EventSerializer extends Serializer<Event, EventObject> {
     return {
       id: this.object.id,
       spaceId: this.object.spaceId,
+      status: this.object.status,
       title: this.object.title,
       slug: this.object.slug,
       description: this.object.description,
+      duration: this.object.duration,
       createdAt: this.object.createdAt.toISOString(),
       updatedAt: this.object.updatedAt.toISOString()
     };

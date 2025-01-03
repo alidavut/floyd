@@ -7,5 +7,7 @@ export { Input } from './input/input';
 export { Overlay } from './overlay/overlay';
 export { PortalProvider, usePortal } from './portal/portal';
 export { Table } from './table/table';
+export { Drawer } from './drawer/drawer';
+export { Tabs, TabItem } from './tabs/tabs';
 
 export type { TableColumn } from './table/table';

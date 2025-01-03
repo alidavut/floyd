@@ -3,6 +3,7 @@ import { createHTTPService } from 'services/service';
 import { event } from '@floyd/schema/inputs';
 import { EventSerializer } from './serializer';
 import { unique } from 'lib/validations';
+import { EventStatus } from '@floyd/schema/enums';
 
 export default createHTTPService({
   id: 'event.create',
@@ -15,7 +16,11 @@ export default createHTTPService({
   },
 
   async perform({ input, auth }) {
-    const event = Event.create({ ...input });
+    const event = Event.create({
+      status: EventStatus.DRAFT,
+      ...input
+    });
+
     await event.save();
 
     return EventSerializer.serialize(event, auth);

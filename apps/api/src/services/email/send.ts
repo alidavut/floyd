@@ -1,8 +1,8 @@
 import { createService } from 'services/service';
 import { z } from 'zod';
-import { Resend } from 'resend';
+import { ServerClient } from 'postmark';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const client = new ServerClient(process.env.POSTMARK_API_KEY);
 
 export default createService({
   id: 'email.send',
@@ -16,11 +16,11 @@ export default createService({
   async perform({ input }) {
     const { from, email, subject, body } = input;
 
-    await resend.emails.send({
-      from: from || 'Floyd <no-reply@mail.floyd.so>',
-      to: email,
-      subject: subject,
-      html: body
+    await client.sendEmail({
+      From: from || 'Floyd <no-reply@floyd.so>',
+      To: email,
+      Subject: subject,
+      HtmlBody: body
     });
   }
 });

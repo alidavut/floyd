@@ -25,7 +25,7 @@ export function EventLayoutComponent({ children }: Props): ReactElement {
 
   return (
     <div className="container py-15">
-      <div className="max-w-3xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         <PageHeader
           title={contextMap.events.first?.title || 'Create Event'}
           className="mb-6"

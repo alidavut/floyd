@@ -3,6 +3,7 @@ import { Button } from '@floyd/ui/components';
 import { SessionEditorDrawer } from 'components';
 import { useState } from 'react';
 import { ServiceError } from 'services/errors';
+import { Calendar } from './partials';
 
 interface Props {
   sessions: SessionObject[];
@@ -32,17 +33,25 @@ export function EventSessionsView({ sessions, onSubmit, submitting, error }: Pro
         error={error}
       />
 
-      <h1>Sessions</h1>
-      <ul>
-        {sessions.map(session => (
-          <li key={session.id}>
-            <h2>{session.startsAt}</h2>
-          </li>
-        ))}
-      </ul>
-      <Button onClick={() => setEditorOpen(true)}>
-        Create Session
-      </Button>
+      <div className="flex space-x-8">
+        <div className="w-80 bg-white rounded-sm p-6">
+          <Calendar
+            onSelect={(date) => console.log(date)}
+          />
+        </div>
+        <div>
+          <ul>
+            {sessions.map(session => (
+              <li key={session.id}>
+                <h2>{session.startsAt}</h2>
+              </li>
+            ))}
+          </ul>
+          <Button onClick={() => setEditorOpen(true)}>
+            Create Session
+          </Button>
+        </div>
+      </div>
     </div>
   )
 }

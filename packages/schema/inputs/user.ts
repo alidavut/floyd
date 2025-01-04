@@ -9,8 +9,8 @@ export const createSchema = z.object({
   lastName: z.string()
     .min(1, 'Last name is required')
     .max(50, 'Last name must be at most 50 characters'),
-  // otpKey: z.string().optional(),
-  // otpCode: z.string().optional()
+  otpKey: z.string().optional(),
+  otpCode: z.string().optional()
 });
 
 export const getSchema = z.object({

@@ -13,13 +13,13 @@ export default createHTTPService({
     .superRefine(unique(User, ['email'])),
 
   async perform({ input, auth }) {
-    if (!input.otpKey) {
-      throw new InputError([{ message: 'OTP key is required', path: ['otpKey'], code: 'custom' }]);
-    }
+    // if (!input.otpKey) {
+    //   throw new InputError([{ message: 'OTP key is required', path: ['otpKey'], code: 'custom' }]);
+    // }
 
-    if (!(await compareOTP(input.otpKey, input.otpCode, { email: input.email }))) {
-      throw new InputError([{ message: 'Invalid code', path: ['otpCode'], code: 'custom' }]);
-    }
+    // if (!(await compareOTP(input.otpKey, input.otpCode, { email: input.email }))) {
+    //   throw new InputError([{ message: 'Invalid code', path: ['otpCode'], code: 'custom' }]);
+    // }
 
     const user = User.create({
       email: input.email,

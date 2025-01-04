@@ -19,22 +19,22 @@ function Signup(): ReactElement {
 
   async function handleSubmit(params: SignupParams) {
     try {
-      if (step === 'info') {
-        try {
-          await createUser({ ...params });
-        } catch(error) {
-          if (error.issues[0].path[0] !== 'otpKey') {
-            throw error;
-          }
-        }
-        const { key } = await sendOtp(params);
-        setOtpKey(key);
-        setStep('verification');
-      } else {
-        await createUser({ ...params, otpKey });
+      // if (step === 'info') {
+      //   try {
+      //     await createUser({ ...params });
+      //   } catch(error) {
+      //     if (error.issues[0].path[0] !== 'otpKey') {
+      //       throw error;
+      //     }
+      //   }
+      //   const { key } = await sendOtp(params);
+      //   setOtpKey(key);
+      //   setStep('verification');
+      // } else {
+        await createUser({ ...params });
         triggerEvent('sign_up');
         router.push('/');
-      }
+      // }
     } catch (error) {
     }
   }

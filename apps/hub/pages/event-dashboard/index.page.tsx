@@ -1,4 +1,3 @@
-import { ReactElement } from 'react';
 import { EventDashboardView } from './view';
 import { withLayout } from '@floyd/ui/layout';
 import { EventLayout } from 'components';
@@ -6,7 +5,7 @@ import { services } from 'services';
 import { useRouter } from 'next/router';
 import { createStoreContextMap, useStoreContext } from 'hacksaw-react';
 
-function EventEditor(): ReactElement {
+function EventDashboard() {
   const router = useRouter();
   const contextMap = useStoreContext('event-dashboard', router.query.eventId);
 
@@ -17,11 +16,11 @@ function EventEditor(): ReactElement {
   )
 }
 
-EventEditor.getInitialProps = async ({ storeMap, query }) => {
+EventDashboard.getInitialProps = async ({ storeMap, query }) => {
   if (query.eventId) {
     const contextMap = createStoreContextMap(storeMap, 'event-dashboard', query.eventId);
     await services.event.get({ id: query.eventId }, { contextMap });
   }
 }
 
-export default withLayout(EventLayout)(EventEditor);
+export default withLayout(EventLayout)(EventDashboard);

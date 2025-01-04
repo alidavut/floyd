@@ -17,6 +17,7 @@ export default createHTTPService({
     const session = Session.create({ ...input });
 
     await session.save();
+    await session.reload();
 
     return SessionSerializer.serialize(session, auth);
   }

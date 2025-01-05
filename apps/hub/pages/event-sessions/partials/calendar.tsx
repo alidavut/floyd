@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { PiArrowLeftBold, PiCaretLeftBold, PiCaretRightBold, PiPlusBold } from 'react-icons/pi';
+import { PiCaretLeftBold, PiCaretRightBold, PiPlusBold } from 'react-icons/pi';
 import { format } from 'date-fns';
 
 interface Props {
@@ -8,6 +8,12 @@ interface Props {
 
 export function Calendar({ onSelect }: Props) {
   const [currentMonth, setCurrentMonth] = useState(new Date());
+
+  // Function to get day of week with Monday as 0
+  const getMondayBasedDay = (date: Date) => {
+    let day = date.getDay();
+    return day === 0 ? 6 : day - 1; // Sunday becomes 6, Monday becomes 0
+  };
 
   return (
     <div>
@@ -31,16 +37,17 @@ export function Calendar({ onSelect }: Props) {
         </button>
       </div>
       <div className="grid grid-cols-7 gap-3 text-sm">
-        <div className="text-center text-gray-700">Sun</div>
-        <div className="text-center text-gray-700">Mon</div>
-        <div className="text-center text-gray-700">Tue</div>
-        <div className="text-center text-gray-700">Wed</div>
-        <div className="text-center text-gray-700">Thu</div>
-        <div className="text-center text-gray-700">Fri</div>
-        <div className="text-center text-gray-700">Sat</div>
+        <div className="text-center text-gray-600">Mon</div>
+        <div className="text-center text-gray-600">Tue</div>
+        <div className="text-center text-gray-600">Wed</div>
+        <div className="text-center text-gray-600">Thu</div>
+        <div className="text-center text-gray-600">Fri</div>
+        <div className="text-center text-gray-600">Sat</div>
+        <div className="text-center text-gray-600">Sun</div>
         {Array.from({ length: 42 }).map((_, index) => {
           const date = new Date(currentMonth);
-          date.setDate(index - date.getDay() + 1);
+          // Adjust the date calculation to account for Monday as first day
+          date.setDate(index - getMondayBasedDay(date) + 1);
           const isCurrentMonth = date.getMonth() === currentMonth.getMonth();
 
           return (

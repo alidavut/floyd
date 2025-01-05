@@ -14,6 +14,7 @@ interface Props {
 
 export function EventSessionsView({ sessions, onSubmit, submitting, error }: Props) {
   const [editorOpen, setEditorOpen] = useState(false);
+  const [params, setParams] = useState<Partial<SessionObject>>({});
 
   const groupedSessions = sessions.reduce((acc, session) => {
     const date = new Date(session.startsAt).toDateString();
@@ -42,10 +43,13 @@ export function EventSessionsView({ sessions, onSubmit, submitting, error }: Pro
         error={error}
       />
 
-      <div className="flex space-x-6">
+      <div className="flex items-start space-x-6">
         <div className="w-80 bg-white rounded-sm p-6">
           <Calendar
-            onSelect={(date) => setEditorOpen(true)}
+            onSelect={(date) => {
+              setParams({ startsAt: date });
+              setEditorOpen(true);
+            }}
           />
         </div>
         <div className="flex-1">

@@ -30,7 +30,7 @@ export function Drawer({ isOpen, children, onClose }: Props) {
     <div className="fixed inset-0 z-50">
       <Overlay active={isMounted} onClick={handleClose} />
       <div className={cx(
-          'fixed flex flex-col top-4 bottom-4 right-0 rounded-tl-sm rounded-bl-sm overflow-hidden shadow',
+          'fixed flex flex-col top-3 bottom-3 right-0 rounded-tl-sm rounded-bl-sm overflow-hidden shadow',
           isMounted ? 'animate-drop-in-from-right' : 'animate-drop-out-to-right'
         )}>
         <Context.Provider value={{ onClose: handleClose }}>

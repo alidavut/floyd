@@ -31,17 +31,27 @@ export function TabItem({ children, href, onClick, active }: TabItemProps) {
   const Component = href ? Link : 'a';
 
   const className = cx(
-    'block relative font-medium text-[0.975rem]',
+    'block relative font-medium text-[0.975rem] group',
     active ? 'text-purple-500' : 'text-bunker-500'
   );
 
   return (
     <li>
       <Component href={href} onClick={onClick} className={className}>
-        <span className="block pb-2.5">{children}</span>
-        {active && (
-          <span className="absolute left-0 right-0 -bottom-[1.5px] border-b-[2px] border-purple-500" />
-        )}
+        <span
+          className={cx(
+            'block pb-2',
+            active ? 'text-purple-500' : 'hover:text-gray-950'
+          )}>
+          {children}
+        </span>
+        <span
+          className={cx(
+            'absolute left-0 right-0 -bottom-[1.5px] border-b-[2px] transition-colors',
+            !active && 'group-hover:border-gray-700',
+            active ? 'border-purple-500' : 'border-transparent'
+          )}
+        />
       </Component>
     </li>
   )

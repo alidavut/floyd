@@ -2,7 +2,7 @@ import * as z from 'zod';
 
 const eventSchema = z.object({
   title: z.string().min(1).max(40),
-  description: z.string().max(1000).optional(),
+  description: z.string().max(1000).nullish(),
   slug: z.string()
     .toLowerCase()
     .min(1, 'Slug must be at least 1 characters')

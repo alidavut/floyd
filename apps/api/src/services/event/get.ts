@@ -9,7 +9,15 @@ export default createHTTPService({
   inputSchema: event.getSchema,
 
   async perform({ input, auth }) {
-    const event = await Event.findOneBy({ id: input.id });
-    return EventSerializer.serialize(event, auth);
+    if (input.id.includes('::')) {
+      const [spaceId, slug] = input.id.split('::');
+      const event = await Event.findOneByOrFail({ spaceId, slug });
+
+      return EventSerializer.serialize(event, auth);
+    } else {
+      const event = await Event.findOneByOrFail({ id: input.id });
+
+      return EventSerializer.serialize(event, auth);
+    }
   }
 });

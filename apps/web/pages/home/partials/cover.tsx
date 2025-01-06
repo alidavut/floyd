@@ -29,7 +29,7 @@ export function Cover() {
               Booking mastery,<br /> made
               {' '}
               <span className="inline-block relative">
-                <span className="h-[1.5rem] bg-yellow-200 block absolute inset-0 top-auto -rotate-1 rounded-full" />
+                <span className="h-[1rem] md:h-[1.5rem] bg-purple-200 block absolute inset-0 top-auto -rotate-1 rounded-full" />
                 <span className="relative font-serif italic font-semibold">for frontiers</span>
               </span>
             </h1>

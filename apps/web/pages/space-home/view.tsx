@@ -1,11 +1,12 @@
-import { Head } from 'components';
-import { SpaceObject } from '@floyd/schema/types';
+import { EventList, Head } from 'components';
+import { EventObject, SpaceObject } from '@floyd/schema/types';
 
 interface Props {
   space: SpaceObject;
+  events: EventObject[];
 }
 
-export function SpaceHomeView({ space }: Props) {
+export function SpaceHomeView({ space, events }: Props) {
   return (
     <div className="pt-24">
       <Head
@@ -13,12 +14,19 @@ export function SpaceHomeView({ space }: Props) {
         description={`Space for ${space.name} on Floyd`}
       />
       <div className="container max-w-3xl">
-        <h1 className="text-4xl font-semibold text-center mb-6 font-serif">
+        <h1 className="text-4xl font-semibold text-center mb-12 font-serif">
           {space.name}
         </h1>
-        <div className="bg-white p-12 text-center rounded-sm text-bunker-950/50 mb-12">
-          No events yet
-        </div>
+        {events.length > 0 ? (
+          <EventList
+            space={space}
+            events={events}
+          />
+        ) : (
+          <div className="bg-white p-12 rounded-sm shadow-sm text-center text-gray-500">
+            No events for now, check back later!
+          </div>
+        )}
       </div>
     </div>
   )

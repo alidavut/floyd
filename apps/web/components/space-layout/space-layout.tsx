@@ -10,11 +10,13 @@ interface Props {
 function SpaceLayoutComponent({ children }: Props) {
   return (
     <div className="pb-12">
-      {children}
+      <div className="mb-12">
+        {children}
+      </div>
       <p className="text-center">
         <a
           href="https://floyd.so"
-          className="text-sm opacity-50 hover:opacity-100 flex items-center space-x-1 justify-center transition-all">
+          className="text-sm opacity-50 hover:opacity-100 inline-flex items-center space-x-1 justify-center transition-all">
           <span>Powered by </span>
           <img src={logo.src} alt="Floyd" className="h-[1.125rem] inline" />
         </a>

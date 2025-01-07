@@ -38,6 +38,7 @@ export function PricingView() {
                   revenue; we earn a small slice. It’s that transparent."
                 className="bg-green-200"
                 icon={PiPiggyBankBold}
+                comingSoon
               />
             </div>
           </div>
@@ -48,7 +49,7 @@ export function PricingView() {
   );
 }
 
-function PricingCard({ title, fee, description, className, icon }) {
+function PricingCard({ title, fee, description, className, icon, comingSoon = false }) {
   const Icon = icon;
 
   return (
@@ -57,6 +58,13 @@ function PricingCard({ title, fee, description, className, icon }) {
         <div className="bg-bunker-950/20 absolute bottom-0 right-1.5 left-0 top-5 rounded-sm -rotate-[1.5deg]" />
         <div className="bg-bunker-950 absolute top-1.5 left-1.5 right-0 bottom-0 rounded-sm rotate-[1.5deg]" />
         <div className={cx('relative p-6 rounded-sm border-2 border-bunker-950', className)}>
+          {comingSoon && (
+            <span
+              className="text-[0.75rem] bg-bunker-950/10 text-bunker-950/85 rounded-sm px-2 py-[0.25rem] absolute
+                top-0 right-0 font-medium">
+              Coming soon
+            </span>
+          )}
           <p className="text-[1.175rem] leading-none font-semibold flex items-center space-x-1.5 mb-3">
             <span>{title}</span>
             <Icon className="inline-block w-[1.325rem] h-[1.325rem]" />

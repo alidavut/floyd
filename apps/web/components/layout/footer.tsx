@@ -9,7 +9,8 @@ export function Footer() {
           title="Floyd"
           links={[
             { label: "Home", href: "/", external: false },
-            { label: "About", href: "/about", external: false },
+            { label: "About us", href: "/about", external: false },
+            { label: "Pricing", href: "/pricing", external: false },
             { label: "Contact", href: "mailto:hey@floyd.so", external: true }
           ]}
         />

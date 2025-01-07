@@ -6,8 +6,8 @@ export function AboutView() {
       <Head
         title="About"
       />
-      <div className="bg-bunker-700 flex-1 flex items-center text-white">
-        <div className="container max-w-3xl py-40">
+      <div className="bg-yellow-300 flex-1 flex items-center">
+        <div className="container max-w-3xl py-44">
           <div className="space-y-4 md:space-y-16">
             <p className="text-3xl md:text-5xl font-semibold md:leading-tight text-center">
               Revolutionizing Event Bookings: Powerful Solutions for Creators

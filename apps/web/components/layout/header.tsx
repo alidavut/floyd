@@ -69,6 +69,11 @@ export function Header({ transparent = false, position = 'static', border=true, 
                 </Link>
               </li>
               <li>
+                <Link href="/pricing">
+                  Pricing
+                </Link>
+              </li>
+              <li>
                 <a
                   href="https://hub.floyd.so">
                   Login

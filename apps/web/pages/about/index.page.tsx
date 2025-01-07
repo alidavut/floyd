@@ -8,4 +8,4 @@ function About() {
   )
 }
 
-export default withLayout(Layout, { header: { position: 'absolute', transparent: true, dark: true } })(About);
+export default withLayout(Layout, { header: { position: 'absolute', transparent: true } })(About);

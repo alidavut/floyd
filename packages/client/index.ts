@@ -1,6 +1,7 @@
 import axios, { Axios } from 'axios';
 import { AuthService } from './services/auth';
 import { UserService } from './services/user';
+import { SessionService } from './services/session';
 import { SpaceService } from './services/space';
 import { EventService } from './services/event';
 
@@ -8,6 +9,7 @@ export class FloydClient {
   axios: Axios;
   auth: AuthService;
   event: EventService;
+  session: SessionService;
   space: SpaceService;
   user: UserService;
 
@@ -25,6 +27,7 @@ export class FloydClient {
 
     this.auth = new AuthService(this.axios);
     this.event = new EventService(this.axios);
+    this.session = new SessionService(this.axios);
     this.space = new SpaceService(this.axios);
     this.user = new UserService(this.axios);
   }

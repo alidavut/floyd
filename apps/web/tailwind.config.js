@@ -40,6 +40,7 @@ module.exports = {
         'drop-out': 'drop-out 0.2s linear forwards'
       },
       spacing: {
+        '4.5': '1.125rem',
         15: '3.75rem',
         18: '4.5rem'
       }

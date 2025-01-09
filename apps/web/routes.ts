@@ -7,5 +7,5 @@ export default [
   { source: '/for', destination: '/use-cases' },
   { source: '/for/:page', destination: '/use-case-page' },
   { source: '/:handle', destination: '/space-home' },
-  { source: '/:handle/:eventSlug', destination: '/space-event' }
+  { source: '/:handle/:eventSlug', destination: '/space-home' }
 ];

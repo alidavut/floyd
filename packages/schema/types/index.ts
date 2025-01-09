@@ -28,7 +28,9 @@ export interface EventObject {
   title: string;
   slug: string;
   description: string;
-  duration: number;
+  startsAt: string;
+  endsAt: string;
+  timeZone: string;
   createdAt: string;
   updatedAt: string;
 }

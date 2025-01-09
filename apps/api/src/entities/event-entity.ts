@@ -18,7 +18,13 @@ export class Event extends BaseEntity {
   description: string;
 
   @Column()
-  duration: number;
+  startsAt: Date;
+
+  @Column()
+  endsAt: Date;
+
+  @Column()
+  timeZone: string;
 
   @Column()
   spaceId: string;

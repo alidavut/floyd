@@ -48,11 +48,24 @@ export function EventEditorView({ event, onSubmit, error, loading }: Props) {
             />
 
             <Input
-              label="Duration (minutes)"
-              type="number"
-              onValueChange={(duration) => setParams({ ...params, duration })}
-              value={params.duration}
-              errors={inputErrors?.duration}
+              label="Start date"
+              onValueChange={(startsAt) => setParams({ ...params, startsAt })}
+              value={params.startsAt}
+              errors={inputErrors?.startsAt}
+            />
+
+            <Input
+              label="End date"
+              onValueChange={(endsAt) => setParams({ ...params, endsAt })}
+              value={params.endsAt}
+              errors={inputErrors?.endsAt}
+            />
+
+            <Input
+              label="Time zone"
+              onValueChange={(timeZone) => setParams({ ...params, timeZone })}
+              value={params.timeZone}
+              errors={inputErrors?.timeZone}
             />
 
             <Button onClick={handleSubmit} loading={loading} fullWidth>

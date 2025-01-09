@@ -8,7 +8,11 @@ const eventSchema = z.object({
     .min(1, 'Slug must be at least 1 characters')
     .max(40, 'Slug must be at most 100 characters')
     .regex(/^[a-z0-9]+(-[a-z0-9]+)*$/, 'Invalid slug, must only contain a-z, 0-9, and -'),
-  duration: z.number().int().positive()
+  startsAt: z.string()
+    .regex(/^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2})$/, 'Start date is not in the correct format'),
+  endsAt: z.string()
+    .regex(/^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2})$/, 'End date is not in the correct format'),
+  timeZone: z.string().min(1).max(40)
 });
 
 export const createSchema = eventSchema.extend({

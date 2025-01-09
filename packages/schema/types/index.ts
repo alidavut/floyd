@@ -32,11 +32,3 @@ export interface EventObject {
   createdAt: string;
   updatedAt: string;
 }
-
-export interface SessionObject {
-  id: string;
-  eventId: string;
-  startsAt: string;
-  createdAt: string;
-  updatedAt: string;
-}

@@ -19,20 +19,11 @@ export class CreateEvents1735824982352 implements MigrationInterface {
 
         CONSTRAINT unique_slug UNIQUE (space_id, slug)
       );
-
-      CREATE TABLE sessions (
-        id UUID NOT NULL PRIMARY KEY DEFAULT uuid_generate_v4(),
-        event_id UUID NOT NULL REFERENCES events(id),
-        starts_at TIMESTAMP NOT NULL,
-        created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
-        updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
-      );
     `);
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.query(sql`
-      DROP TABLE sessions;
       DROP TABLE events;
       DROP TYPE event_status;
     `);

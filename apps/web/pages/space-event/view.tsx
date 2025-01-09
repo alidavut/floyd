@@ -1,13 +1,12 @@
 import { Head } from 'components';
-import { EventObject, SessionObject, SpaceObject } from '@floyd/schema/types';
+import { EventObject, SpaceObject } from '@floyd/schema/types';
 
 interface Props {
   space: SpaceObject;
   event: EventObject;
-  sessions: SessionObject[];
 }
 
-export function SpaceEventView({ space, event, sessions }: Props) {
+export function SpaceEventView({ space, event }: Props) {
   return (
     <div className="pt-24">
       <Head

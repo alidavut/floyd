@@ -20,7 +20,6 @@ export function EventLayoutComponent({ children }: Props): ReactElement {
   const contextMap = useStoreContext('event-dashboard', eventId);
 
   const dashboardUrl = `/spaces/${spaceId}/events/${eventId}`;
-  const sessionsUrl = `/spaces/${spaceId}/events/${eventId}/sessions`;
   const editUrl = `/spaces/${spaceId}/events/${eventId}/edit`;
 
   return (
@@ -34,9 +33,6 @@ export function EventLayoutComponent({ children }: Props): ReactElement {
           <Tabs className="mb-6">
             <TabItem href={dashboardUrl} active={router.asPath === dashboardUrl}>
               Dashboard
-            </TabItem>
-            <TabItem href={sessionsUrl} active={router.asPath === sessionsUrl}>
-              Sessions
             </TabItem>
             <TabItem href={editUrl} active={router.asPath === editUrl}>
               Edit

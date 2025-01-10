@@ -34,8 +34,8 @@ export function Cover() {
               </span>
             </h1>
             <p className="font-medium text-[1rem] lg:text-[1.5rem] text-bunker-900 mb-12 leading-[1.5] max-w-xl">
-              Host live experiences, sell tickets, and engage your audience—all in one place. Floyd makes it effortless
-              to monetize your expertise and creativity.
+              Host live experiences, sell tickets, and engage your audience effortlessly. Floyd turns bold ideas into
+              beautiful, unforgettable experiences—helping you monetize your creativity and expertise with ease.
             </p>
             <div className="grid lg:grid-cols-2 gap-6 lg:w-4/5">
               <a href="https://hub.floyd.so/signup">

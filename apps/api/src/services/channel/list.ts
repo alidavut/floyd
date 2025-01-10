@@ -1,20 +1,20 @@
-import { Space } from 'entities';
-import { SpaceSerializer } from './serializer';
+import { Channel } from 'entities';
+import { ChannelSerializer } from './serializer';
 import { createHTTPService } from 'services/service';
 
 export default createHTTPService({
-  id: 'space.list',
+  id: 'channel.list',
 
   async authorize({ auth }) {
     return auth.ok;
   },
 
   async perform({ auth }) {
-    const spaces = await Space.find({
+    const channels = await Channel.find({
       where: { memberships: { userId: auth.user.id } },
       relations: ['memberships']
     });
 
-    return SpaceSerializer.serializeArray(spaces, auth);
+    return ChannelSerializer.serializeArray(channels, auth);
   }
 });

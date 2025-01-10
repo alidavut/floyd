@@ -1,5 +1,5 @@
 import { auth } from './auth';
-import { space } from './space';
+import { channel } from './channel';
 import { user } from './user';
 
-export const services = { auth, space, user };
+export const services = { auth, channel, user };

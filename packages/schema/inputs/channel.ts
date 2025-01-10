@@ -1,6 +1,6 @@
 import * as z from 'zod';
 
-const spaceSchema = z.object({
+const channelSchema = z.object({
   handle: z.string()
     .toLowerCase()
     .min(4, 'Handle must be at least 4 characters')
@@ -9,13 +9,13 @@ const spaceSchema = z.object({
   name: z.string().min(1).max(50)
 });
 
-export const createSchema = spaceSchema;
+export const createSchema = channelSchema;
 
 export const getSchema = z.object({
   id: z.string()
 });
 
-export const updateSchema = spaceSchema.extend({
+export const updateSchema = channelSchema.extend({
   id: z.string()
 });
 

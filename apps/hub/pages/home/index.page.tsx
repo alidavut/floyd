@@ -9,14 +9,14 @@ function Home() {
 
 Home.getInitialProps = async ({ storeMap, res }) => {
   const contextMap = createStoreContextMap(storeMap, 'home');
-  await services.space.list(null, { contextMap });
+  await services.channel.list(null, { contextMap });
 
-  const space = contextMap.spaces.first;
+  const channel = contextMap.channels.first;
 
-  if (space) {
-    redirect(`/spaces/${space.id}`, res);
+  if (channel) {
+    redirect(`/channels/${channel.id}`, res);
   } else {
-    redirect('/spaces/new', res);
+    redirect('/channels/new', res);
   }
 
   return {};

@@ -1,15 +1,15 @@
 import { InputError } from '../errors';
 import { createService } from '../service';
-import { SpaceObject } from '@floyd/schema/types';
-import { space } from '@floyd/schema/inputs';
+import { ChannelObject } from '@floyd/schema/types';
+import { channel } from '@floyd/schema/inputs';
 
 export default createService({
-  inputSchema: space.updateSchema,
+  inputSchema: channel.createSchema,
 
   async perform({ input, contextMap, axios }) {
     try {
-      const { data }: { data: SpaceObject } = await axios.patch(`/spaces/${input.id}`, input);
-      contextMap.spaces.put(data);
+      const { data }: { data: ChannelObject } = await axios.post('/channels', input);
+      contextMap.channels.put(data);
       return data;
     } catch (error) {
       throw new InputError(error.response.data.errors);

@@ -1,16 +1,16 @@
-import { Space } from 'entities';
-import { SpaceSerializer } from './serializer';
+import { Channel } from 'entities';
+import { ChannelSerializer } from './serializer';
 import { createHTTPService } from 'services/service';
-import { space } from '@floyd/schema/inputs';
+import { channel } from '@floyd/schema/inputs';
 import { FindOneOptions } from 'typeorm';
 import { z } from 'zod';
 
 export default createHTTPService({
-  id: 'space.get',
-  inputSchema: space.getSchema,
+  id: 'channel.get',
+  inputSchema: channel.getSchema,
 
   async perform({ input, auth }) {
-    const query: FindOneOptions<Space> = {};
+    const query: FindOneOptions<Channel> = {};
 
     if (z.string().uuid().safeParse(input.id).success) {
       query.where = { id: input.id };
@@ -18,7 +18,7 @@ export default createHTTPService({
       query.where = { handle: input.id };
     }
 
-    const space = await Space.findOneOrFail(query);
-    return SpaceSerializer.serialize(space, auth);
+    const channel = await Channel.findOneOrFail(query);
+    return ChannelSerializer.serialize(channel, auth);
   }
 });

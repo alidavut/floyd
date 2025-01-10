@@ -3,4 +3,9 @@ import get from './get';
 import list from './list';
 import update from './update';
 
-export const space = { create, get, list, update };
+export const channel = {
+  create,
+  get,
+  list,
+  update
+};

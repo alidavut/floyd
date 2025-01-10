@@ -1,8 +1,8 @@
-import { SpaceObject } from '@floyd/schema/types';
+import { ChannelObject } from '@floyd/schema/types';
 import { Serializer } from '../serializer';
-import { Space } from 'entities';
+import { Channel } from 'entities';
 
-export class SpaceSerializer extends Serializer<Space, SpaceObject> {
+export class ChannelSerializer extends Serializer<Channel, ChannelObject> {
   async serialize() {
     return {
       id: this.object.id,

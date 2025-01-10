@@ -1,12 +1,12 @@
 import axios, { Axios } from 'axios';
 import { AuthService } from './services/auth';
 import { UserService } from './services/user';
-import { SpaceService } from './services/space';
+import { ChannelService } from './services/channel';
 
 export class FloydClient {
   axios: Axios;
   auth: AuthService;
-  space: SpaceService;
+  channel: ChannelService;
   user: UserService;
 
   constructor(options: FloydClientOptions) {
@@ -22,7 +22,7 @@ export class FloydClient {
     });
 
     this.auth = new AuthService(this.axios);
-    this.space = new SpaceService(this.axios);
+    this.channel = new ChannelService(this.axios);
     this.user = new UserService(this.axios);
   }
 }

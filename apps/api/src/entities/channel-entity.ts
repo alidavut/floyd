@@ -2,15 +2,15 @@ import { Column, CreateDateColumn, Entity, OneToMany, UpdateDateColumn } from 't
 import { BaseEntity } from './base';
 import { Membership } from './membership-entity';
 
-@Entity('spaces')
-export class Space extends BaseEntity {
+@Entity('channels')
+export class Channel extends BaseEntity {
   @Column()
   handle: string;
 
   @Column()
   name: string;
 
-  @OneToMany(() => Membership, membership => membership.space)
+  @OneToMany(() => Membership, membership => membership.channel)
   memberships: Membership[];
 
   @CreateDateColumn()

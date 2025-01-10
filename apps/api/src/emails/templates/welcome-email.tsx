@@ -29,7 +29,7 @@ export function WelcomeEmail({ firstName }: Props) {
         — Floyd Team
       </Text>
       <Button href="https://hub.floyd.so" className="mt-6">
-        Manage your space
+        Manage your channel
       </Button>
     </Layout>
   )

@@ -7,7 +7,7 @@ interface Props {
   children?: ReactNode;
 }
 
-function SpaceLayoutComponent({ children }: Props) {
+function ChannelLayoutComponent({ children }: Props) {
   return (
     <div className="pb-12">
       {children}
@@ -23,4 +23,4 @@ function SpaceLayoutComponent({ children }: Props) {
   )
 }
 
-export const SpaceLayout = withLayout(Layout, { header: false, footer: false })(SpaceLayoutComponent);
+export const ChannelLayout = withLayout(Layout, { header: false, footer: false })(ChannelLayoutComponent);

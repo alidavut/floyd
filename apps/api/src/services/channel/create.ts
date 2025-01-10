@@ -1,29 +1,29 @@
 import { MembershipRole } from '@floyd/schema/enums';
-import { space } from '@floyd/schema/inputs';
-import { Membership, Space } from 'entities';
+import { channel } from '@floyd/schema/inputs';
+import { Membership, Channel } from 'entities';
 import { createHTTPService } from 'services/service';
-import { SpaceSerializer } from './serializer';
+import { ChannelSerializer } from './serializer';
 
 export default createHTTPService({
-  id: 'space.create',
-  inputSchema: space.createSchema,
+  id: 'channel.create',
+  inputSchema: channel.createSchema,
 
   async authorize({ auth }) {
     return auth.ok;
   },
 
   async perform({ input, auth }) {
-    const space = Space.create({ ...input });
-    await space.save();
+    const channel = Channel.create({ ...input });
+    await channel.save();
 
     const membership = Membership.create({
       role: MembershipRole.ADMIN,
       userId: auth.user.id,
-      spaceId: space.id
+      channelId: channel.id
     });
 
     await membership.save();
 
-    return SpaceSerializer.serialize(space, auth);
+    return ChannelSerializer.serialize(channel, auth);
   }
 });

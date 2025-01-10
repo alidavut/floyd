@@ -25,8 +25,8 @@ export function Cover() {
                 Trusted by forward thinkers.
               </span>
             </div>
-            <h1 className="text-[2.5rem] lg:text-[4.75rem] font-bold tracking-tight leading-[2.5rem] lg:leading-[4.75rem] mb-6">
-              Booking mastery,<br /> made
+            <h1 className="text-[2.5rem] lg:text-[4.7rem] font-bold tracking-tight leading-[2.5rem] lg:leading-[4.75rem] mb-6">
+              Streaming mastery,<br /> made
               {' '}
               <span className="inline-block relative">
                 <span className="h-[1rem] md:h-[1.5rem] bg-purple-200 block absolute inset-0 top-auto -rotate-1 rounded-full" />
@@ -34,10 +34,10 @@ export function Cover() {
               </span>
             </h1>
             <p className="font-medium text-[1rem] lg:text-[1.5rem] text-bunker-900 mb-12 leading-[1.5] max-w-xl">
-              Accept bookings, manage schedules, and monetize events in minutes. Floyd turns bold ideas into beautiful,
-              unforgettable experiences.
+              Host live experiences, sell tickets, and engage your audience—all in one place. Floyd makes it effortless
+              to monetize your expertise and creativity.
             </p>
-            <div className="grid lg:grid-cols-2 gap-6 lg:w-5/6">
+            <div className="grid lg:grid-cols-2 gap-6 lg:w-4/5">
               <a href="https://hub.floyd.so/signup">
                 <Button size="huge" fullWidth>
                   Get early access
@@ -45,7 +45,7 @@ export function Cover() {
               </a>
               <span className="flex items-center text-bunker-500 font-medium">
                 <span className="block text-center w-full lg:text-left">
-                  You can claim your @handle and start creating your space now.{' '}
+                  You can claim your @handle for your channel now.{' '}
                   <PiRocketLaunch className="w-5 h-5 inline-block" />
                 </span>
               </span>

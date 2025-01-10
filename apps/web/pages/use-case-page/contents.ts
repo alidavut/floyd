@@ -4,83 +4,210 @@ import { images } from './images';
 export interface UseCasePageContent {
   image: StaticImageData;
   title: string;
+  shortDescription: string;
   description: string;
+  htmlTitle: string;
   heroTitle: string;
   heroDescription: string;
 }
 
 export const contents: Record<string, UseCasePageContent> = {
-  'concerts': {
-    image: images.concert,
-    title: 'Concerts',
-    description: 'Concert organizers can use Floyd to manage their events, attendees, and payments.',
-    heroTitle: 'Sell tickets for your concerts effortlessly',
-    heroDescription: `From music festivals to live shows, Floyd helps you manage your concerts with ease. Accept
-      reservations, track schedules, and monetize your events in minutes. Perfect for organizers who want to focus on
-      creating, not logistics.`,
+  'musicians': {
+    image: images.musician,
+    title: 'Musicians',
+    shortDescription: 'Stream live gigs and monetize your music effortlessly.',
+    description: 'Musicians can use Floyd to host live concerts, sell tickets, and grow their fanbase through engaging performances and memorable virtual experiences.',
+    htmlTitle: 'Ticketed Livestreams for Musicians',
+    heroTitle: 'Stream your live gigs to the world',
+    heroDescription: `Take your music to fans anywhere with live streaming. Floyd helps you launch, ticket, and host engaging concerts online. Build lasting relationships with your audience while earning from every performance.`,
   },
-  'festivals': {
-    image: images.festival,
-    title: 'Festivals',
-    description: 'Festival organizers can use Floyd to manage their events, attendees, and payments.',
-    heroTitle: 'Your festival, elevated. Bookings, simplified.',
-    heroDescription: `From music festivals to food fairs, Floyd transforms how you manage your event. Easily sell
-      tickets, keep track of attendance, and create unforgettable moments. Perfect for organizers who want to focus
-      on the experience, not the logistics.`
+  'coaches': {
+    image: images.coach,
+    title: 'Coaches',
+    shortDescription: 'Host paid workshops and empower clients worldwide.',
+    description: 'Coaches can use Floyd to host live workshops, sell tickets, and grow their business through interactive sessions and impactful learning experiences.',
+    htmlTitle: 'Paid Live Sessions and Workshops for Coaches',
+    heroTitle: 'Transform lives with virtual sessions',
+    heroDescription: `Offer live, interactive workshops and Q&A sessions to clients anywhere in the world. Floyd simplifies ticketing, streaming, and audience engagement, helping you focus on delivering value and growing your business.`,
   },
-  'yoga-instructors': {
-    image: images.yoga,
-    title: 'Yoga Instructors',
-    description: 'Yoga instructors can use Floyd to manage their classes, students, and payments.',
-    heroTitle: 'Simplify bookings for your yoga classes',
-    heroDescription: `Whether you teach Vinyasa, Hatha, or private sessions, Floyd helps you manage your yoga practice.
-      Accept class registrations, streamline scheduling, and get paid instantly. Ideal for instructors ready to take
-      their practice to the next level.`
-  },
-  'theaters': {
-    image: images.theater,
-    title: 'Theaters',
-    description: 'Theater organizers can use Floyd to manage their events, attendees, and payments.',
-    heroTitle: 'Your theater\'s stage, their favorite seat.',
-    heroDescription: `From local playhouses to grand performance halls, Floyd helps you manage ticket sales, coordinate
-      schedules, and enhance audience experiences. Accept bookings, simplify management, and focus on delivering
-      unforgettable performances. Perfect for theater managers looking to elevate their operations.`
+  'creators': {
+    image: images.creator,
+    title: 'Creators',
+    shortDescription: 'Turn your creativity into interactive live events.',
+    description: 'Creators can use Floyd to host live events, sell tickets, and connect with their audience, building a loyal and engaged community around their passion.',
+    htmlTitle: 'Monetize Your Creativity with Live Events',
+    heroTitle: 'Monetize your passion with live events',
+    heroDescription: `Host interactive live sessions, workshops, or showcases to share your creativity with a global audience. Floyd makes it easy to engage your fans, grow your community, and earn through ticket sales.`,
   },
   'webinars': {
     image: images.webinar,
     title: 'Webinars',
-    description: `Host and manage your webinars effortlessly with Floyd. Take registrations, organize schedules, and
-      get paid seamlessly.`,
-    heroTitle: 'Seamless webinar scheduling, made simple',
-    heroDescription: `Deliver engaging webinars without the hassle of managing attendees. Floyd simplifies your process,
-      allowing you to accept registrations, organize schedules, and monetize your sessions in minutes. Perfect for
-      creators, educators, and professionals who want to focus on their content.`
+    shortDescription: 'Host professional webinars and grow your audience.',
+    description: 'Webinar hosts can use Floyd to create live sessions, sell tickets, and deliver professional and engaging presentations with ease.',
+    htmlTitle: 'Engage Audiences with Professional Webinars',
+    heroTitle: 'Create webinars that leave a lasting impression',
+    heroDescription: `Host professional and interactive webinars that captivate your audience. Floyd offers tools to simplify ticket sales, manage attendees, and deliver seamless virtual presentations for maximum impact.`,
   },
   'workshops': {
     image: images.workshop,
     title: 'Workshops',
-    description: 'Workshop organizers can use Floyd to manage their events, attendees, and payments.',
-    heroTitle: 'Simplify workshop registrations and payments',
-    heroDescription: `Whether you're leading a creative workshop, technical seminar, or corporate training, Floyd
-    quips you to manage attendees, schedule events, and process payments effortlessly. Perfect for facilitators ready
-    to focus on what matters—creating impactful learning experiences.`
+    shortDescription: 'Create and monetize interactive workshops with ease.',
+    description: 'Workshop organizers can use Floyd to deliver immersive sessions, sell tickets, and engage participants with real-time collaboration tools.',
+    htmlTitle: 'Interactive Workshops with Live Collaboration',
+    heroTitle: 'Deliver immersive workshops no matter where you are',
+    heroDescription: `Take your workshops online with interactive tools and real-time engagement. Floyd allows you to monetize your expertise, reach global learners, and deliver high-value learning experiences.`,
+  },
+  'yoga-instructors': {
+    image: images.yoga,
+    title: 'Yoga Instructors',
+    shortDescription: 'Stream and grow your yoga classes worldwide.',
+    description: 'Yoga instructors can use Floyd to host live classes, sell tickets, and foster a thriving and connected yoga community online.',
+    htmlTitle: 'Host Live Yoga Classes and Grow Your Community',
+    heroTitle: 'Share the art of yoga with the world',
+    heroDescription: `From Vinyasa to Hatha, bring your yoga practice to a global audience with live streaming. Floyd helps you host, monetize, and build a strong online yoga community.`,
+  },
+  'comedians': {
+    image: images.comedian,
+    title: 'Comedians',
+    shortDescription: 'Bring your comedy to a global audience.',
+    description: 'Comedians can use Floyd to stream stand-up shows, sell tickets, and connect with fans around the world through laughter.',
+    htmlTitle: 'Stream Stand-Up Comedy Shows Online',
+    heroTitle: 'Make the world laugh from anywhere',
+    heroDescription: `Deliver your best punchlines to fans across the globe with live-streamed comedy shows. Floyd makes ticketing, streaming, and audience interaction effortless for comedians.`,
+  },
+  'theaters': {
+    image: images.theater,
+    title: 'Theaters',
+    shortDescription: 'Take your performances beyond the stage.',
+    description: 'Theaters can use Floyd to stream plays, sell tickets, and engage with virtual audiences, extending their reach to new viewers.',
+    htmlTitle: 'Stream Theater Performances Online',
+    heroTitle: 'Bring your stage to every screen',
+    heroDescription: `Stream live performances, plays, or musicals to audiences anywhere. Floyd enables theaters to sell tickets, reach wider audiences, and deliver exceptional performances virtually.`,
+  },
+  'djs': {
+    image: images.dj,
+    title: 'DJs',
+    shortDescription: 'Stream live sets and grow your fanbase.',
+    description: 'DJs can use Floyd to stream live sets, sell tickets, and connect with fans across the globe through immersive music experiences.',
+    htmlTitle: 'Stream Live DJ Sets',
+    heroTitle: 'Spin live sets for a global audience',
+    heroDescription: `Take your music global with live-streamed DJ sets. Floyd provides the tools to sell tickets, engage with fans in real time, and grow your following effortlessly.`,
+  },
+  'fitness-instructors': {
+    image: images.fitness,
+    title: 'Fitness Instructors',
+    shortDescription: 'Stream fitness classes and grow your community.',
+    description: 'Fitness instructors can use Floyd to stream live workouts, sell tickets, and build a loyal fitness community online.',
+    htmlTitle: 'Stream Fitness Classes Online',
+    heroTitle: 'Stream your fitness classes with ease',
+    heroDescription: `Host live fitness sessions and inspire your clients anywhere. Floyd simplifies ticket sales, streaming, and audience engagement to help you grow your fitness brand.`,
+  },
+  'authors': {
+    image: images.author,
+    title: 'Authors',
+    shortDescription: 'Host readings and monetize your book launches.',
+    description: 'Authors can use Floyd to host live readings, sell tickets, and connect with readers in engaging and interactive ways.',
+    htmlTitle: 'Host Live Book Readings and Launches',
+    heroTitle: 'Engage readers with live book events',
+    heroDescription: `Host live readings, interactive Q&A sessions, or virtual book launches. Floyd helps authors connect with readers and monetize their creative work globally.`,
+  },
+  'gamers': {
+    image: images.gamer,
+    title: 'Gamers',
+    shortDescription: 'Stream and monetize your gameplay sessions.',
+    description: 'Gamers can use Floyd to stream live gaming events, sell tickets, and engage with their audience in real-time.',
+    htmlTitle: 'Monetize Gaming Streams',
+    heroTitle: 'Turn your gaming sessions into paid events',
+    heroDescription: `Stream live tournaments or casual play sessions with ticketed access. Floyd helps you monetize your gaming passion while connecting with your fanbase worldwide.`,
+  },
+  'comedy-clubs': {
+    image: images.comedyClub,
+    title: 'Comedy Clubs',
+    shortDescription: 'Bring live comedy shows online.',
+    description: 'Comedy clubs can use Floyd to stream performances, sell tickets, and engage with virtual audiences beyond their local reach.',
+    htmlTitle: 'Stream Live Comedy Club Events',
+    heroTitle: 'Take your comedy club online',
+    heroDescription: `Host live-streamed comedy nights and bring laughter to fans who can’t attend in person. Floyd simplifies ticketing and streaming, helping you expand your club’s audience.`,
+  },
+  'podcasters': {
+    image: images.podcast,
+    title: 'Podcasters',
+    shortDescription: 'Host live episodes and connect with listeners.',
+    description: 'Podcasters can use Floyd to host live shows, sell tickets, and engage with their audience in interactive and meaningful ways.',
+    htmlTitle: 'Stream Live Podcast Episodes',
+    heroTitle: 'Stream live podcast episodes and Q&A sessions',
+    heroDescription: `Bring your podcast to life with ticketed live streams and fan Q&As. Floyd provides tools to monetize your episodes and strengthen your community of listeners.`,
+  },
+  'masterclasses': {
+    image: images.expert,
+    title: 'Masterclasses',
+    shortDescription: 'Host exclusive and high-value masterclasses.',
+    description: 'Experts can use Floyd to host live masterclasses, sell tickets, and deliver engaging and impactful lessons.',
+    htmlTitle: 'Host Live Masterclasses Online',
+    heroTitle: 'Deliver exclusive live masterclasses',
+    heroDescription: `Share your expertise with learners worldwide through ticketed live masterclasses. Floyd helps you create professional, engaging sessions that drive value for attendees.`,
+  },
+  'festivals': {
+    image: images.festival,
+    title: 'Festivals',
+    shortDescription: 'Stream multi-day festivals to global audiences.',
+    description: 'Festival organizers can use Floyd to stream multi-day events, sell passes, and expand their reach to international audiences.',
+    htmlTitle: 'Host Virtual Festivals',
+    heroTitle: 'Bring your festival online',
+    heroDescription: `Stream live performances, workshops, and panel discussions to a global audience. Floyd helps you sell passes, engage attendees, and create a vibrant festival experience online.`,
+  },
+  'fundraisers': {
+    image: images.charity,
+    title: 'Fundraisers',
+    shortDescription: 'Host live events to raise funds for causes.',
+    description: 'Fundraisers can use Floyd to host live events, sell tickets, and raise money for important causes while engaging supporters.',
+    htmlTitle: 'Host Live Fundraising Events',
+    heroTitle: 'Raise funds with live events',
+    heroDescription: `Host ticketed live events to amplify your fundraising efforts. Floyd helps you connect with supporters, increase engagement, and achieve your mission through impactful virtual events.`,
+  },
+  'exclusive-communities': {
+    image: images.community,
+    title: 'Exclusive Communities',
+    shortDescription: 'Host private live events for your members.',
+    description: 'Exclusive communities can use Floyd to host live events, sell tickets, and provide unique and engaging experiences for their members.',
+    htmlTitle: 'Host Private Live Events for Members',
+    heroTitle: 'Private live events for your community',
+    heroDescription: `Strengthen your community with exclusive live events tailored to your members. Floyd enables secure ticketing and streaming for a premium experience.`,
+  },
+  'summits': {
+    image: images.summit,
+    title: 'Summits',
+    shortDescription: 'Host virtual summits with ease.',
+    description: 'Summit organizers can use Floyd to host live events, sell tickets, and connect with global audiences through impactful sessions.',
+    htmlTitle: 'Host Virtual Summits',
+    heroTitle: 'Take your summit to the next level',
+    heroDescription: `Stream keynote sessions, panel discussions, and workshops to global attendees. Floyd helps you sell passes, manage schedules, and create a seamless virtual summit experience.`,
+  },
+  'concerts': {
+    image: images.concert,
+    title: 'Concerts',
+    shortDescription: 'Stream live concerts and connect with fans everywhere.',
+    description: 'Concert organizers can use Floyd to stream live performances, sell tickets, and bring unforgettable music experiences to global audiences.',
+    htmlTitle: 'Stream Live Concerts Online',
+    heroTitle: 'Bring your concerts to fans around the world',
+    heroDescription: `Host live music events and share the magic of your concerts with a global audience. Floyd makes it easy to sell tickets, stream performances, and engage fans with unforgettable live music experiences.`,
   },
   'conferences': {
     image: images.conference,
     title: 'Conferences',
-    description: 'Conference organizers can use Floyd to manage their events, attendees, and payments.',
-    heroTitle: 'Seamless ticketing for conferences',
-    heroDescription: `Whether you're hosting an intimate seminar or a global convention, Floyd empowers you to manage
-      your conference effortlessly. Handle registrations, schedule sessions, and collect payments—all in one platform.
-      Built for event pioneers ready to elevate their impact.`
+    shortDescription: 'Host impactful virtual conferences with ease.',
+    description: 'Conference organizers can use Floyd to host live events, sell tickets, and connect with global audiences through seamless virtual sessions and engaging keynotes.',
+    htmlTitle: 'Host Virtual Conferences Online',
+    heroTitle: 'Take your conference to the next level',
+    heroDescription: `Stream keynote speeches, panel discussions, and breakout sessions to attendees worldwide. Floyd simplifies ticket sales, streaming, and audience engagement, making your conference accessible to a global audience.`,
   },
-  'sports-events': {
+  'sports': {
     image: images.sports,
-    title: 'Sports Events',
-    description: 'Organizers of sports events can use Floyd to manage registrations, sell tickets, and streamline payments.',
-    heroTitle: 'Score big with seamless sports event bookings',
-    heroDescription: `Whether you're managing a marathon, a local soccer league, or a national championship, Floyd
-      equips you to handle it all. Simplify participant sign-ups, manage your schedule, and process payments
-      effortlessly. Tailored for organizers aiming to revolutionize their sports events.`
-  },
-}
+    title: 'Sports',
+    shortDescription: 'Stream live sports events and grow your fanbase.',
+    description: 'Sports organizers can use Floyd to stream games, sell tickets, and bring live sports action to fans who can’t attend in person.',
+    htmlTitle: 'Stream Live Sports Events',
+    heroTitle: 'Bring live sports action to every fan',
+    heroDescription: `Host and stream live sports events to fans worldwide, whether it’s local leagues, tournaments, or matches. Floyd enables ticket sales, live streaming, and real-time audience interaction, bringing the energy of sports to every screen.`,
+  }
+};

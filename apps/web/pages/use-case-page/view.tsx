@@ -14,7 +14,7 @@ export function UseCasePageView({ content }: Props) {
   return (
     <div>
       <Head
-        title={`Booking for ${content.title} | Ticketing, Scheduling, and Payments`}
+        title={content.htmlTitle}
         description={content.description}
         og={{
           title: `Floyd for ${content.title}`,

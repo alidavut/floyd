@@ -5,9 +5,9 @@ export function HomeView() {
   return (
     <div>
       <Head
-        title="Floyd - Booking mastery, made for frontiers"
-        description="Floyd provides a booking system for events and experiences. Accept bookings, manage schedules,
-          and monetize events in minutes."
+        title="Floyd - Streaming mastery, made for frontiers"
+        description="Floyd provides a platform to host live experiences, sell tickets, and engage your audience—all in
+          one place. Monetize your expertise and creativity with ease."
         titlePure
       />
       <Cover />

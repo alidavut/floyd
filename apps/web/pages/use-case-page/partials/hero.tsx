@@ -38,7 +38,7 @@ export function Hero({ title, description, image }: Props) {
             </a>
             <span className="flex items-center text-bunker-500 font-medium">
               <span className="block text-center w-full lg:text-left">
-                You can claim your @handle and start creating your space now.{' '}
+                You can claim your @handle for your channel now.{' '}
                 <PiRocketLaunch className="w-5 h-5 inline-block" />
               </span>
             </span>

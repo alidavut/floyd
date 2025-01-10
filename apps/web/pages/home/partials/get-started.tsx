@@ -15,7 +15,7 @@ export function GetStarted() {
               </span>
             </h2>
             <p className="text- text-bunker-500 max-w-xs mx-auto">
-              You can claim your @handle and start creating your space in minutes.
+              You can claim your @handle and start creating your channel in minutes.
             </p>
             <div className="mt-9">
               <a href="https://hub.floyd.so/signup">

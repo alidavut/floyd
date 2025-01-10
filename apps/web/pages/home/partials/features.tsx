@@ -6,26 +6,30 @@ export function Features() {
       <div className="border-b border-dashed border-bunker-300 mb-20 lg:mb-32 pb-32">
         <div className="grid md:grid-cols-2 lg:w-2/3 gap-6 lg:gap-[4.5rem]">
           <Card
-            title="Create your space"
-            description="Claim your @handle and start listing your events."
+            title="Launch your channel"
+            description="Claim your unique @handle and create a channel to showcase your live experiences.
+              Make it yours—your style, your vision."
             number={1}
             color="bg-green-300"
           />
           <Card
-            title="Add your listings"
-            description="Create your events in minutes with our easy-to-use tools."
+            title="Plan your sessions"
+            description="Easily schedule your live experiences, workshops, or events. Set dates, times, and pricing,
+              and customize every detail."
             number={2}
             color="bg-yellow-300"
           />
           <Card
-            title="Share your profile"
-            description="Promote your page and start getting bookings."
+            title="Share your link"
+            description="Promote your Floyd profile or individual event pages across social media, emails, or your
+              website. Bring your audience straight to you."
             number={3}
             color="bg-purple-300"
           />
           <Card
-            title="Accept bookings"
-            description="Get paid instantly and manage your schedule with ease."
+            title="Earn with ease"
+            description="Get paid for your live experiences. Manage your bookings, track earnings, and focus on
+              delivering unforgettable moments."
             number={4}
             color="bg-red-300"
           />

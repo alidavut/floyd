@@ -25,11 +25,11 @@ export function Cover() {
                 Trusted by forward thinkers.
               </span>
             </div>
-            <h1 className="text-[2.5rem] lg:text-[4.7rem] font-bold tracking-tight leading-[2.5rem] lg:leading-[4.75rem] mb-6">
+            <h1 className="text-[2.25rem] lg:text-[4.7rem] font-bold tracking-tight leading-[2.5rem] lg:leading-[4.75rem] mb-6">
               Streaming mastery,<br /> made
               {' '}
               <span className="inline-block relative">
-                <span className="h-[1rem] md:h-[1.5rem] bg-orange-200 block absolute inset-0 top-auto -rotate-1 rounded-full" />
+                <span className="h-[0.75rem] md:h-[1.5rem] bg-orange-200 block absolute inset-0 top-auto -rotate-1 rounded-full" />
                 <span className="relative font-serif italic font-semibold">for frontiers</span>
               </span>
             </h1>

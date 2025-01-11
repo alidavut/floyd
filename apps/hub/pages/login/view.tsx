@@ -41,6 +41,7 @@ export function View({ error, onSubmit, loading }: Props) {
           <div>
               <Input
                 label="Email"
+                type="email"
                 onValueChange={(value) => setParams({ ...params, email: value })}
                 value={params.email}
                 errors={inputErrors?.email}

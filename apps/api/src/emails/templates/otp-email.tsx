@@ -1,10 +1,9 @@
 import { Heading, Text } from 'emails/components';
 import { Layout } from '../layout';
 import { createPreview } from './preview';
-import { Section } from '@react-email/components';
 
 export interface Props {
-  password: string;
+  password: number;
 }
 
 export function OTPEmail({ password }: Props) {
@@ -29,4 +28,4 @@ export function OTPEmail({ password }: Props) {
   )
 }
 
-export default createPreview(OTPEmail, { password: '123456' });
+export default createPreview(OTPEmail, { password: Number('123456') });

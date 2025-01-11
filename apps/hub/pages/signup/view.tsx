@@ -103,6 +103,7 @@ export function View({ step, onSubmit, error, loading }: Props) {
               <Input
                 label="Verification code"
                 type="number"
+                inputMode="numeric"
                 placeholder="Enter the code we sent to your email"
                 onValueChange={(value) => setParams({ ...params, otpCode: value })}
                 value={params.otpCode}

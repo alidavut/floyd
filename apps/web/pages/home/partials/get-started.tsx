@@ -10,7 +10,7 @@ export function GetStarted() {
               <span className="block text-[1.25rem] font-light leading-none mb-1.5">
                 Ready to begin?
               </span>
-              <span className="text-purple-700 text-[2.5rem] font-semibold tracking-tighter">
+              <span className="text-purple-600 text-[2.5rem] font-semibold tracking-tighter">
                 your story starts here
               </span>
             </h2>

@@ -1,5 +1,5 @@
 import { Head } from 'components';
-import { Cover, Features, GetStarted } from './partials';
+import { Cover, Features, Flow, GetStarted } from './partials';
 
 export function HomeView() {
   return (
@@ -11,6 +11,7 @@ export function HomeView() {
         titlePure
       />
       <Cover />
+      <Flow />
       <Features />
       <GetStarted />
     </div>

@@ -1,60 +1,107 @@
 import cx from 'classnames';
+import image1 from './feature-1.jpg';
+import image2 from './feature-2.jpg';
+import image3 from './feature-3.jpg';
+import image4 from './feature-4.jpg';
+import image5 from './feature-5.jpg';
+import image6 from './feature-6.jpg';
+
+const cards = [
+  {
+    title: 'Host live experiences effortlessly',
+    description: 'Go live with ease. Whether it’s a workshop, concert, or Q&A, Floyd makes hosting smooth and simple.',
+    image: image1
+  },
+  {
+    title: 'Sell tickets and get paid fast',
+    description: 'Set your ticket price, sell to your audience, and get payouts right after your event ends.',
+    image: image2
+  },
+  {
+    title: 'Keep your audience engaged',
+    description: `Use live chat and reactions to connect with your audience in real time and make every moment interactive.`,
+    image: image3
+  },
+  {
+    title: 'Earn more with live tips',
+    description: `Let your audience send tips during your event—perfect for creators and performers who thrive on live energy.`,
+    image: image4
+  },
+  {
+    title: 'Focus on your event, not the tech',
+    description: `We handle streaming, ticketing, and payments, so you can focus on creating an unforgettable experience.`,
+    image: image5
+  },
+  {
+    title: 'Built for bold ideas',
+    description: `From intimate workshops to global performances, Floyd gives you the tools to turn your vision into reality, no matter the size or scale.`,
+    image: image6
+  }
+]
 
 export function Features() {
   return (
-    <div className="container">
-      <div className="border-b border-dashed border-bunker-300 mb-20 lg:mb-32 pb-32">
-        <div className="grid md:grid-cols-2 lg:w-2/3 gap-6 lg:gap-[4.5rem]">
-          <Card
-            title="Launch your channel"
-            description="Claim your unique @handle and create a channel to showcase your live experiences.
-              Make it yours—your style, your vision."
-            number={1}
-            color="bg-green-300"
-          />
-          <Card
-            title="Plan your sessions"
-            description="Easily schedule your live experiences, workshops, or events. Set dates, times, and pricing,
-              and customize every detail."
-            number={2}
-            color="bg-yellow-300"
-          />
-          <Card
-            title="Share your link"
-            description="Promote your Floyd profile or individual event pages across social media, emails, or your
-              website. Bring your audience straight to you."
-            number={3}
-            color="bg-purple-300"
-          />
-          <Card
-            title="Earn with ease"
-            description="Get paid for your live experiences. Manage your bookings, track earnings, and focus on
-              delivering unforgettable moments."
-            number={4}
-            color="bg-red-300"
-          />
+    <div className="relative py-48 mb-32 text-white">
+      <div
+        className="bg-bunker-950 -skew-y-6 absolute inset-0 bottom-1/3 border-t-2 border-dashed border-white"
+      />
+      <div
+        className="bg-bunker-950 absolute inset-0 top-1/3 bottom-1/3"
+      />
+      <div
+        className="bg-bunker-950 skew-y-6 absolute inset-0 top-1/3"
+      />
+      <div className="container relative">
+        <h3 className="mb-32 text-center">
+          <span className="block font-semibold font-serif text-[4.25rem] leading-none mb-6">
+            <span className="font-sans font-extrabold uppercase text-[4rem] tracking-tight">Everything</span>{' '}
+            <span className="font-serif italic tracking-tight">you need</span>
+          </span>
+          <span className="block font-semibold text-[1.675rem]">
+            to <U n={1}>create</U>, <U n={2}>host</U>, and <U n={3}>monetize</U> live experiences
+          </span>
+        </h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-15">
+          {cards.map((card, index) => (
+            <div key={index} className="pt-24">
+              <div className="relative rounded-sm">
+                <div className="absolute inset-0 border-t border-dashed border-white/20 ml-24" />
+                <div className="absolute inset-0 border-l border-dashed border-white/20 ml-56" />
+                <div className="relative flex space-x-9 z-10">
+                  <img src={card.image.src} className="rounded-sm w-48 h-48 -mt-24 -rotate-3 -skew-y-2" />
+                  <div className="flex-1 py-12 pl-9">
+                    <h4 className="text-[1.5rem] leading-[2rem] font-semibold mb-3">
+                      {card.title}
+                    </h4>
+                    <p className="text-lg text-white/70">
+                      {card.description}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
   )
 }
 
-function Card({ title, description, number, color }) {
-  const className = cx(
-    'mt-7 pt-9 rounded-sm relative',
-  );
+function U({ n, children }) {
+  const bg = [
+    'bg-pink-300',
+    'bg-yellow-300',
+    'bg-green-300'
+  ][n - 1];
 
   return (
-    <div className={className}>
-      <div className={cx("w-10 h-7 absolute z-10 -top-2 left-3 rounded-sm -rotate-3", color)}>
-      </div>
-      <div className={cx("w-10 h-10 rounded-sm flex items-center justify-center absolute z-10 -top-7 left-0 bg-bunker-950/90")}>
-        <span className="text-white font-bold text-xl">{number}</span>
-      </div>
-      <div>
-        <h4 className="text-2xl font-bold mb-1.5 text-black">{title}</h4>
-        <p className="text-xl text-gray-800">{description}</p>
-      </div>
-    </div>
+    <span className="relative">
+      <span
+        className={cx('absolute inset-0 -skew-y-1', bg)}
+      />
+      <span className="relative text-bunker-950 uppercase font-semibold inline-block px-1.5 py-0.5 font-serif">
+        {children}
+      </span>
+    </span>
   )
 }

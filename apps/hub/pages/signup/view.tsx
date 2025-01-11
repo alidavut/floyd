@@ -20,7 +20,7 @@ export function View({ step, onSubmit, error, loading }: Props) {
     password: '',
     firstName: '',
     lastName: '',
-    otpCode: ''
+    otpCode: null
   });
 
   const inputErrors = getInputErrors(error);

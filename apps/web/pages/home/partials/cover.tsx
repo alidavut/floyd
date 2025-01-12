@@ -5,16 +5,16 @@ import { PiRocketLaunch, PiStarFill } from 'react-icons/pi';
 export function Cover() {
   return (
     <div
-      className="relative z-10 mb-20 lg:mb-0">
+      className="relative z-10 mb-20 lg:mb-0 overflow-hidden">
       <div
         className="bg-gradient-to-br absolute inset-0 z-0 from-gray-100 to-purple-100"
       />
       <div
         className="bg-gradient-to-b absolute inset-0 z-0 from-transparent to-gray-100"
       />
-      <div className="container relative">
+      <div className="container">
         <div className="grid lg:grid-cols-11 gap-12">
-          <div className="lg:col-span-6 pt-24 lg:py-36 lg:pb-32 xl:py-52 xl:pb-48">
+          <div className="lg:col-span-6 pt-24 lg:py-36 lg:pb-32 xl:py-52 xl:pb-48 relative">
             <div className="flex items-center space-x-1 mb-6">
               <PiStarFill className="text-green-600 w-5 h-5" />
               <PiStarFill className="text-green-600 w-5 h-5" />
@@ -51,10 +51,8 @@ export function Cover() {
               </span>
             </div>
           </div>
-          <div className="lg:col-span-5 relative">
-            <div className="lg:absolute inset-0 flex items-center lg:mt-48">
-              <img src={coverImage.src} className="w-full max-w-lg lg:max-w-none mx-auto object-cover lg:rotate-6" />
-            </div>
+          <div className="lg:col-span-5">
+            <img src={coverImage.src} className="relative lg:absolute lg:left-1/2 lg:right-0 lg:top-0 lg:w-[50vw] lg:mt-18 lg:ml-18 lg:-rotate-3" />
           </div>
         </div>
       </div>

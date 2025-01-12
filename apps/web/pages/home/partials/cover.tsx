@@ -14,7 +14,7 @@ export function Cover() {
       />
       <div className="container relative">
         <div className="grid lg:grid-cols-11 gap-12">
-          <div className="lg:col-span-6 pt-24 lg:py-52 lg:pb-48">
+          <div className="lg:col-span-6 pt-24 lg:py-36 lg:pb-32 xl:py-52 xl:pb-48">
             <div className="flex items-center space-x-1 mb-6">
               <PiStarFill className="text-green-600 w-5 h-5" />
               <PiStarFill className="text-green-600 w-5 h-5" />
@@ -25,7 +25,7 @@ export function Cover() {
                 Trusted by forward thinkers.
               </span>
             </div>
-            <h1 className="text-[2.25rem] lg:text-[4.7rem] font-bold tracking-tight leading-[2.5rem] lg:leading-[4.75rem] mb-6">
+            <h1 className="text-[2.25rem] lg:text-[3.5rem] xl:text-[4.7rem] leading-[2.5rem] lg:leading-[4rem] xl:leading-[4.75rem] mb-6 font-bold tracking-tight">
               Streaming mastery,<br /> made
               {' '}
               <span className="inline-block relative">
@@ -33,11 +33,11 @@ export function Cover() {
                 <span className="relative font-serif italic font-semibold">for frontiers</span>
               </span>
             </h1>
-            <p className="font-medium text-[1rem] lg:text-[1.5rem] text-bunker-900 mb-12 leading-[1.5] max-w-xl">
+            <p className="font-medium text-[1rem] lg:text-[1.25rem] xl:text-[1.5rem] text-bunker-900 mb-12 leading-[1.5] max-w-xl">
               Host live experiences, sell tickets, and engage your audience effortlessly. Floyd turns bold ideas into
               beautiful, unforgettable experiences—helping you monetize your creativity and expertise with ease.
             </p>
-            <div className="grid lg:grid-cols-2 gap-6 lg:w-4/5">
+            <div className="grid md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-6 lg:w-4/5">
               <a href="https://hub.floyd.so/signup">
                 <Button size="huge" fullWidth>
                   Get early access
@@ -52,8 +52,8 @@ export function Cover() {
             </div>
           </div>
           <div className="lg:col-span-5 relative">
-            <div className="lg:absolute inset-0 flex items-center">
-              <img src={coverImage.src} className="w-full h-80 lg:h-auto object-cover lg:rotate-6" />
+            <div className="lg:absolute inset-0 flex items-center lg:mt-48">
+              <img src={coverImage.src} className="w-full max-w-lg lg:max-w-none mx-auto object-cover lg:rotate-6" />
             </div>
           </div>
         </div>

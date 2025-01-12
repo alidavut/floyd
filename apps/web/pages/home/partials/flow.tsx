@@ -4,7 +4,7 @@ export function Flow() {
   return (
     <div className="container">
       <div className="pb-32">
-        <div className="grid md:grid-cols-2 lg:w-2/3 gap-6 lg:gap-[4.5rem]">
+        <div className="grid md:grid-cols-2 lg:w-2/3 gap-18 lg:gap-[4.5rem]">
           <Card
             title="Launch your channel"
             description="Claim your unique @handle and create a channel to showcase your live experiences.

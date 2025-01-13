@@ -5,6 +5,7 @@ import image3 from './feature-3.jpg';
 import image4 from './feature-4.jpg';
 import image5 from './feature-5.jpg';
 import image6 from './feature-6.jpg';
+import border from './border.svg';
 
 const cards = [
   {
@@ -41,16 +42,18 @@ const cards = [
 
 export function Features() {
   return (
-    <div className="relative py-32 xl:py-48 mb-32 text-white">
+    <div className="relative py-32 xl:py-48 mb-44 text-white">
       <div
-        className="bg-bunker-950 -skew-y-6 absolute inset-0 bottom-1/3 border-t-2 border-dashed border-white"
-      />
+        className="bg-bunker-950 -skew-y-6 absolute inset-0 bottom-1/3">
+        <div style={{ backgroundImage: `url(${border.src})`}} className="w-full h-12 -mt-12 bg-[length:auto_3rem]" />
+      </div>
       <div
         className="bg-bunker-950 absolute inset-0 top-1/3 bottom-1/3"
       />
       <div
-        className="bg-bunker-950 skew-y-6 absolute inset-0 top-1/3"
-      />
+        className="bg-bunker-950 skew-y-6 absolute inset-0 top-1/3 flex justify-center items-end">
+        <div style={{ backgroundImage: `url(${border.src})`}} className="w-full h-12 -mb-12 bg-[length:auto_3rem]" />
+      </div>
       <div className="container relative">
         <h3 className="mb-15 lg:mb-32 text-center">
           <span className="block font-semibold font-serif leading-none mb-3 lg:mb-6 space-x-1 lg:space-x-2">

@@ -3,7 +3,7 @@ import cx from 'classnames';
 export function Flow() {
   return (
     <div className="container">
-      <div className="pb-32">
+      <div className="pb-48">
         <div className="grid md:grid-cols-2 lg:w-2/3 gap-18 lg:gap-[4.5rem]">
           <Card
             title="Launch your channel"

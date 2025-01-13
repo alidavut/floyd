@@ -1,4 +1,5 @@
 import { Button } from '@floyd/ui/components';
+import bg from './get-started-bg.svg';
 
 export function GetStarted() {
   return (

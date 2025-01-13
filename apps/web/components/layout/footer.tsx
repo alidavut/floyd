@@ -46,7 +46,7 @@ export function Footer() {
             <img src={badge.src} className="h-[2.5rem] rounded-sm" />
           </a>
           <p className="text-bunker-500">
-            Copyright {new Date().getFullYear()} Floyd.
+            Copyright {new Date().getFullYear()} Floyd LLC
           </p>
         </div>
       </div>

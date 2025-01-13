@@ -61,15 +61,15 @@ export function Features() {
             to <U n={1}>create</U>, <U n={2}>host</U>, and <U n={3}>monetize</U> live experiences
           </span>
         </h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-15">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-15 lg:gap-18">
           {cards.map((card, index) => (
             <div key={index} className="pt-24">
               <div className="relative rounded-sm">
                 <div className="absolute inset-0 border-t border-dashed border-white/20 xl:ml-24" />
-                <div className="absolute inset-0 border-l border-dashed border-white/20 ml-3 xl:ml-56" />
+                <div className="absolute inset-0 border-l border-dashed border-white/20 ml-3 xl:ml-[12.5rem]" />
                 <div className="relative flex flex-col xl:flex-row space-x-9 z-10">
-                  <img src={card.image.src} className="rounded-sm w-32 h-48 xl:w-48 xl:h-72 object-cover object-center -mt-24 -rotate-[4.5deg] -skew-y-1" />
-                  <div className="flex-1 pt-9 pb-6 pl-1.5 pr-6 lg:py-10 lg:pl-9">
+                  <img src={card.image.src} className="rounded-sm w-32 h-48 xl:w-40 xl:h-60 object-cover object-center -mt-24 -rotate-[4.5deg] -skew-y-1" />
+                  <div className="flex-1 pt-9 pb-6 pl-1.5 pr-6 lg:py-9 lg:pl-9">
                     <h4 className="text-[1.5rem] leading-[2rem] font-semibold mb-3">
                       {card.title}
                     </h4>

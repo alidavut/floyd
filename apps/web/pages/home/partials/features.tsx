@@ -57,7 +57,7 @@ export function Features() {
             <span className="font-sans font-extrabold uppercase text-[2rem] lg:text-[4rem] tracking-tight">Everything</span>{' '}
             <span className="font-serif italic tracking-tight text-[1.5rem] lg:text-[4.25rem]">you need</span>
           </span>
-          <span className="block font-semibold text-[1.175rem] lg:text-[1.675rem] leading-[1.75rem] lg:leading-[2rem]">
+          <span className="block font-medium text-[1.175rem] lg:text-[1.675rem] leading-[1.75rem] lg:leading-[2rem]">
             to <U n={1}>create</U>, <U n={2}>host</U>, and <U n={3}>monetize</U> live experiences
           </span>
         </h3>
@@ -99,7 +99,7 @@ function U({ n, children }) {
       <span
         className={cx('absolute block inset-0 top-0.5 bottom-0.5 -skew-y-2', bg)}
       />
-      <span className="relative text-bunker-950 uppercase font-semibold inline-block px-0.5 font-serif">
+      <span className="relative text-bunker-950 font-semibold inline-block px-0.5">
         {children}
       </span>
     </span>

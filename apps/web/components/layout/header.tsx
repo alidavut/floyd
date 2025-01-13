@@ -75,13 +75,13 @@ export function Header({ transparent = false, position = 'static', border=true, 
               </li>
               <li>
                 <a
-                  href="https://hub.floyd.so">
+                  href="https://studio.floyd.so">
                   Login
                 </a>
               </li>
               <li>
                 <a
-                  href="https://hub.floyd.so/signup"
+                  href="https://studio.floyd.so/signup"
                   className={cx(
                     'inline-block ml-2 px-4 py-[0.575rem] rounded-full',
                     dark ? 'bg-bunker-100 text-bunker-950 hover:!bg-bunker-200' :

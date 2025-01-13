@@ -19,7 +19,7 @@ export function GetStarted() {
               You can claim your @handle and start creating your channel in minutes.
             </p>
             <div className="mt-9">
-              <a href="https://hub.floyd.so/signup">
+              <a href="https://studio.floyd.so/signup">
                 <Button size="huge">
                   Get early access
                 </Button>

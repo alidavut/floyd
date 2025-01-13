@@ -38,7 +38,7 @@ export function Cover() {
               beautiful, unforgettable experiences—helping you monetize your creativity and expertise with ease.
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-6 lg:w-4/5">
-              <a href="https://hub.floyd.so/signup">
+              <a href="https://studio.floyd.so/signup">
                 <Button size="huge" fullWidth>
                   Get early access
                 </Button>

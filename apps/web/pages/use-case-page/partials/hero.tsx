@@ -31,7 +31,7 @@ export function Hero({ title, description, image }: Props) {
             {description}
           </p>
           <div className="grid lg:grid-cols-2 gap-6 lg:w-5/6">
-            <a href="https://hub.floyd.so/signup">
+            <a href="https://studio.floyd.so/signup">
               <Button size="huge" fullWidth>
                 Get early access
               </Button>

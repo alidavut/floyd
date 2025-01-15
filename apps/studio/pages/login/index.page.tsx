@@ -15,7 +15,9 @@ function Login() {
     try {
       await login({ ...params });
       triggerEvent('login');
-      router.push('/');
+
+      const next = router.query.next as string || '/';
+      router.push(next);
     } catch (error) {
     }
   }

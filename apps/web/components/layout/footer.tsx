@@ -25,12 +25,12 @@ export function Footer() {
         <Links
           title="For"
           links={[
-            { label: "Concerts", href: "/for/concerts", external: false },
-            { label: "Festivals", href: "/for/festivals", external: false },
-            { label: "Yoga Instructors", href: "/for/yoga-instructors", external: false },
-            { label: "Theaters", href: "/for/theaters", external: false },
-            { label: "Webinars", href: "/for/webinars", external: false },
+            { label: "Creators", href: "/for/creators", external: false },
             { label: "Workshops", href: "/for/workshops", external: false },
+            { label: "Gamers", href: "/for/gamers", external: false },
+            { label: "Musicians", href: "/for/musicians", external: false },
+            { label: "Comedy clubs", href: "/for/comedy-clubs", external: false },
+            { label: "Yoga instructors", href: "/for/yoga-instructors", external: false },
             { label: "More", href: "/for", external: false }
           ]}
         />
@@ -46,7 +46,7 @@ export function Footer() {
             <img src={badge.src} className="h-[2.5rem] rounded-sm" />
           </a>
           <p className="text-bunker-500">
-            Copyright {new Date().getFullYear()} Floyd.
+            Copyright {new Date().getFullYear()} Floyd LLC
           </p>
         </div>
       </div>

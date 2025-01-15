@@ -1,6 +1,6 @@
 import { Column, CreateDateColumn, Entity, JoinColumn, OneToOne, UpdateDateColumn } from 'typeorm';
 import { BaseEntity } from './base';
-import { User, Space } from '.';
+import { User, Channel } from '.';
 import { MembershipRole } from '@floyd/schema/enums';
 
 @Entity('memberships')
@@ -16,11 +16,11 @@ export class Membership extends BaseEntity {
   user: User;
 
   @Column()
-  spaceId: string;
+  channelId: string;
 
-  @OneToOne(() => Space)
+  @OneToOne(() => Channel)
   @JoinColumn()
-  space: Space;
+  channel: Channel;
 
   @CreateDateColumn()
   createdAt: Date;

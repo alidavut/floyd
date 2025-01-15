@@ -1,4 +1,5 @@
 import { Button } from '@floyd/ui/components';
+import bg from './get-started-bg.svg';
 
 export function GetStarted() {
   return (
@@ -10,15 +11,15 @@ export function GetStarted() {
               <span className="block text-[1.25rem] font-light leading-none mb-1.5">
                 Ready to begin?
               </span>
-              <span className="text-purple-700 text-[2.5rem] font-semibold tracking-tighter">
+              <span className="text-purple-600 text-[2.5rem] font-semibold tracking-tighter">
                 your story starts here
               </span>
             </h2>
             <p className="text- text-bunker-500 max-w-xs mx-auto">
-              You can claim your @handle and start creating your space in minutes.
+              You can claim your @handle and start creating your channel in minutes.
             </p>
             <div className="mt-9">
-              <a href="https://hub.floyd.so/signup">
+              <a href="https://studio.floyd.so/signup">
                 <Button size="huge">
                   Get early access
                 </Button>

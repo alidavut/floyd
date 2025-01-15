@@ -7,7 +7,7 @@ export default createService({
   id: 'email.send_otp',
   inputSchema: z.object({
     email: z.string().email().toLowerCase(),
-    password: z.string()
+    password: z.number()
   }),
 
   async perform({ input }) {

@@ -28,8 +28,8 @@ export async function decodeAccessToken(token: string): Promise<string> {
   return decoded && decoded.id;
 }
 
-export function createOTP(data: Record<string, unknown>): { password: string, key: string } {
-  const password = Math.floor(100000 + Math.random() * 900000).toString();
+export function createOTP(data: Record<string, unknown>): { password: number, key: string } {
+  const password = Math.floor(100000 + Math.random() * 900000);
 
   return {
     password,
@@ -37,7 +37,7 @@ export function createOTP(data: Record<string, unknown>): { password: string, ke
   }
 }
 
-export function compareOTP(key: string, password: string, data: Record<string, unknown>): Promise<boolean> {
+export function compareOTP(key: string, password: number, data: Record<string, unknown>): Promise<boolean> {
   return new Promise((resolve) => {
     jwt.verify(key, process.env.SECRET_TOKEN, (err, decoded) => {
       if (err) return resolve(false);

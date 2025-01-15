@@ -13,7 +13,7 @@ export interface UserObject {
   updatedAt: string;
 }
 
-export interface SpaceObject {
+export interface ChannelObject {
   id: string;
   handle: string
   name: string;

@@ -14,7 +14,7 @@ export function UseCasePageView({ content }: Props) {
   return (
     <div>
       <Head
-        title={`Booking for ${content.title} | Ticketing, Scheduling, and Payments`}
+        title={content.htmlTitle}
         description={content.description}
         og={{
           title: `Floyd for ${content.title}`,
@@ -30,18 +30,18 @@ export function UseCasePageView({ content }: Props) {
       <ValueProposition
         items={[
           {
-            title: 'Effortless Scheduling',
-            description: 'Create events, set schedules, and manage bookings with ease.',
+            title: 'Effortless Event Setup',
+            description: 'Create events, set schedules, and start selling tickets in minutes—no technical skills required.',
             icon: iconCalendar
           },
           {
-            title: 'Easy Management',
-            description: 'Track attendance, manage payments, and access data in one place.',
+            title: 'All-in-One Control',
+            description: 'Manage bookings, track attendance, and get paid—all from one intuitive platform.',
             icon: iconData
           },
           {
-            title: 'Seamless Integration',
-            description: 'Connect with your favorite tools and grow your business.',
+            title: 'Built to Grow with You',
+            description: 'Scale your business effortlessly with Floyd’s tools for ticketing, streaming, and payouts.',
             icon: iconIntegration
           }
         ]}

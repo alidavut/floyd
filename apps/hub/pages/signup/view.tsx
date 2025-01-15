@@ -20,7 +20,7 @@ export function View({ step, onSubmit, error, loading }: Props) {
     password: '',
     firstName: '',
     lastName: '',
-    otpCode: ''
+    otpCode: null
   });
 
   const inputErrors = getInputErrors(error);
@@ -54,6 +54,7 @@ export function View({ step, onSubmit, error, loading }: Props) {
               <div>
                 <Input
                   label="Email"
+                  type="email"
                   onValueChange={(value) => setParams({ ...params, email: value })}
                   value={params.email}
                   errors={inputErrors?.email}
@@ -101,6 +102,8 @@ export function View({ step, onSubmit, error, loading }: Props) {
             <Form onSubmit={() => onSubmit(params)} className="space-y-6">
               <Input
                 label="Verification code"
+                type="number"
+                inputMode="numeric"
                 placeholder="Enter the code we sent to your email"
                 onValueChange={(value) => setParams({ ...params, otpCode: value })}
                 value={params.otpCode}

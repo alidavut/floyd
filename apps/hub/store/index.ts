@@ -1,9 +1,10 @@
 import { ListStore, ObjectStore, StoreMap as StoreMapType, createListStore, createObjectStore, createStoreMap } from 'hacksaw';
-import { ChannelObject, UserObject } from '@floyd/schema/types';
+import { ChannelObject, EventObject, UserObject } from '@floyd/schema/types';
 
 export type StoreMap = StoreMapType<{
   users: ListStore<UserObject>;
   channels: ListStore<ChannelObject>;
+  events: ListStore<EventObject>;
   state: ObjectStore<Record<string, any>>;
 }>;
 
@@ -18,6 +19,7 @@ export function createStore(initialData?: string): StoreMap {
   store = createStoreMap({
     users: createListStore<UserObject>(),
     channels: createListStore<ChannelObject>(),
+    events: createListStore<EventObject>(),
     state: createObjectStore()
   });
 

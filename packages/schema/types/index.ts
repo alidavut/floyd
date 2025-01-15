@@ -1,3 +1,5 @@
+import { EventStatus } from '../enums';
+
 export interface AuthObject {
   accessToken: string;
   user: UserObject;
@@ -18,6 +20,19 @@ export interface ChannelObject {
   id: string;
   handle: string
   name: string;
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface EventObject {
+  id: string;
+  status: EventStatus;
+  title: string;
+  slug: string;
+  description: string;
+  startsAt: string;
+  channelId: string;
+  channel?: ChannelObject;
   createdAt: string;
   updatedAt: string;
 }

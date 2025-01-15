@@ -17,7 +17,7 @@ export function ChannelHomeView({ channel }: Props) {
   return (
     <div className="flex-1 flex items-center justify-center">
       <Head
-        title="Hub"
+        title="Studio"
       />
       <div className="container">
         <div className="max-w-md mx-auto">

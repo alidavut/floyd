@@ -22,9 +22,7 @@ function ChannelHome(): ReactElement {
 
 ChannelHome.getInitialProps = async ({ storeMap, query }) => {
   const contextMap = createStoreContextMap(storeMap, 'channel-home', query.channelId);
-  console.log({ query });
-  const a = await services.channel.get({ id: query.channelId }, { contextMap });
-  console.log({ a });
+  await services.channel.get({ id: query.channelId }, { contextMap });
 };
 
 export default withLayout(ChannelLayout)(withAuth(ChannelHome));

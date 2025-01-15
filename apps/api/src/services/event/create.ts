@@ -22,6 +22,7 @@ export default createHTTPService({
     });
 
     await event.save();
+    await event.reload();
 
     return EventSerializer.serialize(event, auth);
   }

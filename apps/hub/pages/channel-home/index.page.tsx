@@ -4,7 +4,7 @@ import { services } from 'services';
 import { createStoreContextMap, useStoreContext } from 'hacksaw-react';
 import { useRouter } from 'next/router';
 import { withLayout } from '@floyd/ui/layout';
-import { Layout } from 'components';
+import { ChannelLayout } from 'components';
 import { withAuth } from 'lib/authentication';
 
 function ChannelHome(): ReactElement {
@@ -22,7 +22,9 @@ function ChannelHome(): ReactElement {
 
 ChannelHome.getInitialProps = async ({ storeMap, query }) => {
   const contextMap = createStoreContextMap(storeMap, 'channel-home', query.channelId);
-  await services.channel.get({ id: query.channelId }, { contextMap });
+  console.log({ query });
+  const a = await services.channel.get({ id: query.channelId }, { contextMap });
+  console.log({ a });
 };
 
-export default withLayout(Layout)(withAuth(ChannelHome));
+export default withLayout(ChannelLayout)(withAuth(ChannelHome));

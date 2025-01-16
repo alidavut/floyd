@@ -20,4 +20,6 @@ router.post('/events', mapService(services.event.create));
 router.get('/events/:id', mapService(services.event.get));
 router.patch('/events/:id', mapService(services.event.update));
 
+router.post('/files/signed-url', mapService(services.file.generateSignedUrl));
+
 export default router;

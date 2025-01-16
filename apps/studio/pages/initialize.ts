@@ -1,4 +1,4 @@
-import isBrowser from '@floyd/ui/lib/is-browser';
+import { isBrowser } from '@floyd/ui/lib/is-browser';
 import { Router } from 'next/router';
 import NProgress from 'nprogress';
 

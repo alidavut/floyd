@@ -1,5 +1,5 @@
 import Router from 'next/router';
-import isBrowser from '@floyd/ui/lib/is-browser';
+import { isBrowser } from '@floyd/ui/lib/is-browser';
 import { NextPageContext } from 'next/types';
 
 export function redirect(path: string, res: NextPageContext['res']) {

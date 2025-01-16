@@ -6,7 +6,7 @@ import { NextPageContext } from 'next';
 import axios, { Axios } from 'axios';
 import clientCookie from 'js-cookie';
 import { useState } from 'react';
-import isBrowser from '@floyd/ui/lib/is-browser';
+import { isBrowser } from '@floyd/ui/lib/is-browser';
 
 export interface ServiceDefinition<Input extends ZodType, Output> {
   inputSchema?: Input;

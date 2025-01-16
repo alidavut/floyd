@@ -4,7 +4,7 @@ import App, { AppContext } from 'next/app';
 import { createStore, getStore } from 'store';
 import { Fragment, useEffect } from 'react';
 import { Provider } from 'hacksaw-react';
-import isBrowser from '@floyd/ui/lib/is-browser';
+import { isBrowser } from '@floyd/ui/lib/is-browser';
 import { services } from 'services';
 import Head from 'next/head';
 import favicon from '@floyd/ui/assets/images/badge.svg';

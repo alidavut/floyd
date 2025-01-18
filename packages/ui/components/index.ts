@@ -9,5 +9,6 @@ export { PortalProvider, usePortal } from './portal/portal';
 export { Table } from './table/table';
 export { Drawer } from './drawer/drawer';
 export { Tabs, TabItem } from './tabs/tabs';
+export { Imgix } from './imgix/imgix';
 
 export type { TableColumn } from './table/table';

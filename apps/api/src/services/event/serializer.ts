@@ -11,6 +11,7 @@ export class EventSerializer extends Serializer<Event, EventObject> {
       title: this.object.title,
       slug: this.object.slug,
       description: this.object.description,
+      image: this.object.image,
       startsAt: this.object.startsAt.toISOString(),
       createdAt: this.object.createdAt.toISOString(),
       updatedAt: this.object.updatedAt.toISOString()

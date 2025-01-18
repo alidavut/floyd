@@ -1,18 +1,20 @@
 import { event } from '@floyd/schema/inputs';
-import { EventObject } from '@floyd/schema/types';
+import { ChannelObject, EventObject } from '@floyd/schema/types';
 import { Button, Card, Input } from '@floyd/ui/components';
+import { ImageInput } from 'components';
 import { getInputErrors } from 'lib/errors';
 import { useState } from 'react'
 import { ServiceError } from 'services/errors';
 
 interface Props {
+  channel: ChannelObject;
   event: EventObject;
   onSubmit: (params: event.createParams | event.updateParams) => void;
   error: ServiceError;
   loading: boolean;
 }
 
-export function EventEditorView({ event, onSubmit, error, loading }: Props) {
+export function EventEditorView({ channel, event, onSubmit, error, loading }: Props) {
   const [params, setParams] = useState<event.createParams | event.updateParams>(event || {});
 
   const inputErrors = getInputErrors(error);
@@ -26,6 +28,13 @@ export function EventEditorView({ event, onSubmit, error, loading }: Props) {
       <Card>
         <Card.Body>
           <div className="space-y-6">
+            <ImageInput
+              label="Event Image"
+              channelId={channel.id}
+              onValueChange={(image) => setParams({ ...params, image })}
+              value={params.image}
+            />
+
             <Input
               label="Event title"
               onValueChange={(title) => setParams({ ...params, title })}

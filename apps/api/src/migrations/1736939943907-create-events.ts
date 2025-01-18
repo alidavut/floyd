@@ -13,6 +13,7 @@ export class CreateEvents1736939943907 implements MigrationInterface {
         title VARCHAR NOT NULL,
         slug VARCHAR NOT NULL,
         description TEXT,
+        image VARCHAR,
         starts_at TIMESTAMPTZ NOT NULL,
         created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
         updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),

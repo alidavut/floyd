@@ -18,6 +18,9 @@ export class Event extends BaseEntity {
   description: string;
 
   @Column()
+  image: string;
+
+  @Column()
   startsAt: Date;
 
   @Column()

@@ -19,7 +19,7 @@ export default createHTTPService({
   },
 
   async perform({ input }) {
-    const key = `/assets/ch-${input.channelId}/${input.type}s/${nanoid()}`;
+    const key = `uploads/ch-${input.channelId}/${input.type}s/${nanoid()}`;
 
     const command = new PutObjectCommand({
       Bucket: process.env.AWS_BUCKET_NAME,

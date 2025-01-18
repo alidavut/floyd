@@ -30,6 +30,7 @@ export interface EventObject {
   title: string;
   slug: string;
   description: string;
+  image: string;
   startsAt: string;
   channelId: string;
   channel?: ChannelObject;

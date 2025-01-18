@@ -35,6 +35,7 @@ function EventEditor(): ReactElement {
 
   return (
     <EventEditorView
+      channel={channel}
       event={contextMap.events.first}
       onSubmit={handleSubmit}
       error={error}

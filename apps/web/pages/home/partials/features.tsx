@@ -67,7 +67,7 @@ export function Features() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-15 lg:gap-18">
           {cards.map((card, index) => (
             <div key={index} className="pt-24">
-              <div className="relative rounded-xl">
+              <div className="relative rounded-2xl">
                 <div className="absolute inset-0 border-t border-dashed border-white/20 xl:ml-24" />
                 <div className="absolute inset-0 border-l border-dashed border-white/20 ml-3 xl:ml-[12.5rem]" />
                 <div className="relative flex flex-col xl:flex-row space-x-9 z-10">

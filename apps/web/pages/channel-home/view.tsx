@@ -13,11 +13,11 @@ export function ChannelHomeView({ channel, events }: Props) {
         title={channel.name}
         description={`Channel for ${channel.name} on Floyd`}
       />
-      <div className="container max-w-5xl">
-        <h1 className="text-4xl font-bold mb-6">
-          {channel.name}
+      <div className="container">
+        <h1 className="text-3xl font-semibold mb-6">
+          Events
         </h1>
-        <div className="grid lg:grid-cols-2 gap-3 lg:gap-6">
+        <div className="grid lg:grid-cols-3 gap-3 lg:gap-6">
           {events.map((event) => (
             <div key={event.id}>
               <EventTile

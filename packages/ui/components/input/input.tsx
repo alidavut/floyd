@@ -24,7 +24,7 @@ export function Input<T extends HTMLInputElement['type']>({ label, onValueChange
       {label && (
         <span className="block font-medium text-[0.925rem] mb-1">{label}</span>
       )}
-      <span className="flex transition-all rounded-sm bg-white border overflow-hidden
+      <span className="flex transition-all rounded-lg bg-white border overflow-hidden
         focus-within:ring-1 focus-within:ring-gray-900 focus-within:border-gray-900">
         {prefix && (
           <span className="flex flex-col">

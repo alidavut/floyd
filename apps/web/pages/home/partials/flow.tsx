@@ -41,18 +41,18 @@ export function Flow() {
 
 function Card({ title, description, number, color }) {
   const className = cx(
-    'mt-7 pt-9 rounded-sm relative',
+    'mt-7 pt-9 relative',
   );
 
   return (
     <div className={className}>
-      <div className={cx("w-10 h-7 absolute z-10 -top-2 left-3 rounded-sm -rotate-3", color)}>
+      <div className={cx("w-10 h-7 absolute z-10 -top-2 left-3 rounded-xl -rotate-3", color)}>
       </div>
-      <div className={cx("w-10 h-10 rounded-sm flex items-center justify-center absolute z-10 -top-7 left-0 bg-bunker-950/90")}>
+      <div className={cx("w-10 h-10 rounded-xl flex items-center justify-center absolute z-10 -top-7 left-0 bg-bunker-950/90")}>
         <span className="text-white font-bold text-xl">{number}</span>
       </div>
       <div>
-        <h4 className="text-2xl font-bold mb-1.5 text-black">{title}</h4>
+        <h4 className="text-[1.375rem] font-bold mb-1.5 text-black font-heading">{title}</h4>
         <p className="text-xl text-gray-800">{description}</p>
       </div>
     </div>

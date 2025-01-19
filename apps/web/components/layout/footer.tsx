@@ -43,7 +43,7 @@ export function Footer() {
         />
         <div className="text-center md:text-right">
           <a href="/" className="text-lg font-semibold inline-block mb-2">
-            <img src={badge.src} className="h-[2.5rem] rounded-sm" />
+            <img src={badge.src} className="h-[2.5rem] rounded-xl" />
           </a>
           <p className="text-bunker-500">
             Copyright {new Date().getFullYear()} Floyd LLC

@@ -14,7 +14,7 @@ export function PricingView() {
         <div className="relative container">
           <div className="max-w-3xl mx-auto">
             <div className="md:text-center">
-              <h1 className="text-[1.75rem] md:text-[3.375rem] md:leading-[4rem] font-medium font-serif mb-6 text-white">
+              <h1 className="text-[1.75rem] md:text-[3.375rem] md:leading-[4rem] font-semibold mb-6 text-white font-heading">
                 Simple Pricing,<br />Limitless Experiences
               </h1>
               <p className="md:text-[1.25rem] leading-[2rem] mb-12 md:mb-18 text-white/70 max-w-xl mx-auto">
@@ -55,17 +55,17 @@ function PricingCard({ title, fee, description, className, icon }) {
   return (
     <div>
       <div className="relative pr-1.5 pb-1.5">
-        <div className="bg-bunker-950/20 absolute bottom-0 right-1.5 left-0 top-5 rounded-sm -rotate-[1.5deg]" />
-        <div className="bg-bunker-950 absolute top-1.5 left-1.5 right-0 bottom-0 rounded-sm rotate-[1.5deg]" />
-        <div className={cx('relative p-6 rounded-sm border-2 border-bunker-950', className)}>
-          <p className="text-[1.25rem] leading-none font-semibold flex items-center space-x-1.5 mb-3">
+        <div className="bg-bunker-950/20 absolute bottom-0 right-1.5 left-0 top-5 rounded-2xl -rotate-[1.5deg]" />
+        <div className="bg-bunker-950 absolute top-1.5 left-1.5 right-0 bottom-0 rounded-2xl rotate-[1.5deg]" />
+        <div className={cx('relative p-6 rounded-2xl border-2 border-bunker-950', className)}>
+          <p className="text-[1.375rem] leading-none font-semibold flex items-center space-x-1.5 mb-3">
             <span>{title}</span>
             <Icon className="inline-block w-[1.5rem] h-[1.5rem]" />
           </p>
-          <h4 className="text-[2.5rem] leading-none font-bold mb-[1.125rem] font-serif">
+          <h4 className="text-[2.625rem] leading-none font-bold mb-[1.125rem] font-heading">
             {fee}
           </h4>
-          <p className="text-[0.975rem] leading-[1.5rem] text-bunker-950/85 italic">
+          <p className="leading-[1.5rem] text-bunker-950/85 italic">
             {description}
           </p>
         </div>

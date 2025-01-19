@@ -6,10 +6,10 @@ export function AboutView() {
       <Head
         title="About"
       />
-      <div className="bg-yellow-300 flex-1 flex items-center m-4 mt-16 rounded-sm">
+      <div className="bg-yellow-300 flex-1 flex items-center m-4 mt-16 rounded-3xl">
         <div className="container max-w-2xl py-18 lg:py-44">
           <div className="space-y-4 md:space-y-16">
-            <p className="text-2xl md:text-[3rem] font-semibold md:leading-tight text-center">
+            <p className="text-2xl md:text-[3.25rem] font-bold md:leading-tight text-center">
               Empowering Creators to Thrive in the Spotlight
             </p>
           </div>

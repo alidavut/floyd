@@ -29,7 +29,7 @@ export function Cover() {
               Streaming mastery,<br /> made
               {' '}
               <span className="inline-block relative">
-                <span className="h-[0.75rem] md:h-[1.375rem] bg-orange-200 block absolute inset-0 top-auto -rotate-1 rounded-full" />
+                <span className="h-[0.75rem] md:h-[1.25rem] bg-orange-200 block absolute inset-0 top-auto -rotate-1 rounded-full" />
                 <span className="relative">for frontiers</span>
               </span>
             </h1>

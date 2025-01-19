@@ -13,8 +13,7 @@ module.exports = {
       colors,
       fontFamily: {
         sans: ['Albert Sans', 'sans-serif'],
-        heading: ['Space Grotesk', 'sans-serif'],
-        serif: ['Playfair Display', 'serif']
+        heading: ['Space Grotesk', 'sans-serif']
       },
       keyframes: {
         'fade-in': {

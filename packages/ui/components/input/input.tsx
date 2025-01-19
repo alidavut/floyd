@@ -32,7 +32,7 @@ export function Input<T extends HTMLInputElement['type']>({ label, onValueChange
           </span>
         )}
         <input
-          className="bg-transparent outline-none p-2 w-full"
+          className="bg-transparent outline-none px-2.5 p-2 w-full"
           onChange={handleChange}
           type={type}
           {...rest}

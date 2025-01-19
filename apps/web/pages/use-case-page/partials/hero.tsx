@@ -46,11 +46,11 @@ export function Hero({ title, description, image }: Props) {
         </div>
         <div className="lg:col-span-5">
           <div className="aspect-[14/15] relative z-10">
-            <div className="absolute top-3 left-3 bottom-0 right-0 bg-purple-600/15 rounded-sm rotate-2" />
-            <div className="absolute top-3 left-3 bottom-0 right-0 bg-bunker-950 rounded-sm" />
+            <div className="absolute top-3 left-3 bottom-0 right-0 bg-purple-600/15 rounded-2xl rotate-2" />
+            <div className="absolute top-3 left-3 bottom-0 right-0 bg-bunker-950 rounded-2xl" />
             <div className="pr-3 pb-3">
               <img
-                className="relative object-cover aspect-[14/15] rounded-sm border border-bunker-950"
+                className="relative object-cover aspect-[14/15] rounded-2xl border border-bunker-950"
                 src={image.src}
                 alt={title}
               />

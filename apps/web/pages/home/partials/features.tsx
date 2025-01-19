@@ -100,7 +100,7 @@ function U({ n, children }) {
   return (
     <span className="relative inline-block">
       <span
-        className={cx('absolute block inset-0 top-0.5 bottom-0.5 -skew-y-2', bg)}
+        className={cx('absolute block inset-0 top-0.5 bottom-0.5 -skew-y-2 rounded-md', bg)}
       />
       <span className="relative text-bunker-950 font-head font-semibold inline-block px-0.5">
         {children}

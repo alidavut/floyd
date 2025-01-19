@@ -12,6 +12,7 @@ export class UserSerializer extends Serializer<User, UserObject> {
       firstName: isCurrentUser ? this.object.firstName : undefined,
       lastName: isCurrentUser ? this.object.lastName : undefined,
       name: this.object.name,
+      emailVerified: isCurrentUser ? this.object.emailVerified : undefined,
       createdAt: isCurrentUser ? this.object.createdAt.toISOString() : undefined,
       updatedAt: isCurrentUser ? this.object.updatedAt.toISOString() : undefined
     }

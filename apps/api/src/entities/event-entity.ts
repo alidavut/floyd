@@ -24,6 +24,9 @@ export class Event extends BaseEntity {
   startsAt: Date;
 
   @Column()
+  muxLiveStreamId: string;
+
+  @Column()
   channelId: string;
 
   @OneToOne(() => Channel)

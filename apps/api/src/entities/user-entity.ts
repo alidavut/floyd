@@ -15,6 +15,9 @@ export class User extends BaseEntity {
   @Column()
   lastName: string;
 
+  @Column()
+  emailVerified: boolean;
+
   @CreateDateColumn()
   createdAt: Date;
 

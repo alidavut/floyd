@@ -9,6 +9,7 @@ export interface UserObject {
   firstName: string;
   lastName: string;
   name: string;
+  emailVerified: boolean;
   createdAt: string;
   updatedAt: string;
 }

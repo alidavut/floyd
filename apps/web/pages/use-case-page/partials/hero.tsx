@@ -24,7 +24,7 @@ export function Hero({ title, description, image }: Props) {
             </span>
           </div>
 
-          <h1 className="text-[2.5rem] lg:text-[4rem] font-bold tracking-tight leading-[2.5rem] lg:leading-[4.25rem] mb-6">
+          <h1 className="text-[2.5rem] lg:text-[4rem] font-bold tracking-tight leading-[2.5rem] lg:leading-[4rem] mb-6">
             {title}
           </h1>
           <p className="text-[1.125rem] lg:text-[1.25rem] text-bunker-700 leading-[1.75rem] lg:leading-[2rem] font-medium mb-12">

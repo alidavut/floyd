@@ -5,7 +5,7 @@ export function HomeView() {
   return (
     <div>
       <Head
-        title="Floyd - Streaming mastery, made for frontiers"
+        title="Floyd - Live streams, made for pioneers"
         description="Floyd provides a platform to host live experiences, sell tickets, and engage your audience—all in
           one place. Monetize your expertise and creativity with ease."
         titlePure

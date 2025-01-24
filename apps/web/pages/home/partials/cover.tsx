@@ -1,6 +1,7 @@
 import { Button } from '@floyd/ui/components';
 import coverImage from './cover-image.png';
 import { PiRocketLaunch, PiStarFill } from 'react-icons/pi';
+import line from './line.svg';
 
 export function Cover() {
   return (
@@ -25,17 +26,19 @@ export function Cover() {
                 Trusted by forward thinkers.
               </span>
             </div>
-            <h1 className="text-[2.25rem] lg:text-[3.5rem] xl:text-[4.7rem] leading-[2.5rem] lg:leading-[4rem] xl:leading-[4.75rem] mb-6 font-bold tracking-tight">
-              Streaming mastery,<br /> made
+            <h1 className="text-[2.25rem] lg:text-[3.5rem] xl:text-[4.375rem] leading-[2.5rem] lg:leading-[4rem] xl:leading-[4.375rem] mb-6 font-bold tracking-tight font-heading">
+              Live streams,<br /> made
               {' '}
               <span className="inline-block relative">
-                <span className="h-[0.75rem] md:h-[1.5rem] bg-orange-200 block absolute inset-0 top-auto -rotate-1 rounded-full" />
-                <span className="relative font-serif italic font-semibold">for frontiers</span>
+                <img src={line.src} className="absolute -bottom-[0.25rem] md:-bottom-[0.75rem]  left-0 right-0 -rotate-[0.5deg]" />
+                <span className="relative">
+                  for pioneers
+                </span>
               </span>
             </h1>
             <p className="font-medium text-[1rem] lg:text-[1.25rem] xl:text-[1.5rem] text-bunker-900 mb-12 leading-[1.5] max-w-xl">
-              Host live experiences, sell tickets, and engage your audience effortlessly. Floyd turns bold ideas into
-              beautiful, unforgettable experiences—helping you monetize your creativity and expertise with ease.
+              Host real-time experiences, sell tickets, and engage your audience with ease. Floyd transforms bold ideas
+              into unforgettable live events—helping you monetize your creativity effortlessly.
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-6 lg:w-4/5">
               <a href="https://studio.floyd.so/signup">

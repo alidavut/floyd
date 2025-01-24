@@ -23,8 +23,8 @@ export function ChannelHomeView({ channel }: Props) {
         <div className="max-w-md mx-auto">
           <Card>
             <Card.Body>
-              <p className="font-bold text-2xl mb-[0.875rem] text-center">You're In, Frontier! 🎉</p>
-              <p className="mb-3 space-x-1 bg-gray-100 text-center p-6 rounded-sm leading-none">
+              <p className="font-bold font-heading text-[1.675rem] mb-[0.875rem] text-center">You're In, Pioneer! 🎉</p>
+              <p className="mb-3 space-x-1 bg-gray-100 text-center p-6 rounded-lg leading-none">
                 <span className="font-medium block mb-1.5 text-sw text-gray-800">
                   You successfully claimed your channel!
                 </span>

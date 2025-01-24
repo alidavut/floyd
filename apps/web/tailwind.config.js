@@ -12,8 +12,8 @@ module.exports = {
     extend: {
       colors,
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        serif: ['Lora', 'serif']
+        sans: ['Albert Sans', 'sans-serif'],
+        heading: ['Space Grotesk', 'sans-serif']
       },
       keyframes: {
         'fade-in': {

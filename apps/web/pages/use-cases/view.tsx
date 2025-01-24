@@ -14,7 +14,7 @@ export function UseCasesView({ contents }: Props) {
         title="Who is Floyd for?"
       />
       <div className="mb-12 text-center max-w-4xl mx-auto">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold font-serif mb-3">Who is Floyd for?</h1>
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold font-heading mb-3">Who is Floyd for?</h1>
         <p className="text-gray-800">
           Floyd is for creators, organizers, and businesses who want to create, manage, and grow their events with ease.
           Whether you're hosting a concert, festival, workshop, or webinar, Floyd has the tools to help you succeed.
@@ -24,10 +24,10 @@ export function UseCasesView({ contents }: Props) {
         {Object.entries(contents).map(([key, content]) => (
           <div key={key}>
             <div className="relative h-full pr-1.5 pb-1.5">
-              <div className="bg-bunker-950 absolute inset-0 left-1.5 top-1.5 rounded-sm z-0" />
-              <div className="relative h-full bg-gray-50 rounded-sm p-6 border border-bunker-950 flex flex-col">
+              <div className="bg-bunker-950 absolute inset-0 left-1.5 top-1.5 rounded-xl z-0" />
+              <div className="relative h-full bg-gray-50 rounded-xl p-6 border border-bunker-950 flex flex-col">
                 <div className="flex-1">
-                  <img src={content.image.src} alt={content.title} className="w-full aspect-video object-cover rounded-sm" />
+                  <img src={content.image.src} alt={content.title} className="w-full aspect-video object-cover rounded-xl" />
                   <h3 className="text-xl font-bold mt-4 mb-1.5">{content.title}</h3>
                   <p className="text-gray-800 mb-3">{content.description}</p>
                 </div>

@@ -35,7 +35,7 @@ export function View({ onSubmit, error, loading }: Props) {
             src={logoDark.src}
             className="h-12 rounded-sm mx-auto mb-1.5"
           />
-          <h3 className="font-semibold text-[1.825rem] font-serif">
+          <h3 className="font-semibold text-[1.825rem] font-heading">
             Create your account
           </h3>
           <p className="text-bunker-600 text-[0.95rem]">

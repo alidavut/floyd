@@ -27,7 +27,7 @@ export function View({ error, onSubmit, loading }: Props) {
             src={logoDark.src}
             className="h-14 rounded-sm mx-auto mb-1.5"
           />
-          <h3 className="font-semibold text-[1.825rem] font-serif">
+          <h3 className="font-semibold text-[1.825rem] font-heading">
             Welcome Back
           </h3>
           <p className="text-bunker-600 text-[0.95rem]">

@@ -57,6 +57,14 @@ export function EventEditorView({ channel, event, onSubmit, error, loading }: Pr
             />
 
             <Input
+              label="Price"
+              type="number"
+              onValueChange={(price) => setParams({ ...params, price })}
+              value={params.price}
+              errors={inputErrors?.price}
+            />
+
+            <Input
               label="Start date"
               type="datetime-local"
               onValueChange={(startsAt) => setParams({ ...params, startsAt })}

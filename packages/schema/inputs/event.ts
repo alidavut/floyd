@@ -9,6 +9,7 @@ const eventSchema = z.object({
     .max(40, 'Slug must be at most 100 characters')
     .regex(/^[a-z0-9]+(-[a-z0-9]+)*$/, 'Invalid slug, must only contain a-z, 0-9, and -'),
   image: z.string(),
+  price: z.number().int().positive(),
   startsAt: z.string().datetime()
 });
 

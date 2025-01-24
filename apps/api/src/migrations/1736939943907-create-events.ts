@@ -14,6 +14,7 @@ export class CreateEvents1736939943907 implements MigrationInterface {
         slug VARCHAR NOT NULL,
         description TEXT,
         image VARCHAR,
+        price INTEGER NOT NULL,
         starts_at TIMESTAMPTZ NOT NULL,
         mux_live_stream_id VARCHAR NOT NULL,
         created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),

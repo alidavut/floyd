@@ -31,6 +31,7 @@ export interface EventObject {
   slug: string;
   description: string;
   image: string;
+  price: number;
   startsAt: string;
   channelId: string;
   channel?: ChannelObject;

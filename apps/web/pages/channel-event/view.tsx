@@ -1,6 +1,7 @@
 import { Head } from 'components';
 import { ChannelObject, EventObject } from '@floyd/schema/types';
 import { Button, Imgix } from '@floyd/ui/components';
+import { OrderForm } from './partials';
 
 interface Props {
   channel: ChannelObject;
@@ -28,20 +29,8 @@ export function ChannelEventView({ channel, event }: Props) {
           </div>
           <div>
             <div className="bg-white p-6 rounded-2xl">
-              <h3 className="text-lg font-semibold mb-3">
-                Details
-              </h3>
-              <div className="space-y-3">
-                <div>
-                  <span className="font-semibold">Starts At:</span> {event.startsAt}
-                </div>
-                <div>
-                  <span className="font-semibold">Created At:</span> {event.createdAt}
-                </div>
-              </div>
-              <Button fullWidth>
-                Buy Tickets
-              </Button>
+              <OrderForm
+              />
             </div>
           </div>
         </div>

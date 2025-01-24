@@ -49,7 +49,7 @@ export function ChannelEventsView({ channel, events }: Props) {
           </Link>
         )}
       />
-      <div className="p-6 bg-white rounded-sm space-y-6">
+      <div className="p-6 bg-white rounded-2xl space-y-6">
         <Table
           columns={columns}
           data={events}

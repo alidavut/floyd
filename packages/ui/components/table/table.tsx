@@ -14,12 +14,12 @@ export interface TableColumn {
 
 export function Table({ columns, data }: Props) {
   return (
-    <div className="rounded-md overflow-hidden">
+    <div className="rounded-lg overflow-hidden">
       <table className="min-w-full">
         <thead className="bg-gray-50">
           <tr>
             {columns.map((column) => (
-              <th key={column.key} className="text-left text-sm font-medium text-gray-500 tracking-wider p-2">
+              <th key={column.key} className="text-left text-sm font-medium text-bunker-500 tracking-wider p-3 py-2">
                 {column.label}
               </th>
             ))}
@@ -29,7 +29,7 @@ export function Table({ columns, data }: Props) {
           {data.map((row) => (
             <tr key={row.id}>
               {columns.map((column) => (
-                <td key={column.key} className="p-2">
+                <td key={column.key} className="p-3">
                   {renderColumn(column, row)}
                 </td>
               ))}

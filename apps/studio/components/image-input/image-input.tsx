@@ -24,7 +24,7 @@ export function ImageInput({ label, channelId, onValueChange, value }: Props) {
 
   return (
     <div>
-      <Imgix src={value} width={200} height={200} />
+      <Imgix src={value} width={200} height={200} className="rounded-xl" />
       <label>{label}</label>
       {uploading && <p>Uploading...</p>}
       <input type="file" onChange={(e) => handleUpload(e.target.files[0])} />

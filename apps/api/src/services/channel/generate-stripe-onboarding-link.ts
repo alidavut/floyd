@@ -16,6 +16,16 @@ export default createHTTPService({
   async perform({ input }) {
     const channel = await Channel.findOneByOrFail({ id: input.channelId });
 
+    if (!channel.stripeId) {
+      const account = await stripe.accounts.create({
+        type: 'express'
+      });
+
+      channel.stripeId = account.id;
+
+      await channel.save();
+    }
+
     const accountLink = await stripe.accountLinks.create({
       account: channel.stripeId,
       refresh_url: generateStudioUrl(`/channels/${channel.id}/stripe/setup`),

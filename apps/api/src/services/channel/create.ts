@@ -3,7 +3,6 @@ import { channel } from '@floyd/schema/inputs';
 import { Membership, Channel } from 'entities';
 import { createHTTPService } from 'services/service';
 import { ChannelSerializer } from './serializer';
-import { stripe } from 'lib/stripe';
 
 export default createHTTPService({
   id: 'channel.create',
@@ -14,12 +13,7 @@ export default createHTTPService({
   },
 
   async perform({ input, auth }) {
-    const stripeAccount = await stripe.accounts.create({
-      type: 'express'
-    });
-
     const channel = Channel.create({ ...input });
-    channel.stripeId = stripeAccount.id;
     await channel.save();
 
     const membership = Membership.create({

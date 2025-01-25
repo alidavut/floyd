@@ -8,5 +8,7 @@ export default [
   { source: '/channels/:channelId/events/new', destination: '/event-editor' },
   { source: '/channels/:channelId/events/:eventId', destination: '/event-dashboard' },
   { source: '/channels/:channelId/events/:eventId/edit', destination: '/event-editor' },
-  { source: '/channels/:channelId/settings', destination: '/channel-settings' }
+  { source: '/channels/:channelId/settings', destination: '/channel-settings' },
+  { source: '/channels/:channelId/stripe/setup', destination: '/stripe-setup' },
+  { source: '/channels/:channelId/stripe/verify', destination: '/stripe-verify' }
 ];

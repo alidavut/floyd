@@ -14,6 +14,8 @@ router.get('/channels', mapService(services.channel.list));
 router.post('/channels', mapService(services.channel.create));
 router.get('/channels/:id', mapService(services.channel.get));
 router.patch('/channels/:id', mapService(services.channel.update));
+router.post('/channels/:channelId/stripe_onboarding_link', mapService(services.channel.generateStripeOnboardingLink));
+router.post('/channels/:channelId/verify_stripe', mapService(services.channel.verifyStripe));
 
 router.get('/events', mapService(services.event.list));
 router.post('/events', mapService(services.event.create));

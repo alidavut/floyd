@@ -1,0 +1,28 @@
+import { Channel, Membership } from 'entities';
+import { createHTTPService } from 'services/service';
+import { channel } from '@floyd/schema/inputs';
+import { stripe } from 'lib/stripe';
+import { generateStudioUrl } from 'lib/url';
+
+export default createHTTPService({
+  id: 'channel.generate_stripe_onboarding_link',
+
+  inputSchema: channel.generateStripeOnboardingLinkSchema,
+
+  async authorize({ input, auth }) {
+    return auth.ok && Membership.existsBy({ channelId: input.channelId, userId: auth.user.id });
+  },
+
+  async perform({ input }) {
+    const channel = await Channel.findOneByOrFail({ id: input.channelId });
+
+    const accountLink = await stripe.accountLinks.create({
+      account: channel.stripeId,
+      refresh_url: generateStudioUrl(`/channels/${channel.id}/stripe/setup`),
+      return_url: generateStudioUrl(`/channels/${channel.id}/stripe/verify`),
+      type: 'account_onboarding',
+    });
+
+    return accountLink.url;
+  }
+});

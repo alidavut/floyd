@@ -20,6 +20,8 @@ export interface ChannelObject {
   id: string;
   handle: string
   name: string;
+  stripeId: string;
+  stripeEnabled: boolean;
   createdAt: string;
   updatedAt: string;
 }

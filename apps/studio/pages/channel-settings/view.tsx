@@ -2,6 +2,7 @@ import { ChannelObject } from '@floyd/schema/types';
 import { Button, Input } from '@floyd/ui/components';
 import { PageHeader } from 'components';
 import { getInputErrors } from 'lib/errors';
+import Link from 'next/link';
 import { useState } from 'react';
 import { ServiceError } from 'services/errors';
 
@@ -24,7 +25,7 @@ export function ChannelSettingsView({ channel, onSubmit, error, loading }: Props
       <PageHeader
         title="Settings"
       />
-      <div className="p-6 bg-white rounded-sm space-y-6">
+      <div className="p-6 bg-white rounded-2xl space-y-6">
         <Input
           label="Handle"
           prefix={(
@@ -42,6 +43,11 @@ export function ChannelSettingsView({ channel, onSubmit, error, loading }: Props
           value={params.name}
           errors={inputErrors?.name}
         />
+        <p>
+          <Link href={`/channels/${channel.id}/stripe/setup`} className="link">
+            Connect Stripe
+          </Link>
+        </p>
         <Button onClick={() => onSubmit(params)} loading={loading} fullWidth>
           Update Channel
         </Button>

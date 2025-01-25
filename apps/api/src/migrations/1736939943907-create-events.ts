@@ -4,6 +4,10 @@ import { sql } from 'lib/literals';
 export class CreateEvents1736939943907 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.query(sql`
+      ALTER TABLE channels
+      ADD COLUMN stripe_id VARCHAR,
+      ADD COLUMN stripe_enabled BOOLEAN DEFAULT FALSE;
+
       CREATE TYPE event_status AS ENUM ('draft', 'published', 'archived');
 
       CREATE TABLE events (
@@ -35,6 +39,10 @@ export class CreateEvents1736939943907 implements MigrationInterface {
 
   public async down(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.query(sql`
+      ALTER TABLE channels
+      DROP COLUMN stripe_id,
+      DROP COLUMN stripe_enabled;
+
       DROP TABLE tickets;
       DROP TABLE events;
       DROP TYPE event_status;

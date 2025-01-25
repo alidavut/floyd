@@ -3,11 +3,11 @@ import { createService } from '../service';
 import { channel } from '@floyd/schema/inputs';
 
 export default createService({
-  inputSchema: channel.generateStripeOnboardingLinkSchema,
+  inputSchema: channel.setupStripeSchema,
 
   async perform({ input, axios }) {
     try {
-      const { data }: { data: string } = await axios.post(`/channels/${input.channelId}/stripe_onboarding_link`);
+      const { data }: { data: { url: string } } = await axios.post(`/channels/${input.channelId}/setup_stripe`);
       return data;
     } catch (error) {
       throw new InputError(error.response.data.errors);

@@ -19,7 +19,7 @@ export const updateSchema = channelSchema.extend({
   id: z.string()
 });
 
-export const generateStripeOnboardingLinkSchema = z.object({
+export const setupStripeSchema = z.object({
   channelId: z.string()
 });
 

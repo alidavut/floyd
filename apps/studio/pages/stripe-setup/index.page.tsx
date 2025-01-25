@@ -6,8 +6,8 @@ export default function StripeSetup() {
 }
 
 StripeSetup.getInitialProps = async ({ query, res }) => {
-  const link = await services.channel.generateStripeOnboardingLink({ channelId: query.channelId });
-  redirect(link, res);
+  const { url } = await services.channel.setupStripe({ channelId: query.channelId });
+  redirect(url, res);
 
   return {};
 }

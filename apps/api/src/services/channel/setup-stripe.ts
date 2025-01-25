@@ -5,9 +5,9 @@ import { stripe } from 'lib/stripe';
 import { generateStudioUrl } from 'lib/url';
 
 export default createHTTPService({
-  id: 'channel.generate_stripe_onboarding_link',
+  id: 'channel.setup_stripe',
 
-  inputSchema: channel.generateStripeOnboardingLinkSchema,
+  inputSchema: channel.setupStripeSchema,
 
   async authorize({ input, auth }) {
     return auth.ok && Membership.existsBy({ channelId: input.channelId, userId: auth.user.id });
@@ -30,9 +30,9 @@ export default createHTTPService({
       account: channel.stripeId,
       refresh_url: generateStudioUrl(`/channels/${channel.id}/stripe/setup`),
       return_url: generateStudioUrl(`/channels/${channel.id}/stripe/verify`),
-      type: 'account_onboarding',
+      type: 'account_onboarding'
     });
 
-    return accountLink.url;
+    return { url: accountLink.url };
   }
 });

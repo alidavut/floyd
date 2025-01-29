@@ -18,7 +18,10 @@ export default createHTTPService({
 
     if (!channel.stripeId) {
       const account = await stripe.accounts.create({
-        type: 'express'
+        type: 'express',
+        capabilities: {
+          card_payments: { requested: true }
+        }
       });
 
       channel.stripeId = account.id;

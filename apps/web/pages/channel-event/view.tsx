@@ -1,14 +1,15 @@
 import { Head } from 'components';
-import { ChannelObject, EventObject } from '@floyd/schema/types';
-import { Button, Imgix } from '@floyd/ui/components';
+import { ChannelObject, EventObject, TicketSetupObject } from '@floyd/schema/types';
+import { Imgix } from '@floyd/ui/components';
 import { OrderForm } from './partials';
 
 interface Props {
   channel: ChannelObject;
   event: EventObject;
+  ticketSetup: TicketSetupObject;
 }
 
-export function ChannelEventView({ channel, event }: Props) {
+export function ChannelEventView({ channel, event, ticketSetup }: Props) {
   return (
     <div className="py-12">
       <Head
@@ -30,6 +31,8 @@ export function ChannelEventView({ channel, event }: Props) {
           <div>
             <div className="bg-white p-6 rounded-2xl">
               <OrderForm
+                channel={channel}
+                ticketSetup={ticketSetup}
               />
             </div>
           </div>

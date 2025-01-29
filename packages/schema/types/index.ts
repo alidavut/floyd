@@ -40,3 +40,15 @@ export interface EventObject {
   createdAt: string;
   updatedAt: string;
 }
+
+export interface TicketObject {
+  id: string;
+  code: string;
+  eventId: string;
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface TicketSetupObject {
+  clientSecret: string;
+}

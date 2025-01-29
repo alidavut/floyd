@@ -3,6 +3,7 @@ import { email } from './email';
 import { event } from './event';
 import { file } from './file';
 import { channel } from './channel';
+import { ticket } from './ticket';
 import { user } from './user';
 
 export default {
@@ -11,5 +12,6 @@ export default {
   event,
   file,
   channel,
+  ticket,
   user
 };

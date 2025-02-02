@@ -22,8 +22,8 @@ export function Cover() {
               <PiStarFill className="text-green-600 w-5 h-5" />
               <PiStarFill className="text-green-600 w-5 h-5" />
               <PiStarFill className="text-green-600 w-5 h-5" />
-              <span className="text-gray-500 text-[0.875rem] pl-2 font-medium">
-                Trusted by forward thinkers.
+              <span className="text-gray-600 text-[0.925rem] pl-2 font-medium">
+                Loved by forward-thinking beta users.
               </span>
             </div>
             <h1 className="text-[2.25rem] lg:text-[3.5rem] xl:text-[4.375rem] leading-[2.5rem] lg:leading-[4rem] xl:leading-[4.375rem] mb-6 font-bold tracking-tight font-heading">

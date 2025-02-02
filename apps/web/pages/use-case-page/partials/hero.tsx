@@ -45,19 +45,50 @@ export function Hero({ title, description, image }: Props) {
           </div>
         </div>
         <div className="lg:col-span-5">
-          <div className="aspect-[14/15] relative z-10">
-            <div className="absolute top-3 left-3 bottom-0 right-0 bg-purple-600/15 rounded-2xl rotate-2" />
-            <div className="absolute top-3 left-3 bottom-0 right-0 bg-bunker-950 rounded-2xl" />
-            <div className="pr-3 pb-3">
-              <img
-                className="relative object-cover aspect-[14/15] rounded-2xl border border-bunker-950"
-                src={image.src}
-                alt={title}
-              />
+          <div className="aspect-square relative z-10">
+            <div className="absolute top-1.5 left-1.5 bottom-0 right-0 bg-purple-600/15 rounded-2xl rotate-2" />
+            <div className="absolute top-1.5 left-1.5 bottom-0 right-0 bg-bunker-950 rounded-2xl" />
+            <div className="pr-1.5 pb-1.5 relative">
+              <div className="relative">
+                <img
+                  className="relative object-cover aspect-square rounded-2xl border border-bunker-950"
+                  src={image.src}
+                  alt={title}
+                />
+                <div className="absolute top-4 left-4 flex items-center space-x-4">
+                  <div className="flex items-center space-x-2 bg-red-600 px-3 py-1 rounded-full">
+                    <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
+                    <span className="text-white text-sm font-semibold">LIVE</span>
+                  </div>
+                  <div className="flex items-center space-x-2 bg-bunker-950/70 px-3 py-1 rounded-full">
+                    <div className="w-1 h-1 bg-green-500 rounded-full" />
+                    <span className="text-white text-sm">1.2k watching</span>
+                  </div>
+                </div>
+                <div className="absolute bottom-4 left-4 right-4 space-y-2">
+                  <div className="flex items-start space-x-2 bg-bunker-950/70 p-2 rounded-lg max-w-[80%]">
+                    <div className="w-8 h-8 rounded-full bg-purple-500 flex-shrink-0" />
+                    <div>
+                      <span className="text-purple-300 text-sm font-semibold">@sarah_dev</span>
+                      <p className="text-white text-sm">This is exactly what I've been looking for! 🚀</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-2 bg-bunker-950/70 p-2 rounded-lg max-w-[80%]">
+                    <div className="w-8 h-8 rounded-full bg-yellow-500 flex-shrink-0" />
+                    <div>
+                      <span className="text-yellow-300 text-sm font-semibold">@tech_tom</span>
+                      <p className="text-white text-sm">The features look amazing! 🔥</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="absolute top-4 right-4 bg-bunker-950/70 px-3 py-1 rounded-lg">
+                  <span className="text-white text-sm font-medium">01:23:45</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }

@@ -71,7 +71,7 @@ export function Features() {
                 <div className="absolute inset-0 border-t border-dashed border-white/20 xl:ml-24" />
                 <div className="absolute inset-0 border-l border-dashed border-white/20 ml-3 xl:ml-[12.5rem]" />
                 <div className="relative flex flex-col xl:flex-row space-x-9 z-10">
-                  <img src={card.image.src} className="rounded-xl w-32 h-48 xl:w-40 xl:h-60 object-cover object-center -mt-24 -rotate-[4.5deg] -skew-y-1" />
+                  <img src={card.image.src} className="rounded-xl w-32 h-48 xl:w-40 xl:h-60 object-cover object-center -mt-24 -rotate-[3deg]" />
                   <div className="flex-1 pt-9 pb-6 pl-1.5 pr-6 lg:py-9 lg:pl-9">
                     <h4 className="text-[1.5rem] leading-[2rem] font-heading font-semibold mb-3">
                       {card.title}

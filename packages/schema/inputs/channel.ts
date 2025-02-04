@@ -16,7 +16,8 @@ export const getSchema = z.object({
 });
 
 export const updateSchema = channelSchema.extend({
-  id: z.string()
+  id: z.string(),
+  currencyCode: z.string().optional()
 });
 
 export const setupStripeSchema = z.object({

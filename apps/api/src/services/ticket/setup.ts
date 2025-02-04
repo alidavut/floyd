@@ -13,14 +13,20 @@ export default createHTTPService({
       relations: ['channel']
     });
 
+
+    const fee = Math.floor(event.price * 0.1) + 50;
+    const totalAmount = event.price + fee;
+
     const paymentIntent = await stripe.paymentIntents.create({
-      amount: event.price,
-      currency: 'usd',
+      amount: totalAmount,
+      currency: event.channel.currencyCode,
+      application_fee_amount: fee,
+      transfer_data: {
+        destination: event.channel.stripeId
+      },
       metadata: {
         eventId: event.id
       }
-    }, {
-      stripeAccount: event.channel.stripeId
     });
 
     return {

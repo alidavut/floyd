@@ -10,5 +10,6 @@ export { Table } from './table/table';
 export { Drawer } from './drawer/drawer';
 export { Tabs, TabItem } from './tabs/tabs';
 export { Imgix } from './imgix/imgix';
+export { Select } from './select/select';
 
 export type { TableColumn } from './table/table';

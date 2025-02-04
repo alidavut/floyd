@@ -1,4 +1,4 @@
-import { EventStatus } from '../enums';
+import { EventStatus } from '../constants';
 
 export interface AuthObject {
   accessToken: string;
@@ -20,6 +20,7 @@ export interface ChannelObject {
   id: string;
   handle: string
   name: string;
+  currencyCode: string;
   stripeId: string;
   stripeEnabled: boolean;
   createdAt: string;

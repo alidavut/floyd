@@ -1,5 +1,6 @@
 import { ChannelObject } from '@floyd/schema/types';
-import { Button, Input } from '@floyd/ui/components';
+import { currencies } from '@floyd/schema/constants/currencies';
+import { Button, Input, Select } from '@floyd/ui/components';
 import { PageHeader } from 'components';
 import { getInputErrors } from 'lib/errors';
 import Link from 'next/link';
@@ -48,6 +49,12 @@ export function ChannelSettingsView({ channel, onSubmit, error, loading }: Props
             Connect Stripe
           </Link>
         </p>
+        <Select
+          label="Currency"
+          options={currencies.map(currency => ({ label: currency.name, value: currency.code }))}
+          onValueChange={value => setParams({ ...params, currencyCode: value })}
+          value={params.currencyCode}
+        />
         <Button onClick={() => onSubmit(params)} loading={loading} fullWidth>
           Update Channel
         </Button>

@@ -1,7 +1,7 @@
 import { Column, CreateDateColumn, Entity, JoinColumn, OneToOne, UpdateDateColumn } from 'typeorm';
 import { BaseEntity } from './base';
 import { Channel } from '.';
-import { EventStatus } from '@floyd/schema/enums';
+import { EventStatus } from '@floyd/schema/constants';
 
 @Entity('events')
 export class Event extends BaseEntity {

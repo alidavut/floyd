@@ -3,7 +3,7 @@ import { createHTTPService } from 'services/service';
 import { event } from '@floyd/schema/inputs';
 import { EventSerializer } from './serializer';
 import { unique } from 'lib/validations';
-import { EventStatus } from '@floyd/schema/enums';
+import { EventStatus } from '@floyd/schema/constants';
 import { mux } from 'lib/mux';
 
 export default createHTTPService({

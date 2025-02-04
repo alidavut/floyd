@@ -5,6 +5,15 @@ import { Event } from '.';
 @Entity('tickets')
 export class Ticket extends BaseEntity {
   @Column()
+  firstName: string;
+
+  @Column()
+  lastName: string;
+
+  @Column()
+  email: string;
+
+  @Column()
   code: string;
 
   @Column()

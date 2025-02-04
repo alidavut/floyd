@@ -11,6 +11,9 @@ export class Channel extends BaseEntity {
   name: string;
 
   @Column()
+  currencyCode: string;
+
+  @Column()
   stripeId: string;
 
   @Column()

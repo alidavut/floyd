@@ -10,7 +10,7 @@ interface Props {
 }
 
 export function OrderForm({ channel, ticketSetup }: Props) {
-  const stripe = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY, { stripeAccount: channel.stripeId });
+  const stripe = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY);
 
   return (
     <Elements
@@ -76,6 +76,14 @@ function Form({ channel }: { channel: ChannelObject }) {
         <Input
           label="Email"
           placeholder="We'll send your ticket here"
+        />
+        <Input
+          label="First Name"
+          placeholder="John"
+        />
+        <Input
+          label="Last Name"
+          placeholder="Doe"
         />
         <Button onClick={handleSubmit} fullWidth>
           Buy Ticket

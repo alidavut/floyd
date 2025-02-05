@@ -3,7 +3,7 @@ import { ReactNode } from 'react';
 import { colors } from '@floyd/utils/colors';
 
 interface Props {
-  children: ReactNode;
+  children?: ReactNode;
 }
 
 export function Layout({ children }: Props) {

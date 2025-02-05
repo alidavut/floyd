@@ -3,8 +3,7 @@
   "scripts": {
     "start": "next start",
     "dev": "next dev -p 3002",
-    "build": "next build",
-    "heroku-postbuild": "next build"
+    "build": "next build"
   },
   "dependencies": {
     "@floyd/client": "*",

@@ -3,8 +3,7 @@
   "scripts": {
     "start": "next start",
     "dev": "next dev",
-    "build": "next build",
-    "heroku-postbuild": "next build"
+    "build": "next build"
   },
   "dependencies": {
     "@floyd/ui": "*",

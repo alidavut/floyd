@@ -1,5 +1,5 @@
 build:
   docker:
     web: Dockerfile
-    args:
-      FLOYD_APP_NAME: ${FLOYD_APP_NAME}
+  config:
+    FLOYD_APP_NAME: ${FLOYD_APP_NAME}

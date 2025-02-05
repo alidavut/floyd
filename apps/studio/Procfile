@@ -1,1 +1,1 @@
-web: cd apps/hub && npm start
+web: cd apps/studio && npm start

@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "dev": "turbo run dev --parallel"
+    "dev": "turbo run dev --parallel",
+    "heroku-postbuild": "turbo run heroku-postbuild --filter ${FLOYD_APP_NAME}"
   },
   "workspaces": [
     "apps/*",

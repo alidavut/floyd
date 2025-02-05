@@ -4,6 +4,10 @@
     "build": {
       "outputs": [".next/**", "!.next/cache/**"]
     },
+    "heroku-postbuild": {
+      "dependsOn": ["^heroku-postbuild"],
+      "outputs": ["dist/**", ".next/**"]
+    },
     "dev": {
       "cache": false
     },

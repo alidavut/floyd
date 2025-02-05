@@ -8,7 +8,7 @@ export default createService({
 
   async perform({ input, contextMap, axios }) {
     try {
-      const { data }: { data: ChannelObject } = await axios.post(`/channels/${input.channelId}/verify_stripe`);
+      const { data }: { data: ChannelObject } = await axios.post(`/channels/${input.channelId}/stripe/verify`);
       contextMap.channels.put(data);
       return data;
     } catch (error) {

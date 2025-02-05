@@ -7,7 +7,7 @@ export default createService({
 
   async perform({ input, axios }) {
     try {
-      const { data }: { data: { url: string } } = await axios.post(`/channels/${input.channelId}/setup_stripe`);
+      const { data }: { data: { url: string } } = await axios.post(`/channels/${input.channelId}/stripe/setup`);
       return data;
     } catch (error) {
       throw new InputError(error.response.data.errors);

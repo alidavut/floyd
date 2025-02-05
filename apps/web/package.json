@@ -9,7 +9,7 @@
   "dependencies": {
     "@floyd/client": "*",
     "@floyd/ui": "*",
-    "@tailwindcss/typography": "^0.5.10",
+    "@tailwindcss/typography": "^0.5.16",
     "classnames": "^2.5.1",
     "date-fns": "^4.1.0",
     "graphql-request": "^7.1.2",
@@ -28,14 +28,14 @@
     "@floyd/tsconfig": "*",
     "@floyd/utils": "*",
     "@svgr/webpack": "^8.1.0",
+    "@tailwindcss/postcss": "^4.0.0",
     "@types/node": "^22.13.1",
     "@types/nprogress": "^0.2.3",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
-    "autoprefixer": "^10.4.18",
     "postcss": "^8.4.49",
     "sass": "^1.83.4",
-    "tailwindcss": "^3.4.15",
+    "tailwindcss": "^4.0.3",
     "typescript": "^5.7.2"
   }
 }

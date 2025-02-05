@@ -64,7 +64,7 @@ export function ChannelHomeView({ channel }: Props) {
                     </span>
                   </Button>
                 </a>
-                <hr />
+                <hr className="border-gray-200" />
                 <Button onClick={handleLogout} fullWidth>
                   Logout
                 </Button>

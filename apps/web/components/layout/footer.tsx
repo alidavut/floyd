@@ -3,7 +3,7 @@ import badge from '@floyd/ui/assets/images/badge.svg';
 
 export function Footer() {
   return (
-    <div className="border-t border-dashed text-sm py-12">
+    <div className="border-t border-gray-200 border-dashed text-sm py-12">
       <div className="container grid grid-cols-2 md:grid-cols-5 gap-8">
         <Links
           title="Floyd"

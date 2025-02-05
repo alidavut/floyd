@@ -8,8 +8,11 @@ export const createSchema = z.object({
   paymentIntentId: z.string()
 });
 
-export const setupSchema = z.object({
-  eventId: z.string()
+export const initiateSchema = z.object({
+  eventId: z.string(),
+  firstName: z.string().min(1, 'First name is required'),
+  lastName: z.string().min(1, 'Last name is required'),
+  email: z.string().email()
 });
 
-export type setupParams = z.infer<typeof setupSchema>;
+export type initiateParams = z.infer<typeof initiateSchema>;

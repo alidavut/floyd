@@ -1,8 +1,9 @@
 import { auth } from './auth/index';
+import { channel } from './channel';
 import { email } from './email';
 import { event } from './event';
 import { file } from './file';
-import { channel } from './channel';
+import { listener } from './listener';
 import { ticket } from './ticket';
 import { user } from './user';
 
@@ -12,6 +13,7 @@ export default {
   event,
   file,
   channel,
+  listener,
   ticket,
   user
 };

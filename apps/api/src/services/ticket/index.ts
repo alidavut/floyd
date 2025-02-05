@@ -1,3 +1,3 @@
-import setup from './setup';
+import initiate from './initiate';
 
-export const ticket = { setup };
+export const ticket = { initiate };

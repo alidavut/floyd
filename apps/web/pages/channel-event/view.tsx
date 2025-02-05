@@ -1,15 +1,19 @@
 import { Head } from 'components';
-import { ChannelObject, EventObject, TicketSetupObject } from '@floyd/schema/types';
+import { ChannelObject, EventObject, TicketInitiationObject } from '@floyd/schema/types';
 import { Imgix } from '@floyd/ui/components';
 import { OrderForm } from './partials';
+import { ticket } from '@floyd/schema/inputs';
+import { ServiceError } from 'lib/error';
 
 interface Props {
   channel: ChannelObject;
   event: EventObject;
-  ticketSetup: TicketSetupObject;
+  ticketInitiation: TicketInitiationObject;
+  onInitiateTicket: (params: ticket.initiateParams) => unknown;
+  error: ServiceError;
 }
 
-export function ChannelEventView({ channel, event, ticketSetup }: Props) {
+export function ChannelEventView({ channel, event, ticketInitiation, onInitiateTicket, error }: Props) {
   return (
     <div className="py-12">
       <Head
@@ -32,7 +36,9 @@ export function ChannelEventView({ channel, event, ticketSetup }: Props) {
             <div className="bg-white p-6 rounded-2xl">
               <OrderForm
                 channel={channel}
-                ticketSetup={ticketSetup}
+                ticketInitiation={ticketInitiation}
+                onInitiateTicket={onInitiateTicket}
+                error={error}
               />
             </div>
           </div>

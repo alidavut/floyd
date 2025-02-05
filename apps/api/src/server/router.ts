@@ -22,7 +22,7 @@ router.post('/events', mapService(services.event.create));
 router.get('/events/:id', mapService(services.event.get));
 router.patch('/events/:id', mapService(services.event.update));
 
-router.post('/tickets/setup', mapService(services.ticket.setup));
+router.post('/tickets/initiate', mapService(services.ticket.initiate));
 
 router.post('/files/signed-url', mapService(services.file.generateSignedUrl));
 

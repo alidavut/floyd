@@ -4,8 +4,8 @@ import { createHTTPService } from 'services/service';
 import { stripe } from 'lib/stripe';
 
 export default createHTTPService({
-  id: 'ticket.setup',
-  inputSchema: ticket.setupSchema,
+  id: 'ticket.initiate',
+  inputSchema: ticket.initiateSchema,
 
   async perform({ input }) {
     const event = await Event.findOneOrFail({

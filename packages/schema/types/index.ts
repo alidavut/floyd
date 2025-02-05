@@ -50,6 +50,6 @@ export interface TicketObject {
   updatedAt: string;
 }
 
-export interface TicketSetupObject {
+export interface TicketInitiationObject {
   clientSecret: string;
 }

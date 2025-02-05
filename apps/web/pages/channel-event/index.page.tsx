@@ -1,15 +1,24 @@
 import { withLayout } from '@floyd/ui/layout';
 import { ChannelEventView } from './view';
 import { apiClient } from 'lib/client';
-import { ChannelObject, EventObject, TicketSetupObject } from '@floyd/schema/types';
+import { ChannelObject, EventObject } from '@floyd/schema/types';
 import { ChannelLayout } from 'components';
+import { useService } from 'lib/service';
 
-function ChannelEvent({ channel, event, ticketSetup }: { channel: ChannelObject, event: EventObject, ticketSetup: TicketSetupObject }) {
+function ChannelEvent({ channel, event }: { channel: ChannelObject, event: EventObject }) {
+  const { data: ticketInitiation, perform: initiateTicket, error } = useService(apiClient.ticket.initiate);
+
+  function handleInitiateTicket(params) {
+    initiateTicket({ ...params, eventId: event.id });
+  }
+
   return (
     <ChannelEventView
       channel={channel}
       event={event}
-      ticketSetup={ticketSetup}
+      ticketInitiation={ticketInitiation}
+      onInitiateTicket={handleInitiateTicket}
+      error={error}
     />
   )
 }
@@ -20,9 +29,8 @@ ChannelEvent.getInitialProps = async ({ query }) => {
 
   const channel = await apiClient.channel.get({ id: handle });
   const event = await apiClient.event.get({ id: `${channel.id}::${slug}` });
-  const ticketSetup = await apiClient.ticket.setup({ eventId: event.id });
 
-  return { channel, event, ticketSetup };
+  return { channel, event };
 };
 
 export default withLayout(ChannelLayout)(ChannelEvent);

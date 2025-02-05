@@ -82,7 +82,7 @@ export function View({ onSubmit, error, loading }: Props) {
         <p className="text-center text-bunker-600 text-[0.95rem]">
           Already have an account? <Link href="/login" className="link">Login</Link>
         </p>
-        <p className="text-center text-bunker-600 text-sm border-t border-dashed pt-7">
+        <p className="text-center text-bunker-600 text-sm border-t border-gray-200 border-dashed pt-7">
           By signing up, you acknowledge that you have read and agreed to our{' '}
           <a href="https://floyd.so/about/terms" className="link" target="_blank">Terms of Service</a>{' '}
           and{' '}

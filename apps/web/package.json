@@ -18,8 +18,8 @@
     "nprogress": "^0.2.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-icons": "^5.0.1",
-    "react-markdown": "^9.0.1",
+    "react-icons": "^5.4.0",
+    "react-markdown": "^9.0.3",
     "slugify": "^1.6.6",
     "usehooks-ts": "^3.1.0"
   },
@@ -28,13 +28,13 @@
     "@floyd/tsconfig": "*",
     "@floyd/utils": "*",
     "@svgr/webpack": "^8.1.0",
-    "@types/node": "^22.9.3",
+    "@types/node": "^22.13.1",
     "@types/nprogress": "^0.2.3",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
     "autoprefixer": "^10.4.18",
     "postcss": "^8.4.49",
-    "sass": "^1.81.0",
+    "sass": "^1.83.4",
     "tailwindcss": "^3.4.15",
     "typescript": "^5.7.2"
   }

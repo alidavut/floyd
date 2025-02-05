@@ -17,6 +17,7 @@
     "dev:email": "email dev --dir ./src/emails/templates"
   },
   "dependencies": {
+    "@floyd/utils": "*",
     "@react-email/components": "^0.0.32",
     "bcrypt": "^5.1.1",
     "body-parser": "^1.20.3",

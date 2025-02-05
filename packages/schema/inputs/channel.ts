@@ -16,7 +16,16 @@ export const getSchema = z.object({
 });
 
 export const updateSchema = channelSchema.extend({
-  id: z.string()
+  id: z.string(),
+  currencyCode: z.string().optional()
+});
+
+export const setupStripeSchema = z.object({
+  channelId: z.string()
+});
+
+export const verifyStripeSchema = z.object({
+  channelId: z.string()
 });
 
 export type createParams = z.infer<typeof createSchema>;

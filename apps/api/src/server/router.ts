@@ -13,6 +13,17 @@ router.get('/users/:id', mapService(services.user.get));
 router.get('/channels', mapService(services.channel.list));
 router.post('/channels', mapService(services.channel.create));
 router.get('/channels/:id', mapService(services.channel.get));
-router.put('/channels/:id', mapService(services.channel.update));
+router.patch('/channels/:id', mapService(services.channel.update));
+router.post('/channels/:channelId/stripe/setup', mapService(services.channel.setupStripe));
+router.post('/channels/:channelId/stripe/verify', mapService(services.channel.verifyStripe));
+
+router.get('/events', mapService(services.event.list));
+router.post('/events', mapService(services.event.create));
+router.get('/events/:id', mapService(services.event.get));
+router.patch('/events/:id', mapService(services.event.update));
+
+router.post('/tickets/initiate', mapService(services.ticket.initiate));
+
+router.post('/files/signed-url', mapService(services.file.generateSignedUrl));
 
 export default router;

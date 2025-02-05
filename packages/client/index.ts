@@ -1,13 +1,17 @@
 import axios, { Axios } from 'axios';
-import { AuthService } from './services/auth';
-import { UserService } from './services/user';
-import { ChannelService } from './services/channel';
+import { createAuthService } from './services/auth';
+import { createChannelService } from './services/channel';
+import { createEventService } from './services/event';
+import { createTicketService } from './services/ticket';
+import { createUserService } from './services/user';
 
 export class FloydClient {
   axios: Axios;
-  auth: AuthService;
-  channel: ChannelService;
-  user: UserService;
+  auth: ReturnType<typeof createAuthService>;
+  channel: ReturnType<typeof createChannelService>;
+  event: ReturnType<typeof createEventService>;
+  ticket: ReturnType<typeof createTicketService>;
+  user: ReturnType<typeof createUserService>;
 
   constructor(options: FloydClientOptions) {
     const headers = {};
@@ -21,9 +25,11 @@ export class FloydClient {
       headers
     });
 
-    this.auth = new AuthService(this.axios);
-    this.channel = new ChannelService(this.axios);
-    this.user = new UserService(this.axios);
+    this.auth = createAuthService(this.axios);
+    this.channel = createChannelService(this.axios);
+    this.event = createEventService(this.axios);
+    this.ticket = createTicketService(this.axios);
+    this.user = createUserService(this.axios);
   }
 }
 

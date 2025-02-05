@@ -2,9 +2,10 @@
   "name": "@floyd/ui",
   "private": true,
   "dependencies": {
-    "@floyd/utils": "*",
     "@floyd/tsconfig": "*",
-    "react-icons": "^5.0.1"
+    "@floyd/utils": "*",
+    "react-icons": "^5.0.1",
+    "react-imgix": "^9.10.0"
   },
   "devDependencies": {
     "react": "^18.2.0",

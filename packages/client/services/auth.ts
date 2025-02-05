@@ -1,8 +1,12 @@
-import * as inputs from '@floyd/schema/inputs';
-import { Service } from './service';
+import { auth } from '@floyd/schema/inputs';
+import { AuthObject } from '@floyd/schema/types';
+import { Axios } from 'axios';
 
-export class AuthService extends Service {
-  create(input: inputs.auth.createParams) {
-    return this.axios.post('/auth', input);
+export function createAuthService(axios: Axios) {
+  return {
+    async create(input: auth.createParams): Promise<AuthObject> {
+      const { data } = await axios.post('/auth', input);
+      return data;
+    }
   }
 }

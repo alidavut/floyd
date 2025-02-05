@@ -8,6 +8,9 @@ export class ChannelSerializer extends Serializer<Channel, ChannelObject> {
       id: this.object.id,
       handle: this.object.handle,
       name: this.object.name,
+      currencyCode: this.object.currencyCode,
+      stripeId: this.object.stripeId,
+      stripeEnabled: this.object.stripeEnabled,
       createdAt: this.object.createdAt.toISOString(),
       updatedAt: this.object.updatedAt.toISOString()
     };

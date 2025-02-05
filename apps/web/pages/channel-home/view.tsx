@@ -1,23 +1,31 @@
-import { Head } from 'components';
-import { ChannelObject } from '@floyd/schema/types';
+import { EventTile, Head } from 'components';
+import { ChannelObject, EventObject } from '@floyd/schema/types';
 
 interface Props {
   channel: ChannelObject;
+  events: EventObject[];
 }
 
-export function ChannelHomeView({ channel }: Props) {
+export function ChannelHomeView({ channel, events }: Props) {
   return (
-    <div className="pt-24">
+    <div className="py-12">
       <Head
         title={channel.name}
         description={`Channel for ${channel.name} on Floyd`}
       />
-      <div className="container max-w-3xl">
-        <h1 className="text-4xl font-bold text-center mb-6 font-heading">
-          {channel.name}
+      <div className="container">
+        <h1 className="text-3xl font-bold mb-6">
+          Events
         </h1>
-        <div className="bg-white p-12 text-center rounded-2xl text-bunker-950/50 mb-12">
-          No events yet
+        <div className="grid lg:grid-cols-3 gap-3 lg:gap-6">
+          {events.map((event) => (
+            <div key={event.id}>
+              <EventTile
+                channel={channel}
+                event={event}
+              />
+            </div>
+          ))}
         </div>
       </div>
     </div>

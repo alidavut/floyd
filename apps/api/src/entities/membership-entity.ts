@@ -1,7 +1,7 @@
 import { Column, CreateDateColumn, Entity, JoinColumn, OneToOne, UpdateDateColumn } from 'typeorm';
 import { BaseEntity } from './base';
 import { User, Channel } from '.';
-import { MembershipRole } from '@floyd/schema/enums';
+import { MembershipRole } from '@floyd/schema/constants';
 
 @Entity('memberships')
 export class Membership extends BaseEntity {

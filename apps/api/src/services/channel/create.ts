@@ -1,4 +1,4 @@
-import { MembershipRole } from '@floyd/schema/enums';
+import { MembershipRole } from '@floyd/schema/constants';
 import { channel } from '@floyd/schema/inputs';
 import { Membership, Channel } from 'entities';
 import { createHTTPService } from 'services/service';
@@ -13,7 +13,11 @@ export default createHTTPService({
   },
 
   async perform({ input, auth }) {
-    const channel = Channel.create({ ...input });
+    const channel = Channel.create({
+      ...input,
+      currencyCode: 'USD'
+    });
+
     await channel.save();
 
     const membership = Membership.create({

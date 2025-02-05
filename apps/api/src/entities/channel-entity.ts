@@ -10,6 +10,15 @@ export class Channel extends BaseEntity {
   @Column()
   name: string;
 
+  @Column()
+  currencyCode: string;
+
+  @Column()
+  stripeId: string;
+
+  @Column()
+  stripeEnabled: boolean;
+
   @OneToMany(() => Membership, membership => membership.channel)
   memberships: Membership[];
 

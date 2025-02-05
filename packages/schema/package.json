@@ -1,4 +1,7 @@
 {
   "name": "@floyd/schema",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "zod": "^3.24.1"
+  }
 }

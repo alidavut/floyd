@@ -28,7 +28,7 @@
     "@floyd/tsconfig": "*",
     "@floyd/utils": "*",
     "@svgr/webpack": "^8.1.0",
-    "@tailwindcss/postcss": "^4.0.0",
+    "@tailwindcss/postcss": "^4.0.3",
     "@types/node": "^22.13.1",
     "@types/nprogress": "^0.2.3",
     "@types/react": "^19.0.8",

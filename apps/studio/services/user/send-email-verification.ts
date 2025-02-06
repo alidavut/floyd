@@ -1,14 +1,10 @@
 import { InputError } from '../errors';
 import { createService } from '../service';
-import { auth } from '@floyd/schema/inputs';
 
 export default createService({
-  inputSchema: auth.sendOtpSchema,
-
   async perform({ input, axios }) {
     try {
-      const { data } = await axios.post('/auth/send-otp', input);
-      return data as { key: string };
+      await axios.post('/users/send-email-verification', input);
     } catch (error) {
       throw new InputError(error.response.data.errors);
     }

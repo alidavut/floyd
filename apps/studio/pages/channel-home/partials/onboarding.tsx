@@ -2,7 +2,7 @@ import { ChannelObject, UserObject } from '@floyd/schema/types';
 import { Alert, Button } from '@floyd/ui/components';
 import Link from 'next/link';
 import { ReactElement, useEffect, useRef, useState } from 'react';
-import { PiCaretDownBold, PiCheckCircleFill, PiInstagramLogo, PiXLogo } from 'react-icons/pi';
+import { PiCaretDownBold, PiCheckCircleFill, PiInstagramLogo, PiLightbulb, PiXLogo } from 'react-icons/pi';
 import cx from 'classnames';
 
 interface Props {
@@ -27,10 +27,10 @@ export function Onboarding({ channel, currentUser, onSendEmailVerification, send
     <div>
       <div className="mb-4.5">
         <h3 className="text-2xl font-semibold mb-1.5">
-          What's next?
+          What's Next?
         </h3>
         <p className="text-gray-600 leading-snug">
-          Follow these steps to get started with your channel for early access to Floyd.
+          Follow these steps to become a verified user and get ready to create events when we launch—or even secure early access!
         </p>
       </div>
       <div className="space-y-3">
@@ -42,32 +42,34 @@ export function Onboarding({ channel, currentUser, onSendEmailVerification, send
           content={
             <div className="space-y-4.5">
               <p>
-                We've sent an email to <strong>{currentUser.email}</strong> with a link to verify your account.
-                Click the link in the email to complete the verification process.
+                We’ve sent a verification email to <strong>{currentUser.email}</strong>. Please click the button inside
+                to confirm your account and unlock the next steps.
               </p>
               <div>
                 <Button disabled={currentUser.emailVerified} onClick={onSendEmailVerification} loading={sendingEmailVerification}>
-                  Resend email
+                  {currentUser.emailVerified ? 'Email verified' : 'Resend Verification Email'}
                 </Button>
               </div>
             </div>
           }
         />
         <Item
-          title="Enable Payments"
+          title="Enable payments"
           completed={channel.stripeEnabled}
           expanded={openItem === 'stripe'}
           onClick={() => toggleItem('stripe')}
           content={
             <div className="space-y-4.5">
               <p>
-                Enable payments to start accepting payments from your channel. We'll redirect you to Stripe, our payment
-                processor, to complete the setup.
+                Get set up to accept payments from your channel by linking your account with Stripe. Complete this step
+                now so you’re ready when event creation goes live.
               </p>
-              <Alert
-                color="warning"
-                description="Please verify your email first"
-              />
+              {!currentUser.emailVerified && (
+                <Alert
+                  color="warning"
+                  description="Please verify your email first"
+                />
+              )}
               <div>
                 <Link href={`/channels/${channel.id}/stripe/setup`}>
                   <Button disabled={channel.stripeEnabled || !currentUser.emailVerified}>
@@ -86,9 +88,20 @@ export function Onboarding({ channel, currentUser, onSendEmailVerification, send
           content={
             <div className="space-y-4.5">
               <p>
-                Follow us on social media to stay updated on the latest features and updates.
+                Follow us on social media and share your thoughts—stay updated on new features, product launch news,
+                and exclusive early access opportunities.
               </p>
               <div className="space-y-3">
+                <a href="https://tally.so/r/mVbqRl" target="_blank" rel="noreferrer" className="block">
+                  <Button fullWidth>
+                    <span className="flex items-center justify-center space-x-2">
+                      <PiLightbulb className="w-5 h-5" />
+                      <span>
+                        Take a quick survey
+                      </span>
+                    </span>
+                  </Button>
+                </a>
                 <a href="https://x.com/heyfloydso" target="_blank" rel="noreferrer" className="block">
                   <Button fullWidth>
                     <span className="flex items-center justify-center space-x-2">
@@ -138,7 +151,7 @@ export function Item({ title, content, completed, expanded, onClick }: ItemProps
 
   return (
     <div className={cx('border border-gray-200/70 rounded-xl', expanded && 'shadow-sm shadow-gray-900/5')}>
-      <div className="flex items-center space-x-2 p-3 cursor-pointer select-none" onClick={onClick}>
+      <div className="flex items-center space-x-1.5 p-3 cursor-pointer select-none" onClick={onClick}>
         <div>
           <PiCheckCircleFill
             className={`text-2xl ${completed ? 'text-green-500' : 'text-gray-200'}`}

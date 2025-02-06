@@ -5,7 +5,7 @@ export function Button({ children, ...props }: ComponentProps<typeof REButton>) 
   return (
     <REButton
       {...props}
-      className="bg-purple-600 text-white text-base font-medium rounded-sm px-4 py-2 cursor-pointer">
+      className="bg-purple-600 text-white text-base font-medium rounded-xl px-4 py-[0.575rem] cursor-pointer">
       {children}
     </REButton>
   )

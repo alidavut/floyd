@@ -19,7 +19,7 @@ function ButtonComponent({ type='button', variant='contained', size='medium', ch
       className={cx(
         'font-semibold rounded-xl relative transition-all box-border',
         fullWidth && 'w-full',
-        disabled && 'opacity-50',
+        disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer',
         size === 'small' && 'text-sm px-2 py-1',
         size === 'medium' && 'text-base px-4 py-[0.575rem]',
         size === 'large' && 'text-[1.125rem] px-[1.35rem] py-[0.675rem]',

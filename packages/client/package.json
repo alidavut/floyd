@@ -2,7 +2,7 @@
   "name": "@floyd/client",
   "private": true,
   "dependencies": {
-    "axios": "^1.6.7"
+    "axios": "^1.7.9"
   },
   "devDependencies": {
     "@floyd/schema": "*"

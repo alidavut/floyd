@@ -3,7 +3,7 @@ import badge from '@floyd/ui/assets/images/badge.svg';
 
 export function Footer() {
   return (
-    <div className="border-t border-dashed text-sm py-12">
+    <div className="border-t border-gray-200 border-dashed text-sm py-12">
       <div className="container grid grid-cols-2 md:grid-cols-5 gap-8">
         <Links
           title="Floyd"
@@ -41,12 +41,12 @@ export function Footer() {
             { label: "Privacy Policy", href: "/about/privacy", external: false }
           ]}
         />
-        <div className="text-center md:text-right">
+        <div className="text-center md:text-right col-span-2 md:col-span-1">
           <a href="/" className="text-lg font-semibold inline-block mb-2">
             <img src={badge.src} className="h-[2.5rem] rounded-xl" />
           </a>
           <p className="text-bunker-500">
-            Copyright {new Date().getFullYear()} Floyd LLC
+            © {new Date().getFullYear()}, Floyd LLC
           </p>
         </div>
       </div>

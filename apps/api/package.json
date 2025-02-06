@@ -13,40 +13,38 @@
     "run:dev": "ts-node-dev -r ./src/initialize -r dotenv/config --respawn --transpile-only",
     "service": "TS_NODE_BASEURL=./dist node -r ./dist/initialize -r ts-node/register/transpile-only ./dist/services/run",
     "service:dev": "ts-node -r ./src/initialize -r dotenv/config ./src/services/run",
-    "heroku-postbuild": "npm run build",
     "dev:email": "email dev --dir ./src/emails/templates"
   },
   "dependencies": {
-    "@react-email/components": "^0.0.31",
+    "@floyd/utils": "*",
+    "@react-email/components": "^0.0.32",
     "bcrypt": "^5.1.1",
     "body-parser": "^1.20.3",
-    "cookie": "^1.0.2",
     "cors": "^2.8.5",
-    "express": "^4.21.1",
+    "express": "^4.21.2",
     "if-env": "^1.0.4",
     "jsonwebtoken": "^9.0.2",
     "lodash": "^4.17.21",
     "pg": "^8.13.1",
     "postmark": "^4.0.5",
-    "react": "^18.2.0",
-    "react-email": "^3.0.4",
+    "react": "^19.0.0",
+    "react-email": "^3.0.6",
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
     "typeorm": "^0.3.20",
     "typeorm-naming-strategies": "^4.1.0",
-    "zod": "^3.23.8"
+    "zod": "^3.24.1"
   },
   "devDependencies": {
     "@floyd/schema": "*",
     "@floyd/tsconfig": "*",
     "@types/bcrypt": "^5.0.2",
-    "@types/cookie": "^1.0.0",
     "@types/cors": "^2.8.17",
     "@types/express": "^4.17.21",
-    "@types/jsonwebtoken": "^9.0.7",
-    "@types/lodash": "^4.17.13",
-    "dotenv": "^16.4.5",
+    "@types/jsonwebtoken": "^9.0.8",
+    "@types/lodash": "^4.17.15",
+    "dotenv": "^16.4.7",
     "ts-node-dev": "^2.0.0",
-    "typescript": "^5.7.2"
+    "typescript": "^5.7.3"
   }
 }

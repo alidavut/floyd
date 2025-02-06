@@ -1,6 +1,5 @@
 import './global.scss';
 import './initialize';
-import './highlight.scss';
 import { Fragment } from 'react';
 import Head from 'next/head';
 import favicon from '@floyd/ui/assets/images/badge.svg';

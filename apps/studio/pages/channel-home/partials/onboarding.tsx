@@ -1,5 +1,5 @@
 import { ChannelObject, UserObject } from '@floyd/schema/types';
-import { Button } from '@floyd/ui/components';
+import { Alert, Button } from '@floyd/ui/components';
 import Link from 'next/link';
 import { ReactElement, useEffect, useRef, useState } from 'react';
 import { PiCaretDownBold, PiCheckCircleFill, PiInstagramLogo, PiXLogo } from 'react-icons/pi';
@@ -64,9 +64,13 @@ export function Onboarding({ channel, currentUser, onSendEmailVerification, send
                 Enable payments to start accepting payments from your channel. We'll redirect you to Stripe, our payment
                 processor, to complete the setup.
               </p>
+              <Alert
+                color="warning"
+                description="Please verify your email first"
+              />
               <div>
                 <Link href={`/channels/${channel.id}/stripe/setup`}>
-                  <Button disabled={channel.stripeEnabled}>
+                  <Button disabled={channel.stripeEnabled || !currentUser.emailVerified}>
                     Setup Stripe
                   </Button>
                 </Link>

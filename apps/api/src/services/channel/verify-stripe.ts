@@ -10,7 +10,7 @@ export default createHTTPService({
   inputSchema: channel.verifyStripeSchema,
 
   async authorize({ input, auth }) {
-    return auth.ok && Membership.existsBy({ channelId: input.channelId, userId: auth.user.id });
+    return auth.ok && await Membership.existsBy({ channelId: input.channelId, userId: auth.user.id });
   },
 
   async perform({ input, auth }) {

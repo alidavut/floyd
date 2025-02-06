@@ -9,13 +9,13 @@ interface Props {
 }
 
 const COLOR_MAP = {
-  warning: 'bg-amber-700/10',
-  error: 'bg-rose-700/10'
+  warning: 'bg-orange-700/10',
+  error: 'bg-red-700/10'
 };
 
 const ICON_BG_MAP = {
-  warning: 'bg-amber-700/50',
-  error: 'bg-rose-700/50'
+  warning: 'bg-orange-700/50',
+  error: 'bg-red-700/50'
 };
 
 const ICON_MAP = {
@@ -36,9 +36,9 @@ export function Alert({ title, description, color }: Props) {
       <div className={cx(ICON_BG_MAP[color], 'flex items-center justify-center w-7 h-7 rounded-lg')}>
         <Icon className="w-4 h-4 text-white" />
       </div>
-      <div className="flex-1 space-y-2">
-        {title && <h3 className="font-semibold leading-none">{title}</h3>}
-        <div className="text-sm leading-none">{description}</div>
+      <div className="flex-1 space-y-0.5 flex flex-col justify-center">
+        {title && <h3 className="font-semibold leading-snug">{title}</h3>}
+        <div className="text-sm leading-snug">{description}</div>
       </div>
     </div>
   )

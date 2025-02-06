@@ -54,18 +54,19 @@ export function Onboarding({ channel, currentUser, onSendEmailVerification, send
           }
         />
         <Item
-          title="Enable Stripe Payments"
+          title="Enable Payments"
           completed={channel.stripeEnabled}
           expanded={openItem === 'stripe'}
           onClick={() => toggleItem('stripe')}
           content={
             <div className="space-y-4.5">
               <p>
-                Enable Stripe to start accepting payments from your channel.
+                Enable payments to start accepting payments from your channel. We'll redirect you to Stripe, our payment
+                processor, to complete the setup.
               </p>
               <div>
                 <Button disabled={channel.stripeEnabled}>
-                  Enable Stripe
+                  Setup Stripe
                 </Button>
               </div>
             </div>

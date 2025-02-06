@@ -19,6 +19,14 @@ export const updateSchema = channelSchema.extend({
   id: z.string()
 });
 
+export const setupStripeSchema = z.object({
+  channelId: z.string()
+});
+
+export const verifyStripeSchema = z.object({
+  channelId: z.string()
+});
+
 export type createParams = z.infer<typeof createSchema>;
 export type getParams = z.infer<typeof getSchema>;
 export type updateParams = z.infer<typeof updateSchema>;

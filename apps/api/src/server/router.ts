@@ -16,5 +16,7 @@ router.get('/channels', mapService(services.channel.list));
 router.post('/channels', mapService(services.channel.create));
 router.get('/channels/:id', mapService(services.channel.get));
 router.put('/channels/:id', mapService(services.channel.update));
+router.post('/channels/:channelId/stripe/setup', mapService(services.channel.setupStripe));
+router.post('/channels/:channelId/stripe/verify', mapService(services.channel.verifyStripe));
 
 export default router;

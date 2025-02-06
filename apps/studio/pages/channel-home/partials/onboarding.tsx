@@ -65,9 +65,11 @@ export function Onboarding({ channel, currentUser, onSendEmailVerification, send
                 processor, to complete the setup.
               </p>
               <div>
-                <Button disabled={channel.stripeEnabled}>
-                  Setup Stripe
-                </Button>
+                <Link href={`/channels/${channel.id}/stripe/setup`}>
+                  <Button disabled={channel.stripeEnabled}>
+                    Setup Stripe
+                  </Button>
+                </Link>
               </div>
             </div>
           }

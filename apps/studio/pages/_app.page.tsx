@@ -9,6 +9,7 @@ import { services } from 'services';
 import Head from 'next/head';
 import favicon from '@floyd/ui/assets/images/badge.svg';
 import Script from 'next/script';
+import { ToastContainer } from 'react-toastify';
 
 export default function MyApp({ Component, pageProps, storeData }) {
   const storeMap = isBrowser ? getStore(storeData) : createStore(storeData);
@@ -40,6 +41,7 @@ export default function MyApp({ Component, pageProps, storeData }) {
       </Script>
       <Provider storeMap={storeMap}>
         <Component {...pageProps} />
+        <ToastContainer />
       </Provider>
       <noscript>
         <iframe

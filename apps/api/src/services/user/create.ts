@@ -4,7 +4,7 @@ import { hashPassword } from 'lib/security';
 import { unique } from 'lib/validations';
 import { user } from '@floyd/schema/inputs';
 import { AuthSerializer } from 'services/auth/serializer';
-import { email } from 'services/email';
+import sendEmailVerification from './internal/send-email-verification';
 
 export default createHTTPService({
   id: 'user.create',
@@ -24,10 +24,7 @@ export default createHTTPService({
 
     auth.user = user;
 
-    email.sendWelcome({
-      email: user.email,
-      firstName: user.firstName
-    });
+    await sendEmailVerification({ userId: user.id, email: user.email, firstName: user.firstName });
 
     return AuthSerializer.serialize(auth, auth);
   }

@@ -1,4 +1,4 @@
-import { Button as REButton, Heading as REHeading, Text as REText } from '@react-email/components';
+import { Hr, Button as REButton, Heading as REHeading, Text as REText } from '@react-email/components';
 import { ComponentProps } from 'react';
 
 export function Button({ children, ...props }: ComponentProps<typeof REButton>) {
@@ -19,6 +19,12 @@ export function Text({ children, ...props }: ComponentProps<typeof REText>) {
 
 export function Heading({ children, ...props }: ComponentProps<typeof REHeading>) {
   return (
-    <h1 {...props} className="text-2xl font-bold text-bunker-950">{children}</h1>
+    <h1 {...props} className="text-2xl font-semibold text-bunker-950">{children}</h1>
+  )
+}
+
+export function Divider({ ...props }: ComponentProps<'hr'>) {
+  return (
+    <Hr {...props} />
   )
 }

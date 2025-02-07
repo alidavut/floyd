@@ -15,5 +15,10 @@ export const getSchema = z.object({
   id: z.literal('me')
 });
 
+export const verifyEmailSchema = z.object({
+  token: z.string()
+});
+
 export type createParams = z.infer<typeof createSchema>;
 export type getParams = z.infer<typeof getSchema>;
+export type verifyEmailParams = z.infer<typeof verifyEmailSchema>;

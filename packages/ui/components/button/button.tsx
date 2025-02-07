@@ -24,8 +24,8 @@ function ButtonComponent({ type='button', variant='contained', size='medium', ch
         size === 'medium' && 'text-base px-4 py-[0.575rem]',
         size === 'large' && 'text-[1.125rem] px-[1.35rem] py-[0.675rem]',
         size === 'huge' && 'text-[1.375rem] px-[2.125rem] py-[1rem] !rounded-[1.325rem]',
-        variant === 'outlined' && 'border border-yellow-950/50 bg-transparent text-yellow-950 ring-gray-950',
-        variant === 'outlined' && !disabled && 'hover:bg-yellow-500/5 active:bg-yellow-500/10 hover:ring-[2px]',
+        variant === 'outlined' && 'border border-gray-950/50 bg-transparent text-gray-950',
+        variant === 'outlined' && !disabled && 'hover:bg-gray-500/5 active:bg-gray-500/10',
         variant === 'contained' && 'bg-purple-600 text-gray-950 ring-purple-300 text-white',
         variant === 'contained' && !disabled && 'hover:bg-purple-600 active:bg-purple-600 hover:ring-[3px]',
       )}

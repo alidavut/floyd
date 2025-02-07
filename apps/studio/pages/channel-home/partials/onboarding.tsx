@@ -1,23 +1,30 @@
 import { ChannelObject, UserObject } from '@floyd/schema/types';
-import { Alert, Button } from '@floyd/ui/components';
+import { Alert, Button, Input, Select } from '@floyd/ui/components';
 import Link from 'next/link';
 import { ReactElement, useEffect, useRef, useState } from 'react';
 import { PiCaretDownBold, PiCheckCircleFill, PiInstagramLogo, PiLightbulb, PiXLogo } from 'react-icons/pi';
 import cx from 'classnames';
+import { countries } from '@floyd/schema/constants';
 
 interface Props {
   channel: ChannelObject;
   currentUser: UserObject;
   onSendEmailVerification: () => void;
   sendingEmailVerification: boolean;
+  onSetupStripe: (countryCode: string) => void;
+  settingUpStripe: boolean;
 }
 
-export function Onboarding({ channel, currentUser, onSendEmailVerification, sendingEmailVerification }: Props): ReactElement {
+export function Onboarding({ channel, currentUser, onSendEmailVerification, sendingEmailVerification, onSetupStripe, settingUpStripe }: Props): ReactElement {
+  const stripeEnabled = channel.chargesEnabled && channel.payoutsEnabled;
+
   const [openItem, setOpenItem] = useState<string | null>(
     !currentUser.emailVerified && 'email' ||
-    !channel.stripeEnabled && 'stripe' ||
+    !stripeEnabled && 'stripe' ||
     'loop'
   );
+
+  const [countryCode, setCountryCode] = useState(channel.countryCode);
 
   function toggleItem(item: string) {
     setOpenItem(openItem === item ? null : item);
@@ -55,7 +62,7 @@ export function Onboarding({ channel, currentUser, onSendEmailVerification, send
         />
         <Item
           title="Enable payments"
-          completed={channel.stripeEnabled}
+          completed={stripeEnabled}
           expanded={openItem === 'stripe'}
           onClick={() => toggleItem('stripe')}
           content={
@@ -70,12 +77,24 @@ export function Onboarding({ channel, currentUser, onSendEmailVerification, send
                   description="Please verify your email first"
                 />
               )}
+              <Alert
+                color="warning"
+                description="We only support a small number of countries for now."
+              />
+              <Select
+                label="Your country"
+                options={countries}
+                onValueChange={setCountryCode}
+                value={countryCode}
+                disabled={!!channel.countryCode}
+              />
               <div>
-                <Link href={`/channels/${channel.id}/stripe/setup`}>
-                  <Button disabled={channel.stripeEnabled || !currentUser.emailVerified}>
-                    Setup Stripe
-                  </Button>
-                </Link>
+                <Button
+                  onClick={() => onSetupStripe(countryCode)}
+                  disabled={stripeEnabled || !currentUser.emailVerified || !countryCode}
+                  loading={settingUpStripe}>
+                  {stripeEnabled ? 'Stripe enabled' : 'Setup Stripe'}
+                </Button>
               </div>
             </div>
           }

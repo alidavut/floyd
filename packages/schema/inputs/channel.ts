@@ -1,4 +1,5 @@
 import * as z from 'zod';
+import { countries } from '../constants/countries';
 
 const channelSchema = z.object({
   handle: z.string()
@@ -20,7 +21,10 @@ export const updateSchema = channelSchema.extend({
 });
 
 export const setupStripeSchema = z.object({
-  channelId: z.string()
+  channelId: z.string(),
+  countryCode: z.string().refine(value => countries.some(country => country.value === value), {
+    message: 'Invalid country'
+  })
 });
 
 export const verifyStripeSchema = z.object({

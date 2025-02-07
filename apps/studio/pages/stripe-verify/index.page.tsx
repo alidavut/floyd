@@ -11,7 +11,7 @@ function StripeVerify() {
   const channel = useChannel();
 
   useEffect(() => {
-    if (channel.stripeEnabled) {
+    if (channel.chargesEnabled && channel.payoutsEnabled) {
       toast.success('Stripe account verified');
     } else {
       toast.error('Stripe account not verified yet please try again later');

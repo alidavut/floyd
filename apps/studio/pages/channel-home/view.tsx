@@ -10,9 +10,11 @@ interface Props {
   currentUser: UserObject;
   onSendEmailVerification: () => void;
   sendingEmailVerification: boolean;
+  onSetupStripe: (countryCode: string) => void;
+  settingUpStripe: boolean;
 }
 
-export function ChannelHomeView({ channel, currentUser, onSendEmailVerification, sendingEmailVerification }: Props) {
+export function ChannelHomeView({ channel, currentUser, onSendEmailVerification, sendingEmailVerification, onSetupStripe, settingUpStripe }: Props) {
   async function handleLogout() {
     await services.auth.logout();
     window.location.href = '/';
@@ -53,6 +55,8 @@ export function ChannelHomeView({ channel, currentUser, onSendEmailVerification,
                 currentUser={currentUser}
                 onSendEmailVerification={onSendEmailVerification}
                 sendingEmailVerification={sendingEmailVerification}
+                onSetupStripe={onSetupStripe}
+                settingUpStripe={settingUpStripe}
               />
               <hr
                 className="border-gray-200 my-4.5"

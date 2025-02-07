@@ -1,4 +1,4 @@
-import { MembershipRole } from '@floyd/schema/enums';
+import { MembershipRole } from '@floyd/schema/constants';
 import { channel } from '@floyd/schema/inputs';
 import { Membership, Channel } from 'entities';
 import { createHTTPService } from 'services/service';

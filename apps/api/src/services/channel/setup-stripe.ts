@@ -20,12 +20,16 @@ export default createHTTPService({
     if (!channel.stripeAccountId) {
       const account = await stripe.accounts.create({
         type: 'express',
+        country: input.countryCode,
         capabilities: {
-          card_payments: { requested: true },
           transfers: { requested: true }
+        },
+        tos_acceptance: {
+          service_agreement: input.countryCode === 'US' ? 'full' : 'recipient'
         }
       });
 
+      channel.countryCode = input.countryCode;
       channel.stripeAccountId = account.id;
 
       await channel.save();
@@ -33,7 +37,7 @@ export default createHTTPService({
 
     const accountLink = await stripe.accountLinks.create({
       account: channel.stripeAccountId,
-      refresh_url: generateStudioUrl(`/channels/${channel.id}/stripe/setup`),
+      refresh_url: generateStudioUrl(`/channels/${channel.id}`),
       return_url: generateStudioUrl(`/channels/${channel.id}/stripe/verify`),
       type: 'account_onboarding'
     });

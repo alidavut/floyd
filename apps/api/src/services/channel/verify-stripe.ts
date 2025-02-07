@@ -18,11 +18,8 @@ export default createHTTPService({
 
     const account = await stripe.accounts.retrieve(channel.stripeAccountId);
 
-    if (account.details_submitted && account.charges_enabled && account.payouts_enabled) {
-      channel.stripeEnabled = true;
-    } else {
-      channel.stripeEnabled = false;
-    }
+    channel.chargesEnabled = account.charges_enabled;
+    channel.payoutsEnabled = account.payouts_enabled;
 
     await channel.save();
 

@@ -21,9 +21,16 @@ function ChannelHome(): ReactElement {
     services.user.sendEmailVerification
   );
 
+  const { perform: setupStripe, loading: settingUpStripe } = useService(services.channel.setupStripe);
+
   async function handleSendEmailVerification() {
     await sendEmailVerification();
     toast.success('Verification email sent');
+  }
+
+  async function handleSetupStripe(countryCode: string) {
+    const { url } = await setupStripe({ channelId: channel.id, countryCode }, { contextMap });
+    window.location.href = url;
   }
 
   return (
@@ -32,6 +39,8 @@ function ChannelHome(): ReactElement {
       currentUser={currentUser}
       onSendEmailVerification={handleSendEmailVerification}
       sendingEmailVerification={sendingEmailVerification}
+      onSetupStripe={handleSetupStripe}
+      settingUpStripe={settingUpStripe}
     />
   )
 }

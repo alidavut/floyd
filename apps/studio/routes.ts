@@ -6,6 +6,5 @@ export default [
   { source: '/channels/new', destination: '/channel-create' },
   { source: '/channels/:channelId', destination: '/channel-home' },
   { source: '/channels/:channelId/settings', destination: '/channel-settings' },
-  { source: '/channels/:channelId/stripe/setup', destination: '/stripe-setup' },
   { source: '/channels/:channelId/stripe/verify', destination: '/stripe-verify' }
 ];

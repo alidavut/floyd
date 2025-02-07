@@ -37,7 +37,7 @@ export default createHTTPService({
 
     const accountLink = await stripe.accountLinks.create({
       account: channel.stripeAccountId,
-      refresh_url: generateStudioUrl(`/channels/${channel.id}/stripe/setup`),
+      refresh_url: generateStudioUrl(`/channels/${channel.id}`),
       return_url: generateStudioUrl(`/channels/${channel.id}/stripe/verify`),
       type: 'account_onboarding'
     });

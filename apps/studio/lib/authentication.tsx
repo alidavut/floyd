@@ -8,6 +8,7 @@ export function withAuth<T>(Component: ComponentType<T>) {
     if (!ctx.currentUser) {
       const nextUrl = ctx.asPath === '/' ? '' : `?next=${ctx.asPath}`;
       redirect(`/login${nextUrl}`, ctx.res);
+      return {};
     }
 
     if (Component['getInitialProps']) {
